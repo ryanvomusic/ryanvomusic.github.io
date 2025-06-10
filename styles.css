@@ -14,16 +14,30 @@
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    filter: blur(0px);
     padding: 15px 0;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 100;
 }
 
+.nav-link {
+	margin: 0 40px;
+    color: #7a6a5a;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-eight: 400;
+    font-size: 16px;
+    trasition: all 0.3s ease;
+    position: relative;
+
 .nav-link:hover {
     color: #5a4a3a;
 }
+
+.nav-link:active {
+    color: #5a4a3a;
+    font-weight: 500;
 
 .nav-link:active::after {
     content: '';
@@ -119,8 +133,34 @@ header p {
     /* rest of .music-btn styles stay the same */
 }
 
-footer {
+.social-footer {
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    filter: blur(0px);
+    padding: 20px;
     text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+social.icon {
+	margin: 0 20px;
+    color: #7a6a5a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icon:hover {
+	color: #5a4a3a;
+    transform: translateY(-2px);
+}
+
+.social-icon svg {
+	width: 28px;
+    height: 28px;
 }
 
 .social-footer a {
