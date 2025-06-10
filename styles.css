@@ -9,10 +9,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    background-image: url('images/background-photo.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     position: relative;
 }
 
@@ -20,13 +16,28 @@ body {
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba (255, 255, 255, 0.3);
-    backdrop;filter: blur(8px);
+    background-image: url('images/background-photo.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -2;
+}
+
+/* Add a semi-transparent overlay on top */
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
     z-index: -1;
 }
 
