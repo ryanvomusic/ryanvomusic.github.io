@@ -18,6 +18,13 @@ body {
 
 /* Rest of your CSS stays the same, but update these parts: */
 
+header {
+    text-align: center;
+}
+
+.music-links {
+    text-align: center;
+
 header h1 {
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
