@@ -65,6 +65,10 @@ header p {
     /* rest of .music-btn styles stay the same */
 }
 
+footer {
+    text-align: center;
+}
+
 .social-footer a {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
