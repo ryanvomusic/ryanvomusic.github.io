@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-image: url('images/your-photo-name.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Rest of your CSS stays the same, but update these parts: */
+
+header h1 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 3em;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+}
+
+header p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #7a6a5a;
+    margin-bottom: 40px;
+}
+
+.music-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    /* rest of .music-btn styles stay the same */
+}
+
+.social-footer a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    /* rest of .social-footer a styles stay the same */
+}
