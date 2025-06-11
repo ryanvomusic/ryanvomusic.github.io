@@ -506,6 +506,7 @@ header p {
     opacity: 0;
     transition: opacity 0.3s ease;
     cursor: pointer;
+    z-index: 2;
 }
 
 .release-card:hover .play-overlay {
