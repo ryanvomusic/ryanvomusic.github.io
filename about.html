@@ -58,11 +58,17 @@
     if (window.innerWidth > 768) {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.about-photo img');
-            const speed = scrolled * 0.1;
+            const parallaxImg = document.querySelector('.about-photo img');
+            const parallaxOverlay = document.querySelector('.about-photo::after');
+            const speed = scrolled * 0.8;
 
-            if (parallax) {
-                parallax.style.transform = `translateY(${speed}px)`;
+            if (parallaxImg) {
+                parallaxImg.style.transform = `translateY(${speed}px)`;
+            }
+            
+            const aboutPhoto = document.querySelector('.about-photo');
+            if (aboutPhoto) {
+                aboutPhoto.style.setProperty('--parallax-offset', `${speed}px`);
             }
         });
     }
