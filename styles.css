@@ -265,9 +265,10 @@ header p {
     bottom: 0;
     background: 
     	radial-gradient(ellipse at center,
-        	rgba(255,250,240,0.1) 0%,
-            rgba(255,250,240,0.15) 40%,
-            rgba(160,130,150,0.25) 100%
+        	rgba(255,250,240,0.05) 0%,
+            rgba(255,250,240,0.15) 30%,
+            rgba(160,130,150,0.4) 80%,
+            rgba(140,110,130,0.6) 100%
         );
     border-radius: 15px;
     pointer-events: none;
