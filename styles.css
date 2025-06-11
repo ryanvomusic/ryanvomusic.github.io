@@ -998,6 +998,7 @@ header p {
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
+    justify-content: center;
 }
 
 .stat-item {
