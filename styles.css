@@ -538,9 +538,14 @@ header p {
     margin-top: 15px;
 }
 
+.stream-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
 .stream-icon img {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     transition: all 0.3s ease;
 }
 
@@ -586,6 +591,11 @@ header p {
     .release-artwork img {
         max-width: 200px;
         height: 200px;
+    }
+    
+    .stream-icon img {
+        width: 20px;
+        height: 20px;
     }
     
     .play-overlay {
