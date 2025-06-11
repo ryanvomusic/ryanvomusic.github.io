@@ -815,6 +815,7 @@ header p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
+    justify-items: center;
 }
 
 .project-card {
@@ -823,6 +824,8 @@ header p {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 350px;
 }
 
 .project-card:hover {
