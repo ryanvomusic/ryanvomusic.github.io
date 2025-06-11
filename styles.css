@@ -1023,20 +1023,22 @@ header p {
 
 .quick-links {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .quick-links a {
     background: rgba(160, 130, 150, 0.2);
     color: #5a4a3a;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 20px;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-weight: 500;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .quick-links a:hover {
@@ -1102,7 +1104,7 @@ header p {
     display: flex;
     gap: 20px;
     background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
+    padding: 20px 20p 20px 30px;
     border-radius: 10px;
     align-items: center;
 }
@@ -1140,8 +1142,8 @@ header p {
 }
 
 .release-details .stream-icon img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     transition: all 0.3s ease;
 }
 
