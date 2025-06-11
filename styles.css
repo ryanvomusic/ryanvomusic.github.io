@@ -102,7 +102,12 @@ header h1 {
     font-size: 3em;
     color: #5a4a3a;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+    text-shadow: 
+    	1px 1px 0px rgba(255,255,255,0.9),
+    	-1px -1px 0px rgba(255,255,255,0.9),
+    	1px -1px 0px rgba(255,255,255,0.9)
+    	-1px 1px 0px rgba(255,255,255,0.9)
+    	2px 2px 4px rgba(0,0,0,1);
 }
 
 header p {
@@ -111,6 +116,12 @@ header p {
     font-size: 1.2em;
     color: #7a6a5a;
     margin-bottom: 40px;
+    text-shadow: 
+    	1px 1px 0px rgba(255,255,255,0.9),
+    	-1px -1px 0px rgba(255,255,255,0.9),
+    	1px -1px 0px rgba(255,255,255,0.9)
+    	-1px 1px 0px rgba(255,255,255,0.9)
+    	1px 1px 2px rgba(0,0,0,1);
 }
 
 /* Social Footer with Icons */
