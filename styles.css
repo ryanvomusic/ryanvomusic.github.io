@@ -771,7 +771,7 @@ header p {
 }
 
 .skills-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     justify-items: center;
@@ -784,6 +784,7 @@ header p {
     border-left: 4px solid rgba(160, 130, 150, 0.6);
     width: 100%;
     max-width: 350px;
+    flex: 0 1 300px;
 }
 
 .skill-item h3 {
@@ -815,7 +816,7 @@ header p {
 }
 
 .projects-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     justify-items: center;
@@ -829,6 +830,7 @@ header p {
     transition: transform 0.3s ease;
     width: 100%;
     max-width: 350px;
+    fle: 0 1 300px;
 }
 
 .project-card:hover {
