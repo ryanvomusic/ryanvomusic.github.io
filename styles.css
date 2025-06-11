@@ -159,3 +159,58 @@ header p {
     transform: translateY(-2px) scale(1.2);
     opacity: 0.6;
 }
+
+@media (max-width: 768px) {
+	.nav-link {
+    	margin: 0 15px;
+        font-size: 14px;
+    }
+    
+    .social-icon {
+    	margin: 0 12px;
+    }
+    
+    .social-icon img {
+    	width: 28px;
+        height: 28px;
+    }
+    
+    .social-icon img[alt="Bluesky"] {
+    	width: 34px;
+        height: 34px;
+    }
+    
+    header h1 {
+    	font-size: 2.2em;
+    }
+    
+    header p {
+    	font-size: 1em;
+    }
+    
+    main {
+    	margin-top: 70px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+	.nav-link {
+    	margin: 0 8px;
+        font-size: 12px;
+    }
+    
+    .social-icon {
+    	margin: 0 8px;
+    }
+    
+    .social-icon img {
+    	width: 24px;
+        height: 24px;
+    }
+    
+    .social-icon img[alt="Bluesky"] {
+    	width: 28px;
+        height: 28px;
+    }
+}
