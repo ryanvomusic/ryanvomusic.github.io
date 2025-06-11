@@ -70,13 +70,13 @@
     </footer>
     <script>
     function isMobileLandscape () {
-        return window.innerWidth <=768 || (window.innerHeight <= 500 && window.matchMedia("(orientation: landscape)").matches);
+        return window.innerWidth <=768 && window.matchMedia("(orientation: portrait)").matches);
     }
-    if (window.innerWidth > 768) {
+    if (!isMobilePortrait()) {
         let ticking = false;
         
         function updateParallax() {
-            if (isMobileLandscape()) {
+            if (isMobilePortrait()) {
                 return;
             }
             
