@@ -31,216 +31,91 @@
     <main class="analytics-page">
         <div class="analytics-container">
             <section class="dashboard-header">
-                <h1>Performance Tracking</h1>
-                <p class="dashboard-tagline">Monitor growth across all platforms</p>
-                <div class="last-updated">
-                    <span>Last Updated: June 11, 2025</span>
-                </div>
+              <h1>Performance Tracking</h1>
+              <p class="dashboard-tagline">Monitor growth across all platforms</p>
+              <div class="last-updated">
+                <span>Last Updated: </span>
+                <input type="date" id="lastUpdatedDate" value="2025-06-11" onchange="updateLastUpdated()">
+              </div>
             </section>
-            
-            <section class="quick-stats">
-                <h2>Current Totals</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <h3>Total Streams</h3>
-                            <span class="trend positive">+12</span>
-                        </div>
-                        <div class="stat-number">359</div>
-                        <div class="stat-breakdown">
-                            <small>Spotify: 240 | Apple: 119</small>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <h3>Social Followers</h3>
-                            <span class="trend positive">+23</span>
-                        </div>
-                        <div class="stat-number">906</div>
-                        <div class="stat-breakdown">
-                            <small>IG: 574 | Tiktok: 311 | Twitter: 25 | Bluesky: 21 | YouTube: 82</small>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <h3>Monthly Listeners</h3>
-                            <span class="trend neutral">+0</span>
-                        </div>
-                        <div class="stat-number">14</div>
-                        <div class="stat-breakdown">
-                            <small>Spotify only</small>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <h3>Playlist Adds</h3>
-                            <span class="trend positive">+2</span>
-                        </div>
-                        <div class="stat-number">11</div>
-                        <div class="stat-breakdown">
-                            <small>You: 9 | Haunt You: 2</small>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="detailed-tracking">
-                <h2>Platform Breakdown</h2>
-                <div class="tracking-section">
-                    <h3>Music Streaming</h3>
-                    <div class="platform-grid">
-                        <div class="platform-card">
-                            <h4>Spotify</h4>
-                            <div class="platform-stats">
-                                <div class="platform-metric">
-                                    <span class="metric-label">Total Streams:</span>
-                                    <span class="metric-value">240</span>
-                                </div>
-                                <div class="platform-metric">
-                                    <span class="metric-label">Monthly Listeners:</span>
-                                    <span class="metric-value">14</span>
-                                </div>
-                                <div class="platform-metric">
-                                    <span class="metric-label">Saves:</span>
-                                    <span class="metric-value">34</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="platform-card">
-                            <h4>Apple Music</h4>
-                            <div class="platform-stats">
-                                <div class="platform-metric">
-                                    <span class="metric-label">Total Streams:</span>
-                                    <span class="metric-value">119</span>
-                                </div>
-                                <div class="platform-metric">
-                                    <span class="metric-label">Shazams:</span>
-                                    <span class="metric-value">-</span>
-                                </div>
-                                <div class="platform-metric">
-                                    <span class="metric-label">Library Adds:</span>
-                                    <span class="metric-value">8</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tracking-section">
-                    <h3>Social Media</h3>
-                    <div class="platform-grid">
-                        <div class="platform-card">
-                            <h4>Instagram</h4>
-                            <div class="platform-stats">
-                              <div class="platform-metric">
-                                  <span class="metric-label">Followers:</span>
-                                  <span class="metric-value">574</span>
-                              </div>
-                              <div class="platform-metric">
-                                  <span class="metric-label">Avg. Engagement:</span>
-                                  <span class="metric-value">~8%</span>
-                              </div>
-                              <div class="platform-metric">
-                                  <span class="metric-label">Best Post:</span>
-                                  <span class="metric-value">45 likes</span>
-                              </div>
-                            </div>
-                        </div>
-                        
-                        <div class="platform-card">
-                            <h4>TikTok</h4>
-                            <div class="platform-stats">
-                              <div class="platform-metric">
-                                  <span class="metric-label">Followers:</span>
-                                  <span class="metric-value">311</span>
-                              </div>
-                              <div class="platform-metric">
-                                  <span class="metric-label">Total Views:</span>
-                                  <span class="metric-value">1.2K</span>
-                              </div>
-                              <div class="platform-metric">
-                                  <span class="metric-label">Best Video:</span>
-                                  <span class="metric-value">156 views</span>
-                              </div>
-                            </div>
-                        </div>
-                        
-                        <div class="platform-card">
-                            <h4>Other Platforms</h4>
-                            <div class="platform-stats">
-                              <div class="platform-metric">
-                                  <span class="metric-label">Twitter:</span>
-                                  <span class="metric-value">10 followers</span>
-                              </div>
-                              <div class="platform-metric">
-                                  <span class="metric-label">Bluesky:</span>
-                                  <span class="metric-value">21 followers</span>
-                              </div>
-                              <div class="platform-metric">
-                                  <span class="metric-label">YouTube:</span>
-                                  <span class="metric-value">82 subscribers</span>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="goals-section">
-                <h2>Goals & Milestones</h2>
-                <div class="goals-grid">
-                    <div class="goal-card">
-                        <h4>Next Stream Milestone</h4>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 72%"></div>
-                        </div>
-                        <p>359 / 500 streams</p>
-                    </div>
-                    
-                    <div class="goal-card">
-                        <h4>Social Followers</h4>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 91%"></div>
-                        </div>
-                        <p>906 / 1,000 followers</p>
-                    </div>
-                    
-                    <div class="goal-card">
-                        <h4>Monthly Listeners</h4>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 28%"></div>
-                        </div>
-                        <p>14 / 50 listeners</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="notes-section">
-                <h2>Growth Notes</h2>
-                <div class="notes-content">
-                    <div class="note-item">
-                        <div class="note-date">June 11, 2025</div>
-                        <div class="note-text">
-                            <p><strong>Weekly Update:</strong> Instagram growth steady with photoshoot content performing well. TikTok engagement up 15% this week.</p>
-                        </div>
-                    </div>
-                    <div class="note-item">
-                        <div class="note-date">June 4, 2025</div>
-                        <div class="note-text">
-                            <p><strong>Content Strategy:</strong> Friday week=in-life posts consistently get best engagement. Continue this pattern.</p>
-                        </div>
-                    </div>
-                    <div class="note-item">
-                        <div class="note-date">May 30, 2025</div>
-                        <div class="note-text">
-                            <p><strong>Streaming Update:</strong> "You" reached 200 streams milestone. Consider promoting this track more heavily.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+          <section class="quick-stats">
+              <h2>Current Totals</h2>
+              <div class="stats-grid">
+                  <div class="stat-card">
+                      <div class="stat-header">
+                          <h3>Total Streams</h3>
+                          <input type="number" class="trend-input" id="streamTrend" value="12" onchange="updateTrend('streamTrend')">
+                      </div>
+                      <input type="number" class="stat-input" id="totalStreams" value="359" onchange="updateStats()">
+                      <div class="stat-breakdown">
+                          <small>Spotify: <input type="number" class="small-input" id="spotifyStreams" value="240" onchange="updateBreakdown()"> | Apple: <input type="number" class="small-input" id="appleStreams" value="119" onchange="updateBreakdown()"></small>
+                      </div>
+                  </div>
+                  
+                  <div class="stat-card">
+                      <div class="stat-header">
+                          <h3>Social Followers</h3>
+                          <input type="number" class="trend-input" id="followerTrend" value="23" onchange="updateTrend('followerTrend')">
+                      </div>
+                      <input type="number" class="stat-input" id="totalFollowers" value="906" onchange="updateStats()">
+                      <div class="stat-breakdown">
+                          <small>IG: <input type="number" class="small-input" id="igFollowers" value="574" onchange="updateSocialBreakdown()"> | TT: <input type="number" class="small-input" id="ttFollowers" value="311" onchange="updateSocialBreakdown()"> | Other: <input type="number" class="small-input" id="otherFollowers" value="21" onchange="updateSocialBreakdown()"></small>
+                      </div>
+                  </div>
+                  
+                  <div class="stat-card">
+                      <div class="stat-header">
+                          <h3>Monthly Listeners</h3>
+                          <input type="number" class="trend-input" id="listenerTrend" value="0" onchange="updateTrend('listenerTrend')">
+                      </div>
+                      <input type="number" class="stat-input" id="monthlyListeners" value="14" onchange="updateStats()">
+                      <div class="stat-breakdown">
+                          <small>Spotify only</small>
+                      </div>
+                  </div>
+                  
+                  <div class="stat-card">
+                      <div class="stat-header">
+                          <h3>Playlist Adds</h3>
+                          <input type="number" class="trend-input" id="playlistTrend" value="2" onchange="updateTrend('playlistTrend')">
+                      </div>
+                      <input type="number" class="stat-input" id="totalPlaylists" value="11" onchange="updateStats()">
+                      <div class="stat-breakdown">
+                          <small>You: <input type="number" class="small-input" id="youPlaylists" value="9" onchange="updatePlaylistBreakdown()"> | Haunt You: <input type="number" class="small-input" id="hauntPlaylists" value="2" onchange="updatePlaylistBreakdown()"></small>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          
+          <section class="goals-section">
+              <h2>Goals & Milestones</h2>
+              <div class="goals-grid">
+                  <div class="goal-card">
+                      <h4>Next Stream Milestone</h4>
+                      <div class="progress-bar">
+                          <div class="progress-fill" id="streamProgress"></div>
+                      </div>
+                      <p><span id="currentStreams">359</span> / <input type="number" class="goal-input" id="streamGoal" value="500" onchange="updateProgress()"> streams</p>
+                  </div>
+                  
+                  <div class="goal-card">
+                      <h4>Social Followers Goal</h4>
+                      <div class="progress-bar">
+                          <div class="progress-fill" id="followerProgress"></div>
+                      </div>
+                      <p><span id="currentFollowers">906</span> / <input type="number" class="goal-input" id="followerGoal" value="1000" onchange="updateProgress()"> followers</p>
+                  </div>
+                  
+                  <div class="goal-card">
+                      <h4>Monthly Listeners Goal</h4>
+                      <div class="progress-bar">
+                          <div class="progress-fill" id="listenerProgress"></div>
+                      </div>
+                      <p><span id="currentListeners">14</span> / <input type="number" class="goal-input" id="listenerGoal" value="50" onchange="updateProgress()"> listeners</p>
+                  </div>
+              </div>
+          </section>
         </div>
     </main>
     <footer class="social-footer">
@@ -266,5 +141,81 @@
         <img src="images/social-icons/email.png" alt="Email">
       </a>
     </footer>
+<script>
+// Update functions for live editing
+function updateLastUpdated() {
+    // This function can be expanded later if needed
+}
+
+function updateTrend(elementId) {
+    const trendValue = document.getElementById(elementId).value;
+    const trendElement = document.getElementById(elementId);
+    
+    // Update trend styling based on value
+    if (trendValue > 0) {
+        trendElement.className = 'trend-input positive';
+    } else if (trendValue == 0) {
+        trendElement.className = 'trend-input neutral';
+    } else {
+        trendElement.className = 'trend-input negative';
+    }
+}
+
+function updateStats() {
+    // Update the display numbers in goals section
+    document.getElementById('currentStreams').textContent = document.getElementById('totalStreams').value;
+    document.getElementById('currentFollowers').textContent = document.getElementById('totalFollowers').value;
+    document.getElementById('currentListeners').textContent = document.getElementById('monthlyListeners').value;
+    
+    updateProgress();
+}
+
+function updateBreakdown() {
+    const spotify = parseInt(document.getElementById('spotifyStreams').value) || 0;
+    const apple = parseInt(document.getElementById('appleStreams').value) || 0;
+    document.getElementById('totalStreams').value = spotify + apple;
+    updateStats();
+}
+
+function updateSocialBreakdown() {
+    const ig = parseInt(document.getElementById('igFollowers').value) || 0;
+    const tt = parseInt(document.getElementById('ttFollowers').value) || 0;
+    const other = parseInt(document.getElementById('otherFollowers').value) || 0;
+    document.getElementById('totalFollowers').value = ig + tt + other;
+    updateStats();
+}
+
+function updatePlaylistBreakdown() {
+    const you = parseInt(document.getElementById('youPlaylists').value) || 0;
+    const haunt = parseInt(document.getElementById('hauntPlaylists').value) || 0;
+    document.getElementById('totalPlaylists').value = you + haunt;
+    updateStats();
+}
+
+function updateProgress() {
+    // Stream progress
+    const currentStreams = parseInt(document.getElementById('totalStreams').value);
+    const streamGoal = parseInt(document.getElementById('streamGoal').value);
+    const streamPercent = Math.min((currentStreams / streamGoal) * 100, 100);
+    document.getElementById('streamProgress').style.width = streamPercent + '%';
+    
+    // Follower progress
+    const currentFollowers = parseInt(document.getElementById('totalFollowers').value);
+    const followerGoal = parseInt(document.getElementById('followerGoal').value);
+    const followerPercent = Math.min((currentFollowers / followerGoal) * 100, 100);
+    document.getElementById('followerProgress').style.width = followerPercent + '%';
+    
+    // Listener progress
+    const currentListeners = parseInt(document.getElementById('monthlyListeners').value);
+    const listenerGoal = parseInt(document.getElementById('listenerGoal').value);
+    const listenerPercent = Math.min((currentListeners / listenerGoal) * 100, 100);
+    document.getElementById('listenerProgress').style.width = listenerPercent + '%';
+}
+
+// Initialize progress bars on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateProgress();
+});
+</script>
   </body>
 </html>
