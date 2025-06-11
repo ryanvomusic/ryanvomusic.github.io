@@ -1253,13 +1253,8 @@ header p {
 }
 
 /* Video Section */
-.video-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-video.download-item {
+video-download-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1269,14 +1264,14 @@ video.download-item {
     gap: 20px;
 }
 
-.video-info h4 {
+.download-info h3 {
     font-family: 'Comfortaa', cursive;
     color: #5a4a3a;
     margin-bottom: 8px;
     font-size: 1.1em
 }
 
-.video-info p {
+.download-info p {
     font-family: 'Poppins', sans-serif;
     color: #6a5a4a;
     margin: 0;
