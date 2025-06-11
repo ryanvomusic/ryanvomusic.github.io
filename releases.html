@@ -32,14 +32,9 @@
         <h1>New Releases</h1>
         <p class="releases-intro">Latest music and upcoming projects</p>
         <div class="releases-grid">
-            <div class="release-card" data-track="haunt-you">
+            <div class="release-card">
                 <div class="release-artwork">
                     <img src="images/album-covers/haunt-you-artwork.jpeg" alt="Haunt You - Single Artwork">
-                    <div class="play-overlay">
-                        <div class="play-button">
-                          <img src="images/play-button.png" alt="Play" class="play-btn-img">
-                        </div>
-                    </div>
                 </div>
                 <div class="release-info">
                     <h3>Haunt You</h3>
@@ -55,14 +50,9 @@
                     </div>
                 </div>
             </div>
-            <div class="release-card" data-track="you">
+            <div class="release-card">
                 <div class="release-artwork">
                     <img src="images/album-covers/you-artwork.jpeg" alt="You - Single Artwork">
-                    <div class="play-overlay">
-                        <div class="play-button">
-                          <img src="images/play-button.png" alt="Play" class="play-btn-img">
-                        </div>
-                    </div>
                 </div>
                 <div class="release-info">
                     <h3>You</h3>
@@ -94,7 +84,6 @@
         </div>
       </div>
     </main>
-    
     <footer class="social-footer">
       <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
         <img src="images/social-icons/spotify.jpeg" alt="Spotify">
@@ -115,65 +104,5 @@
         <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
       </a>
     </footer>
-    
-<script>
-let audio = {};
-let currentlyPlaying = null;
-let audioLoaded = false;
-
-document.addEventListener('DOMContentLoaded', function() {
-    const playButtons = document.querySelectorAll('.play-overlay');
-    
-    playButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const card = this.closest('.release-card');
-            const songKey = card.dataset.track;
-            const playImg = this.querySelector('.play-btn-img');
-            
-            // Create audio element on first click (better iOS compatibility)
-            if (!audio[songKey]) {
-                audio[songKey] = new Audio('audio/' + songKey + '-preview.wav');
-                audio[songKey].load(); // Explicitly load
-            }
-            
-            // Stop any currently playing audio
-            if (currentlyPlaying && currentlyPlaying !== songKey) {
-                audio[currentlyPlaying].pause();
-                audio[currentlyPlaying].currentTime = 0;
-                document.querySelectorAll('.play-btn-img').forEach(img => {
-                    img.src = 'images/play-button.png';
-                });
-            }
-            
-            // Toggle current audio
-            if (audio[songKey].paused || audio[songKey].currentTime === 0) {
-                // Force user interaction context
-                const playPromise = audio[songKey].play();
-                
-                if (playPromise !== undefined) {
-                    playPromise.then(() => {
-                        alert('Audio playing!');
-                        playImg.src = 'images/pause-button.png';
-                        currentlyPlaying = songKey;
-                    }).catch(error => {
-                        alert('Still error: ' + error.name);
-                    });
-                }
-            } else {
-                audio[songKey].pause();
-                audio[songKey].currentTime = 0;
-                playImg.src = 'images/play-button.png';
-                currentlyPlaying = null;
-            }
-            
-            // Reset to play button when audio ends
-            audio[songKey].addEventListener('ended', () => {
-                playImg.src = 'images/play-button.png';
-                currentlyPlaying = null;
-            });
-        });
-    });
-});
-</script>
   </body>
 </html
