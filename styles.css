@@ -408,3 +408,194 @@ header p {
         text-align: center;
     }
 }
+
+/* Releases Page Styles */
+.releases-page {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 180px);
+}
+
+.releases-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.releases-container h1 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    text-shadow: 
+        0 0 8px rgba(255, 250, 240, 0.9),
+        0 0 15px rgba(255, 250, 240, 0.7),
+        1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.releases-intro {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #7a6a5a;
+    margin-bottom: 50px;
+    font-style: italic;
+    text-shadow: 
+        0 0 6px rgba(255, 250, 240, 0.8),
+        1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.releases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.release-card {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.release-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.release-artwork {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.release-artwork img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.release-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #5a4a3a;
+}
+
+.release-info h3 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #5a4a3a;
+    margin-bottom: 8px;
+}
+
+.release-type, .release-date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: #7a6a5a;
+    margin-bottom: 5px;
+}
+
+.streaming-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stream-icon img {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+}
+
+.stream-icon:hover img {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 0.8;
+}
+
+/* Coming Soon Card */
+.coming-soon {
+    opacity: 0.7;
+}
+
+.coming-soon-placeholder {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    background: rgba(160, 130, 150, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px dashed rgba(160, 130, 150, 0.5);
+}
+
+.coming-soon-placeholder span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #7a6a5a;
+    font-weight: 500;
+}
+
+/* Mobile responsiveness for releases */
+@media (max-width: 768px) {
+    .releases-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .releases-container h1 {
+        font-size: 2em;
+    }
+    
+    .release-artwork img {
+        max-width: 200px;
+        height: 200px;
+    }
+    
+    .play-overlay {
+        max-width: 200px;
+        height: 200px;
+    }
+    
+    .coming-soon-placeholder {
+        max-width: 200px;
+        height: 200px;
+    }
+}
