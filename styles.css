@@ -26,9 +26,9 @@
     color: #7a6a5a;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-eight: 400;
+    font-wight: 400;
     font-size: 16px;
-    trasition: all 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
 
 .nav-link:hover {
