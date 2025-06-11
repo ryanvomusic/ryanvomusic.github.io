@@ -275,7 +275,6 @@ header p {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     filter: sepia(10%) saturate(90%) brightness(105%) contrast(95%);
     position: relative;
-    transition: transform 0.3s ease;
 }
 
 .about-photo {
@@ -305,8 +304,6 @@ header p {
         );
     border-radius: 15px;
     pointer-events: none;
-    transform: translateY(var(--parallax-offset, 0px));
-    transition: transform 0.1s ease-out;
 }
 
 .about-content {
