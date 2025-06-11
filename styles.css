@@ -1163,15 +1163,14 @@ header p {
     margin-top: 10px;
 }
 
-.release-details .stream-icon img {
-    width: 20px;
-    height: 20px;
+.epk-page .streaming-links img,
+.music-releases img[alt="Spotify"],
+.music-releases img[alt="Apple Music"] {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
     transition: all 0.3s ease;
-}
-
-.release-details .stream-icon:hover img {
-    transform: translateY(-2px) scale(1.1);
-    opacity: 0.8;
 }
 
 /* Photos Section */
