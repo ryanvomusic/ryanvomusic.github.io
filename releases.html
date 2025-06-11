@@ -116,32 +116,47 @@
       </a>
     </footer>
     <script>
+// Audio elements for each song
+const audio = {
+    'haunt-you': new Audio('audio/haunt-you-preview.mp3'), // fixed the typo
+    'you': new Audio('audio/you-preview.mp3')
+};
+
+let currentlyPlaying = null;
+
 document.addEventListener('DOMContentLoaded', function() {
     const playButtons = document.querySelectorAll('.play-overlay');
-    let currentlyPlaying = null;
     
     playButtons.forEach(button => {
         button.addEventListener('click', function() {
             const card = this.closest('.release-card');
-            const playerContainer = card.querySelector('.spotify-player');
+            const songKey = card.dataset.track;
             const playImg = this.querySelector('.play-btn-img');
             
-            // Hide any currently playing players
-            if (currentlyPlaying && currentlyPlaying !== playerContainer) {
-                currentlyPlaying.style.display = 'none';
-                // Keep all buttons as play buttons
+            // Stop any currently playing audio
+            if (currentlyPlaying && currentlyPlaying !== songKey) {
+                audio[currentlyPlaying].pause();
+                audio[currentlyPlaying].currentTime = 0;
+                // Reset other play buttons
+                document.querySelectorAll('.play-btn-img').forEach(img => {
+                    img.src = 'images/play-button.png';
+                });
             }
             
-            // Toggle current player
-            if (playerContainer.style.display === 'none' || !playerContainer.style.display) {
-                playerContainer.style.display = 'block';
-                // Keep button as play button - don't change image
-                currentlyPlaying = playerContainer;
+            // Toggle current audio
+            if (audio[songKey].paused) {
+                audio[songKey].play();
+                currentlyPlaying = songKey;
             } else {
-                playerContainer.style.display = 'none';
-                // Keep button as play button
+                audio[songKey].pause();
+                audio[songKey].currentTime = 0;
                 currentlyPlaying = null;
             }
+            
+            // Reset to play button when audio ends
+            audio[songKey].addEventListener('ended', () => {
+                currentlyPlaying = null;
+            });
         });
     });
 });
