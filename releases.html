@@ -118,7 +118,7 @@
     <script>
 // Audio elements for each song
 const audio = {
-    'haunt-you': new Audio('audio/haunt-you-preview.mp3'), // fixed the typo
+    'haunt-you': new Audio('audio/haunt-you-preview.mp3'),
     'you': new Audio('audio/you-preview.mp3')
 };
 
@@ -146,15 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle current audio
             if (audio[songKey].paused) {
                 audio[songKey].play();
+                playImg.src = 'images/pause-button.png'; // change to pause
                 currentlyPlaying = songKey;
             } else {
                 audio[songKey].pause();
                 audio[songKey].currentTime = 0;
+                playImg.src = 'images/play-button.png'; // change back to play
                 currentlyPlaying = null;
             }
             
             // Reset to play button when audio ends
             audio[songKey].addEventListener('ended', () => {
+                playImg.src = 'images/play-button.png';
                 currentlyPlaying = null;
             });
         });
