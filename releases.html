@@ -117,13 +117,9 @@
     </footer>
     
 <script>
-// Try WAV format instead
-const audio = {
-    'haunt-you': new Audio('audio/haunt-you-preview.wav'),
-    'you': new Audio('audio/you-preview.wav')
-};
-
+let audio = {};
 let currentlyPlaying = null;
+let audioLoaded = false;
 
 document.addEventListener('DOMContentLoaded', function() {
     const playButtons = document.querySelectorAll('.play-overlay');
@@ -134,9 +130,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const songKey = card.dataset.track;
             const playImg = this.querySelector('.play-btn-img');
             
+            // Create audio element on first click (better iOS compatibility)
             if (!audio[songKey]) {
-                alert('No audio found for: ' + songKey);
-                return;
+                audio[songKey] = new Audio('audio/' + songKey + '-preview.wav');
+                audio[songKey].load(); // Explicitly load
             }
             
             // Stop any currently playing audio
@@ -149,14 +146,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Toggle current audio
-            if (audio[songKey].paused) {
-                audio[songKey].play().then(() => {
-                    alert('WAV Audio started successfully');
-                }).catch(error => {
-                    alert('WAV Audio play error: ' + error);
-                });
-                playImg.src = 'images/pause-button.png';
-                currentlyPlaying = songKey;
+            if (audio[songKey].paused || audio[songKey].currentTime === 0) {
+                // Force user interaction context
+                const playPromise = audio[songKey].play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        alert('Audio playing!');
+                        playImg.src = 'images/pause-button.png';
+                        currentlyPlaying = songKey;
+                    }).catch(error => {
+                        alert('Still error: ' + error.name);
+                    });
+                }
             } else {
                 audio[songKey].pause();
                 audio[songKey].currentTime = 0;
