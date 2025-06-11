@@ -671,3 +671,253 @@ header p {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+
+/* Portfolio Page Styles */
+
+.private-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(90, 74, 58, 0.95);
+    padding: 15px 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content h2 {
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.back-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #fff;
+}
+
+.portfolio-page {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 180px);
+}
+
+.portfolio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-intro h1 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    text-shadow: 
+        0 0 8px rgba(255, 250, 240, 0.9),
+        0 0 15px rgba(255, 250, 240, 0.7),
+        1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.portfolio-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #7a6a5a;
+    font-style: italic;
+    text-shadow: 
+        0 0 6px rgba(255, 250, 240, 0.8),
+        1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.skills-section, .projects-section, .goals-section {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.skills-section h2, .projects-section h2, .goals-section h2 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #5a4a3a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+}
+
+.skill-item h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.skill-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.8);
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-item li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: rgba(160, 130, 150, 0.8);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.project-card.placeholder .project-image {
+    height: 150px;
+    background: rgba(160, 130, 150, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(160, 130, 150, 0.4);
+}
+
+.project-image span {
+    font-family: 'Poppins', sans-serif;
+    color: #7a6a5a;
+    font-weight: 500;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.project-info p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.project-status {
+    display: inline-block;
+    background: rgba(160, 130, 150, 0.2);
+    color: #6a5a4a;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.goals-content p {
+    font-family: 'Poppins', sans-serif;
+    color: #5a4a3a;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.goals-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.goals-content li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.8);
+    position: relative;
+    padding-left: 25px;
+}
+
+.goals-content li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: rgba(160, 130, 150, 0.8);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-content h2 {
+        font-size: 1.1em;
+    }
+    
+    .portfolio-intro h1 {
+        font-size: 2em;
+    }
+    
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
