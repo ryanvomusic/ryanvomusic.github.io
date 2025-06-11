@@ -117,29 +117,21 @@
     </footer>
     
 <script>
-// Audio elements for each song
+// Try WAV format instead
 const audio = {
-    'haunt-you': new Audio('audio/haunt-you-preview.mp3'),
-    'you': new Audio('audio/you-preview.mp3')
+    'haunt-you': new Audio('audio/haunt-you-preview.wav'),
+    'you': new Audio('audio/you-preview.wav')
 };
-
-//Test if files load
-audio['haunt-you'].addEventListener('loadstart', () => alert('Haunt You file found'));
-audio['haunt-you'].addEventListener('error', (e) => alert('Haunt You file error: ' + e.message));
 
 let currentlyPlaying = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    alert('Script loaded');
     const playButtons = document.querySelectorAll('.play-overlay');
-    alert('Found play buttons: ' + playButtons.length);
     
     playButtons.forEach(button => {
         button.addEventListener('click', function() {
-            alert('Play button clicked');
             const card = this.closest('.release-card');
             const songKey = card.dataset.track;
-            alert('Song key: ' + songKey);
             const playImg = this.querySelector('.play-btn-img');
             
             if (!audio[songKey]) {
@@ -158,16 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Toggle current audio
             if (audio[songKey].paused) {
-                alert('Attempting to play audio for: ' + songKey);
                 audio[songKey].play().then(() => {
-                    alert('Audio started successfully');
+                    alert('WAV Audio started successfully');
                 }).catch(error => {
-                    alert('Audio play error: ' + error);
+                    alert('WAV Audio play error: ' + error);
                 });
                 playImg.src = 'images/pause-button.png';
                 currentlyPlaying = songKey;
             } else {
-                alert('Pausing audio for: ' + songKey);
                 audio[songKey].pause();
                 audio[songKey].currentTime = 0;
                 playImg.src = 'images/play-button.png';
