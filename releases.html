@@ -123,6 +123,10 @@ const audio = {
     'you': new Audio('audio/you-preview.mp3')
 };
 
+//Test if files load
+audio['haunt-you'].addEventListener('loadstart', () => alert('Haunt You file found'));
+audio['haunt-you'].addEventListener('error', (e) => alert('Haunt You file error: ' + e.message));
+
 let currentlyPlaying = null;
 
 document.addEventListener('DOMContentLoaded', function() {
