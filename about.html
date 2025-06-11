@@ -69,13 +69,20 @@
       </a>
     </footer>
     <script>
-    if (!isMobile) {
+    function isMobileLandscape () {
+        return window.innerWidth <=768 || (window.innerHeight <= 500 && window.matchMedia("(orientation: landscape)").matches);
+    }
+    if (window.innerWidth > 768) {
         let ticking = false;
         
         function updateParallax() {
+            if (isMobileLandscape()) {
+                return;
+            }
+            
             const scrolled = window.pageYOffset;
             const parallaxContainer = document.querySelector('.about-photo');
-            const speed = scrolled * 1.5;
+            const speed = scrolled * 1.1;
 
             if (parallaxContainer) {
                 parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
