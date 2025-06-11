@@ -128,18 +128,18 @@ header p {
 
 .social-icon {
     margin: 0 20px;
-    color: #7a6a5a;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
 }
 
-.social-icon:hover {
-    color: #5a4a3a;
-    transform: translateY(-2px);
+.social-icon img {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
 }
 
-.social-icon svg {
-    width: 28px;
-    height: 28px;
+.social-icon:hover img {
+    transform: translateY(-2px);
+    opacity: 0.8;
 }
