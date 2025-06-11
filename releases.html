@@ -135,35 +135,39 @@
       </a>
     </footer>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const playButtons = document.querySelectorAll('.play-overlay');
-        let currentlyPlaying = null;
-        
-        playButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const card = this.closest('.release-card');
-                const player = card.querySelector('.spotify-player');
-                const playImg = this.querySelector('.play-btn-img');
-                
-                if (currentlyPlaying && currentlyPlaying !== player) {
-                    currentlyPlaying.style.display = 'none';
-                    document.querySelectorAll('.play-btn-img').forEach(img => {
-                        img.src = 'images/play-button.png';
-                    });
-                }
-                
-                if (player.style.display === 'none' || !player.style.display) {
-                    player.style.display = 'block';
-                    playImg.src = 'images/pause-button.png';
-                    currentlyPlaying = player;
-                } else {
-                    player.style.display = 'none';
-                    playImg.src = 'images/play-button.png';
-                    currentlyPlaying = null;
-                }
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    const playButtons = document.querySelectorAll('.play-overlay');
+    let currentlyPlaying = null;
+    
+    playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.release-card');
+            const player = card.querySelector('.spotify-player iframe');
+            const playImg = this.querySelector('.play-btn-img');
+            
+            // Stop any currently playing players
+            if (currentlyPlaying && currentlyPlaying !== player) {
+                // Reset other play buttons
+                document.querySelectorAll('.play-btn-img').forEach(img => {
+                    img.src = 'images/play-button.png';
+                });
+            }
+            
+            // Toggle current player
+            if (currentlyPlaying !== player) {
+                // Start playing (iframe will auto-play)
+                player.src = player.src; // refresh iframe to start playing
+                playImg.src = 'images/pause-button.png';
+                currentlyPlaying = player;
+            } else {
+                // Stop playing
+                player.src = player.src.replace('?', '?autoplay=0&'); // stop autoplay
+                playImg.src = 'images/play-button.png';
+                currentlyPlaying = null;
+            }
         });
     });
+});
     </script>
   </body>
 </html
