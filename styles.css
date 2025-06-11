@@ -1264,6 +1264,17 @@ video-download-section {
     gap: 20px;
 }
 
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.download-info {
+    flex: 1;
+}
+
 .download-info h3 {
     font-family: 'Comfortaa', cursive;
     color: #5a4a3a;
@@ -1281,14 +1292,14 @@ video-download-section {
 .download-btn {
     background: #5a4a3a;
     color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 12px 24px;
+    border-radius: 8px;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 0.9em;
     transition: all 0.3s ease;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .download-btn:hover {
@@ -1333,4 +1344,9 @@ video-download-section {
     .photo-gallery {
         grid-template-columns: 1fr;
     }
+    
+    .download-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
 }
