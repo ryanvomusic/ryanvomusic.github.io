@@ -131,6 +131,7 @@ header h1 {
     font-size: 6em;
     color: #5a4a3a;
     margin-bottom: 20px;
+    letter-spacing: 1px;
     text-shadow: 
         0 0 5px rgba(255,250,240,1),
         0 0 10px rgba(255,250,240,1),
