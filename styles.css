@@ -112,13 +112,12 @@ header h1 {
     color: #5a4a3a;
     margin-bottom: 20px;
     text-shadow: 
-        0 0 5px rgba(255,255,255,1),
-        0 0 10px rgba(255,255,255,1),
-        0 0 15px rgba(255,255,255,0.8),
-        0 0 20px rgba(255,255,255,0.6),
-        0 0 35px rgba(255,255,255,0.4),
+        0 0 5px rgba(255,250,240,1),
+        0 0 10px rgba(255,250,240,1),
+        0 0 15px rgba(255,250,240,0.8),
+        0 0 20px rgba(255,250,240,0.6),
+        0 0 35px rgba(255,250,240,0.4),
         3px 3px 6px rgba(0,0,0,0.3);
-    filter: drop-shadow(0 0 8px rgba(255,255,240,0.7));
 }
 
 header p {
