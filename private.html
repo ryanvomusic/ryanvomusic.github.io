@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ryan Vo - Private Access</title>
+    
+    <link rel="icon" type="image/jpeg" href="images/background-photo.jpeg">
+    <link rel="apple-touch-icon" href="images/background-photo.jpeg">
+    
+    <meta property="og:title" content="Ryan Vo - Home">
+    <meta property="og:description" content="Music and all the heart that comes with it.">
+    <meta property="og:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+    <meta property="og:url" content="https://ryanvomusic.github.io">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ryan Vo - Home">
+    <meta name="twitter:description" content="Music and all the heart that comes with it.">
+    <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+  </head>
+  <body class="private-access">
+    <div class="password-container">
+        <h1>Private Access</h1>
+        <p>Choose your access level and enter the corresponding password</p>
+        
+        <div class="access-options">
+            <div class="access-section">
+                <h3>Portfolio Access</h3>
+                <p>Data analytics projects and technical work</p>
+                <form class="password-form" data-redirect="portfolio.html">
+                    <input type="password" placeholder="Portfolio Password" required>
+                    <button type="submit">Access Portfolio</button>
+                </form>
+            </div>
+            
+            <div class="access-section">
+                <h3>EPK Access</h3>
+                <p>Electronic press kit and promotional materials</p>
+                <form class="password-form" data-redirect="epk.html">
+                    <input type="password" placeholder="EPK Password" required>
+                    <button type="submit">Access EPK</button>
+                </form>
+            </div>
+            
+            <div class="access-section">
+                <h3>Analytics Dashboard</h3>
+                <p>Personal analytics and performance tracking</p>
+                <form class="password-form" data-redirect="analytics.html">
+                    <input type="password" placeholder="Analytics Password" required>
+                    <button type="submit">Access Dashboard</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="errorMessage" style="display: none;">
+            <p>Incorrect password. Please try again.</p>
+        </div>
+        
+        <div class="back-to-site">
+            <a href="index.html">← Back to Main Site</a>
+        </div>
+    </div>
+    <footer class="social-footer">
+    	<a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
+      	<img src="images/social-icons/spotify.jpeg" alt="Spotify">
+      </a>
+      <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram">
+      	<img src="images/social-icons/instagram.jpeg" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok">
+      	<img src="images/social-icons/tiktok.jpeg" alt="TikTok">
+      </a>
+      <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music">
+      	<img src="images/social-icons/apple.jpeg" alt="Apple Music">
+      </a>
+      <a href="https://x.com/ryanvomusic" class="social-icon" target="_blank" title="Twitter">
+      	<img src="images/social-icons/twitter.jpeg" alt="Twitter">
+      </a>
+      <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky">
+      	<img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
+      </a>
+      <a href="mailto:ryanvomusic@gmail.com" class="social-icon" title="Email">
+        <img src="images/social-icons/email.png" alt="Email">
+      </a>
+    </footer>
+    <script>
+
+const passwords = {
+    'portfolio.html': atob('VkRhdGFQb3J0'),
+    'epk.html': atob('UlZNUHJlc3NLaXQ='),
+    'analytics.html': atob('VmlldG5hbWV4aWNhbi4x')
+};
+
+document.querySelectorAll('.password-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const password = this.querySelector('input[type="password"]').value;
+        const redirect = this.dataset.redirect;
+        const correctPassword = passwords[redirect];
+        
+        if (password === correctPassword) {
+            window.location.href = redirect;
+        } else {
+            document.getElementById('errorMessage').style.display = 'block';
+            this.querySelector('input[type="password"]').value = '';
+            setTimeout(() => {
+                document.getElementById('errorMessage').style.display = 'none';
+            }, 3000);
+        }
+    });
+});
+</script>
+  </body>
+</html>
