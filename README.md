@@ -2,9 +2,7 @@
 
 # Artist Hub & Portfolio
 
-**Private repository for Ryan Vo's digital presence and professional materials**
-
-**To be eventually made public**
+**Repository for Ryan Vo's digital presence and professional materials**
 
 ## Overview
 Central hub website connecting all social media presence and music promotion with private portfolio sections and EPK materials.
