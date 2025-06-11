@@ -480,6 +480,12 @@ header p {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.release-card:hover .release-artwork img {
+    opacity: 0.6;
 }
 
 .play-overlay {
