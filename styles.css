@@ -145,6 +145,6 @@ header p {
 }
 
 .social-icon:hover img {
-    transform: translateY(-2px);
-    opacity: 0.8;
+    transform: translateY(-2px) scale(1.2);
+    opacity: 0.6;
 }
