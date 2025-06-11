@@ -1022,6 +1022,15 @@ header p {
     margin-top: 5px;
 }
 
+.stats-date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #7a6a5a;
+    font-style: italic;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
 .quick-links {
     display: flex;
     gap: 15px;
