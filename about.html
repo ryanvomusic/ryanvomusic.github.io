@@ -98,7 +98,7 @@ if (!isMobilePortrait()) {
         console.log('Scroll position:', scrolled, 'Container found:', !!parallaxContainer);
         
         if (parallaxContainer) {
-            const speed = scrolled * 1.2;
+            const speed = scrolled * 0.8;
             parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
             console.log('Applied transform:', `translate3d(0, ${speed}px, 0)`);
         }
