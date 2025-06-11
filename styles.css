@@ -74,9 +74,9 @@ body::after {
     transform: translateY(-2px);
 }
 
-.nav-link::before {
+.nav-link:not(.active)::after {
     content: '';
-    positionL absolute;
+    position: absolute;
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
@@ -87,7 +87,7 @@ body::after {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::before {
+.nav-link:not(.active):hover::after {
 	width: 120%;
 }
 
