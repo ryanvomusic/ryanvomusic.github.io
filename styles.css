@@ -159,7 +159,6 @@ header p {
 @media (max-width: 768px) {
 	.nav-link {
     	margin: 0 15px;
-        font-size: 14px;
     }
     
     .social-icon {
@@ -188,7 +187,6 @@ header p {
 @media (max-width: 480px) {
 	.nav-link {
     	margin: 0 8px;
-        font-size: 12px;
     }
     
     .social-icon {
