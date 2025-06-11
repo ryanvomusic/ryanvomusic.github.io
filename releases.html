@@ -126,20 +126,20 @@ const audio = {
 let currentlyPlaying = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Script loaded');
+    alert('Script loaded');
     const playButtons = document.querySelectorAll('.play-overlay');
-    console.log('Found play buttons:', playButtons.length);
+    alert('Found play buttons: ' + playButtons.length);
     
     playButtons.forEach(button => {
         button.addEventListener('click', function() {
-            console.log('Play button clicked');
+            alert('Play button clicked');
             const card = this.closest('.release-card');
             const songKey = card.dataset.track;
-            console.log('Song key:', songKey);
+            alert('Song key: ' + songKey);
             const playImg = this.querySelector('.play-btn-img');
             
             if (!audio[songKey]) {
-                console.log('No audio found for:', songKey);
+                alert('No audio found for: ' + songKey);
                 return;
             }
             
@@ -154,16 +154,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Toggle current audio
             if (audio[songKey].paused) {
-                console.log('Playing audio for:', songKey);
+                alert('Attempting to play audio for: ' + songKey);
                 audio[songKey].play().then(() => {
-                    console.log('Audio started successfully');
+                    alert('Audio started successfully');
                 }).catch(error => {
-                    console.log('Audio play error:', error);
+                    alert('Audio play error: ' + error);
                 });
                 playImg.src = 'images/pause-button.png';
                 currentlyPlaying = songKey;
             } else {
-                console.log('Pausing audio for:', songKey);
+                alert('Pausing audio for: ' + songKey);
                 audio[songKey].pause();
                 audio[songKey].currentTime = 0;
                 playImg.src = 'images/play-button.png';
