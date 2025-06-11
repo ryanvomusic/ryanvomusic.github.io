@@ -35,7 +35,13 @@ body::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: 
+        linear-gradient(to right, 
+            rgba(255, 250, 240, 0.7) 0%,     /* ivory on left */
+            rgba(255, 255, 255, 0.2) 20%,    /* fade to clear */
+            rgba(255, 255, 255, 0.2) 80%,    /* stay clear in middle */
+            rgba(255, 250, 240, 0.7) 100%    /* ivory on right */
+        );
     z-index: -1;
 }
 
