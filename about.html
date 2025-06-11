@@ -56,13 +56,24 @@
     </footer>
     <script>
     if (window.innerWidth > 768) {
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+        
+        function updateParallax() {
             const scrolled = window.pageYOffset;
             const parallaxContainer = document.querySelector('.about-photo');
             const speed = scrolled * 1.1;
 
             if (parallaxContainer) {
                 parallaxContainer.style.transform = `translateY(${speed}px)`;
+            }
+            
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking - true;
             }
         });
     }
