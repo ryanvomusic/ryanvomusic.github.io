@@ -142,11 +142,12 @@ document.addEventListener('DOMContentLoaded', function() {
     playButtons.forEach(button => {
         button.addEventListener('click', function() {
             const card = this.closest('.release-card');
-            const player = card.querySelector('.spotify-player iframe');
+            const playerContainer = card.querySelector('.spotify-player');
             const playImg = this.querySelector('.play-btn-img');
             
-            // Stop any currently playing players
-            if (currentlyPlaying && currentlyPlaying !== player) {
+            // Hide any currently playing players
+            if (currentlyPlaying && currentlyPlaying !== playerContainer) {
+                currentlyPlaying.style.display = 'none';
                 // Reset other play buttons
                 document.querySelectorAll('.play-btn-img').forEach(img => {
                     img.src = 'images/play-button.png';
@@ -154,14 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Toggle current player
-            if (currentlyPlaying !== player) {
-                // Start playing (iframe will auto-play)
-                player.src = player.src; // refresh iframe to start playing
+            if (playerContainer.style.display === 'none' || !playerContainer.style.display) {
+                playerContainer.style.display = 'block';
                 playImg.src = 'images/pause-button.png';
-                currentlyPlaying = player;
+                currentlyPlaying = playerContainer;
             } else {
-                // Stop playing
-                player.src = player.src.replace('?', '?autoplay=0&'); // stop autoplay
+                playerContainer.style.display = 'none';
                 playImg.src = 'images/play-button.png';
                 currentlyPlaying = null;
             }
