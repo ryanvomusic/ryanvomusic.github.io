@@ -69,35 +69,52 @@
       </a>
     </footer>
     <script>
-    function isMobilePortrait () {
-        return window.innerWidth <=768 && window.matchMedia("(orientation: portrait)").matches);
-    }
-    if (!isMobilePortrait()) {
-        let ticking = false;
-        
-        function updateParallax() {
-            if (isMobilePortrait()) {
-                return;
-            }
-            
-            const scrolled = window.pageYOffset;
-            const parallaxContainer = document.querySelector('.about-photo');
-            const speed = scrolled * 1.1;
+console.log('Script starting...');
+console.log('Window width:', window.innerWidth);
+console.log('Window height:', window.innerHeight);
+console.log('Orientation:', window.matchMedia("(orientation: portrait)").matches ? 'portrait' : 'landscape');
 
-            if (parallaxContainer) {
-                parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
-            }
-            
-            ticking = false;
+// Check if it's mobile in portrait orientation specifically
+function isMobilePortrait() {
+    const isPortrait = window.innerWidth <= 768 && window.matchMedia("(orientation: portrait)").matches;
+    console.log('Is mobile portrait?', isPortrait);
+    return isPortrait;
+}
+
+// Apply parallax everywhere EXCEPT mobile portrait
+if (!isMobilePortrait()) {
+    console.log('Parallax should work - setting up scroll listener');
+    let ticking = false;
+    
+    function updateParallax() {
+        // Double-check orientation before applying parallax
+        if (isMobilePortrait()) {
+            console.log('Skipping parallax - mobile portrait detected');
+            return;
         }
         
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        });
+        const scrolled = window.pageYOffset;
+        const parallaxContainer = document.querySelector('.about-photo');
+        console.log('Scroll position:', scrolled, 'Container found:', !!parallaxContainer);
+        
+        if (parallaxContainer) {
+            const speed = scrolled * 1.2;
+            parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
+            console.log('Applied transform:', `translate3d(0, ${speed}px, 0)`);
+        }
+        
+        ticking = false;
     }
-    </script>
+    
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
+} else {
+    console.log('Parallax disabled - mobile portrait');
+}
+</script>
   </body>
 </html
