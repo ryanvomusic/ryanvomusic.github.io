@@ -507,6 +507,7 @@ header p {
     transition: opacity 0.3s ease;
     cursor: pointer;
     z-index: 10;
+    isolation: isolate;
 }
 
 .release-card:hover .play-overlay {
@@ -522,12 +523,15 @@ header p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    z-index: 11;
+    isolation: isolate;
 }
 
 .play-button img {
     width: 30px;
     height: 30px;
     object-fit: contain;
+    filter: none !important;
 }
 
 .release-info h3 {
