@@ -1221,54 +1221,6 @@ header p {
     font-size: 0.8em;
 }
 
-/* Videos Section */
-.video-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.video-item {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.video-placeholder {
-    width: 100%;
-    height: 150px;
-    background: rgba(160, 130, 150, 0.2);
-    border: 2px dashed rgba(160, 130, 150, 0.4);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.video-placeholder span {
-    font-family: 'Poppins', sans-serif;
-    color: #7a6a5a;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.video-placeholder p {
-    font-family: 'Poppins', sans-serif;
-    color: #7a6a5a;
-    font-size: 0.8em;
-    margin: 0;
-}
-
-.video-item > p {
-    font-family: 'Poppins', sans-serif;
-    color: #7a6a5a;
-    font-size: 0.9em;
-    margin: 0;
-}
-
 /* Contact Section */
 .contact-info {
     background: rgba(255, 255, 255, 0.6);
@@ -1298,6 +1250,50 @@ header p {
 
 .contact-item a:hover {
     text-decoration: underline;
+}
+
+.video-download-section {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.download-info h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+}
+
+.download-info p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.download-btn {
+    background: #5a4a3a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.download-btn:hover {
+    background: #4a3a2a;
+    transform: translateY(-2px);
 }
 
 /* Mobile responsiveness for EPK */
@@ -1334,7 +1330,17 @@ header p {
         text-align: center;
     }
     
-    .photo-gallery, .video-gallery {
+    .photo-gallery {
         grid-template-columns: 1fr;
+    }
+    
+    .download-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .video-thumbnails {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
