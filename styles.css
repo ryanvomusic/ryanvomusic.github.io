@@ -12,7 +12,6 @@ body {
     position: relative;
 }
 
-/* Blurred background - Safari compatible */
 body::before {
     content: '';
     position: fixed;
@@ -27,7 +26,6 @@ body::before {
     z-index: -2;
 }
 
-/* Semi-transparent overlay */
 body::after {
     content: '';
     position: fixed;
@@ -47,7 +45,6 @@ body::after {
     z-index: -1;
 }
 
-/* Navigation Bar */
 .navbar {
     position: fixed;
     top: 0;
@@ -94,7 +91,6 @@ body::after {
     border-radius: 1px;
 }
 
-/* Main content with proper spacing */
 main {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -134,7 +130,6 @@ header p {
     	1px 1px 3px rgba(0,0,0,0.2);
 }
 
-/* Social Footer with Icons */
 .social-footer {
     position: fixed;
     bottom: 0;
