@@ -580,3 +580,94 @@ header p {
         height: 200px;
     }
 }
+
+/* Private Access Page Styles */
+
+.private-access {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+.password-container h1 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+}
+
+.access-options {
+    display: grid;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.access-section {
+    background: rgba(255, 250, 240, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+}
+
+.access-section h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 8px;
+}
+
+.access-section p {
+    font-family: 'Poppins', sans-serif;
+    color: #7a6a5a;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.password-form input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.password-form button {
+    padding: 10px 20px;
+    background: #5a4a3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.password-form button:hover {
+    background: #4a3a2a;
+}
+
+#errorMessage {
+    color: #d63384;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+}
+
+.back-to-site {
+    margin-top: 30px;
+}
+
+.back-to-site a {
+    color: #7a6a5a;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
