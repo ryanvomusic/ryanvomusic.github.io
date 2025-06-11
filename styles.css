@@ -203,6 +203,32 @@ header p {
         margin-top: 70px;
         padding: 15px;
     }
+    
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-photo {
+        flex: none;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .about-photo img {
+        width: 250px;
+        height: 300px;
+        transform: none !important;
+    }
+    
+    .about-content h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .intro-text
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
