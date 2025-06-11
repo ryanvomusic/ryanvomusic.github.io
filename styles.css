@@ -512,8 +512,13 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    color: #5a4a3a;
+    overflow: hidden;
+}
+
+.play-button img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .release-info h3 {
