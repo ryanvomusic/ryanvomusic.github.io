@@ -54,5 +54,18 @@
         <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
       </a>
     </footer>
+    <script>
+    if (window.innerWidth > 768) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.about-photo img');
+            const speed = scrolled * 0.1;
+
+            if (parallax) {
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    }
+    </script>
   </body>
 </html
