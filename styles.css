@@ -490,50 +490,6 @@ header p {
     filter: blur(4px);
 }
 
-.play-overlay {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 250px;
-    height: 250px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
-    z-index: 10;
-    isolation: isolate;
-}
-
-.release-card:hover .play-overlay {
-    opacity: 1;
-}
-
-.play-button {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 11;
-    isolation: isolate;
-}
-
-.play-button img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    filter: none !important;
-}
-
 .release-info h3 {
     font-family: 'Comfortaa', cursive;
     font-weight: 600;
@@ -625,11 +581,6 @@ header p {
     .stream-icon img {
         width: 20px;
         height: 20px;
-    }
-    
-    .play-overlay {
-        max-width: 200px;
-        height: 200px;
     }
     
     .coming-soon-placeholder {
