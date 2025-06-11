@@ -265,6 +265,9 @@ header p {
 
 .about-photo {
     flex: 0 0 300px;
+    position: relative;
+    transition: tranform 0.1s east-out;
+    will-change: transform;
 }
 
 .about-photo img {
