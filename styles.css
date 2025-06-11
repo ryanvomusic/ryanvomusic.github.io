@@ -505,17 +505,6 @@ header p {
     margin-bottom: 5px;
 }
 
-.spotify-player {
-    margin: 15px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 80px;
-}
-
-.spotify-player iframe {
-    height: 80px;
-}
-
 .streaming-links {
     display: flex;
     justify-content: center;
