@@ -69,7 +69,7 @@
       </a>
     </footer>
     <script>
-    if (window.innerWidth > 768) {
+    if (!isMobile) {
         let ticking = false;
         
         function updateParallax() {
@@ -78,7 +78,7 @@
             const speed = scrolled * 1.5;
 
             if (parallaxContainer) {
-                parallaxContainer.style.transform = `translateY(${speed}px)`;
+                parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
             }
             
             ticking = false;
