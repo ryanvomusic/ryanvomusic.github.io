@@ -37,10 +37,12 @@ body::after {
     bottom: 0;
     background: 
         linear-gradient(to right, 
-            rgba(255, 250, 240, 0.7) 0%,     /* ivory on left */
-            rgba(255, 255, 255, 0.2) 20%,    /* fade to clear */
-            rgba(255, 255, 255, 0.2) 80%,    /* stay clear in middle */
-            rgba(255, 250, 240, 0.7) 100%    /* ivory on right */
+            rgba(255, 250, 240, 0.9) 0%,
+            rgba(255, 250, 240, 0.6) 15%,
+            rgba(255, 255, 255, 0.2) 35%,
+            rgba(255, 255, 255, 0.2) 65%,
+            rgba(255, 250, 240, 0.6) 85%,
+            rgba(255, 250, 240, 0.9) 100%
         );
     z-index: -1;
 }
