@@ -481,11 +481,13 @@ header p {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     opacity: 0.85;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    filter: blur(0px);
 }
 
 .release-card:hover .release-artwork img {
     opacity: 0.6;
+    filter: blur(4px);
 }
 
 .play-overlay {
