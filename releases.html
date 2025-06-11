@@ -115,7 +115,8 @@
         <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
       </a>
     </footer>
-    <script>
+    
+<script>
 // Audio elements for each song
 const audio = {
     'haunt-you': new Audio('audio/haunt-you-preview.mp3'),
@@ -125,19 +126,27 @@ const audio = {
 let currentlyPlaying = null;
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded');
     const playButtons = document.querySelectorAll('.play-overlay');
+    console.log('Found play buttons:', playButtons.length);
     
     playButtons.forEach(button => {
         button.addEventListener('click', function() {
+            console.log('Play button clicked');
             const card = this.closest('.release-card');
             const songKey = card.dataset.track;
+            console.log('Song key:', songKey);
             const playImg = this.querySelector('.play-btn-img');
+            
+            if (!audio[songKey]) {
+                console.log('No audio found for:', songKey);
+                return;
+            }
             
             // Stop any currently playing audio
             if (currentlyPlaying && currentlyPlaying !== songKey) {
                 audio[currentlyPlaying].pause();
                 audio[currentlyPlaying].currentTime = 0;
-                // Reset other play buttons
                 document.querySelectorAll('.play-btn-img').forEach(img => {
                     img.src = 'images/play-button.png';
                 });
@@ -145,13 +154,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Toggle current audio
             if (audio[songKey].paused) {
-                audio[songKey].play();
-                playImg.src = 'images/pause-button.png'; // change to pause
+                console.log('Playing audio for:', songKey);
+                audio[songKey].play().then(() => {
+                    console.log('Audio started successfully');
+                }).catch(error => {
+                    console.log('Audio play error:', error);
+                });
+                playImg.src = 'images/pause-button.png';
                 currentlyPlaying = songKey;
             } else {
+                console.log('Pausing audio for:', songKey);
                 audio[songKey].pause();
                 audio[songKey].currentTime = 0;
-                playImg.src = 'images/play-button.png'; // change back to play
+                playImg.src = 'images/play-button.png';
                 currentlyPlaying = null;
             }
             
@@ -163,6 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-    </script>
+</script>
   </body>
 </html
