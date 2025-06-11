@@ -148,20 +148,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide any currently playing players
             if (currentlyPlaying && currentlyPlaying !== playerContainer) {
                 currentlyPlaying.style.display = 'none';
-                // Reset other play buttons
-                document.querySelectorAll('.play-btn-img').forEach(img => {
-                    img.src = 'images/play-button.png';
-                });
+                // Keep all buttons as play buttons
             }
             
             // Toggle current player
             if (playerContainer.style.display === 'none' || !playerContainer.style.display) {
                 playerContainer.style.display = 'block';
-                playImg.src = 'images/pause-button.png';
+                // Keep button as play button - don't change image
                 currentlyPlaying = playerContainer;
             } else {
                 playerContainer.style.display = 'none';
-                playImg.src = 'images/play-button.png';
+                // Keep button as play button
                 currentlyPlaying = null;
             }
         });
