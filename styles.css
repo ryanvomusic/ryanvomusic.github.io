@@ -230,6 +230,25 @@ header p {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    filter: sepia(10%) saturate(90%) brightness(105%) contrast(95%);
+    position: relative;
+}
+
+.about-photo {
+    flex: 0 0 300px;
+    position: relative;
+}
+
+.about-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,250,240,0.15);
+    border-radius: 15px;
+    pointer-events: none;
 }
 
 .about-content {
@@ -268,7 +287,6 @@ header p {
         1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Mobile responsiveness for About page */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
