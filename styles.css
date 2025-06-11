@@ -249,11 +249,18 @@ header p {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     filter: sepia(10%) saturate(90%) brightness(105%) contrast(95%);
     position: relative;
+    transition: transform 0.3s ease;
 }
 
 .about-photo {
     flex: 0 0 300px;
     position: relative;
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+.about-container:hover .about-photo {
+    transform: translateY(-5px);
 }
 
 .about-photo::after {
