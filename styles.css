@@ -305,6 +305,8 @@ header p {
         );
     border-radius: 15px;
     pointer-events: none;
+    transform: translateY(var(--parallax-offset, 0px));
+    transition: transform 0.1s ease-out;
 }
 
 .about-content {
