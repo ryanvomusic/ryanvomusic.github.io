@@ -134,6 +134,36 @@
         <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
       </a>
     </footer>
-
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const playButtons = document.querySelectorAll('.play-overlay');
+        let currentlyPlaying = null;
+        
+        playButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.release-card');
+                const player = card.querySelector('.spotify-player');
+                const playImg = this.querySelector('.play-btn-img');
+                
+                if (currentlyPlaying && currentlyPlaying !== player) {
+                    currentlyPlaying.style.display = 'none';
+                    document.querySelectorAll('.play-btn-img').forEach(img => {
+                        img.src = 'images/play-button.png';
+                    });
+                }
+                
+                if (player.style.display === 'none' || !player.style.display) {
+                    player.style.display = 'block';
+                    playImg.src = 'images/pause-button.png';
+                    currentlyPlaying = player;
+                } else {
+                    player.style.display = 'none';
+                    playImg.src = 'images/play-button.png';
+                    currentlyPlaying = null;
+                }
+            });
+        });
+    });
+    </script>
   </body>
 </html
