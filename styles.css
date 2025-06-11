@@ -88,7 +88,7 @@ body::after {
 }
 
 .nav-link:not(.active):hover::after {
-	width: 120%;
+    width: 120%;
 }
 
 .nav-link.active {
@@ -142,9 +142,9 @@ header p {
     color: #7a6a5a;
     margin-bottom: 40px;
     text-shadow: 
-    	0px 0px 8px rgba(255,255,255,0.9),
-    	0px 0px 15px rgba(255,255,255,0.7),
-    	1px 1px 3px rgba(0,0,0,0.2);
+        0px 0px 8px rgba(255,255,255,0.9),
+        0px 15px rgba(255,255,255,0.7),
+        1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .social-footer {
@@ -178,44 +178,44 @@ header p {
 }
 
 @media (max-width: 768px) {
-	.nav-link {
-    	margin: 0 15px;
+    .nav-link {
+        margin: 0 15px;
     }
     
     .social-icon {
-    	margin: 0 12px;
+        margin: 0 12px;
     }
     
     .social-icon img {
-    	width: 28px;
+        width: 28px;
         height: 28px;
     }
     
     header h1 {
-    	font-size: 3.5em;
+        font-size: 3.5em;
     }
     
     header p {
-    	font-size: 1.6em;
+        font-size: 1.6em;
     }
     
     main {
-    	margin-top: 70px;
+        margin-top: 70px;
         padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
-	.nav-link {
-    	margin: 0 8px;
+    .nav-link {
+        margin: 0 8px;
     }
     
     .social-icon {
-    	margin: 0 8px;
+        margin: 0 8px;
     }
     
     .social-icon img {
-    	width: 24px;
+        width: 24px;
         height: 24px;
     }
 }
@@ -307,6 +307,22 @@ header p {
     margin-bottom: 20px;
     text-shadow: 
         0 0 5px rgba(255, 250, 240, 0.8),
+        1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.bio-section blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.6;
+    color: #6a5a4a;
+    margin: 30px 0;
+    padding: 20px 30px;
+    background: rgba(255,250,240,0.3);
+    border-left: 4px solid rgba(160, 130,150,0.6);
+    border-radius: 0 8px 8px 0;
+    text-shadow:
+        0 0 5px rgba(255,250,240,0.8),
         1px 1px 2px rgba(0,0,0,0.1);
 }
 
