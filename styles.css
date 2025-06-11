@@ -390,6 +390,8 @@ header p {
     .about-photo {
         flex: none;
         text-align: center;
+        align-self: center;
+        transform: none !important;
     }
     
     .about-photo img {
