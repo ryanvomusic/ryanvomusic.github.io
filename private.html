@@ -1,30 +1,57 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
+
+<!-- Character Encoding -->
+
     <meta charset="utf-8">
+
+<!-- Viewport (Mobile Responsiveness) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <link rel="stylesheet" href="styles.css">
+
+
+
     <title>Ryan Vo - Private Access</title>
-    
+
+
+
     <link rel="icon" type="image/jpeg" href="images/background-photo.jpeg">
     <link rel="apple-touch-icon" href="images/background-photo.jpeg">
-    
+
+
+
     <meta property="og:title" content="Ryan Vo - Private Access">
     <meta property="og:description" content="Music and all the heart that comes with it.">
     <meta property="og:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
     <meta property="og:url" content="https://ryanvomusic.github.io">
     <meta property="og:type" content="website">
-    
+
+
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ryan Vo - Private Access">
     <meta name="twitter:description" content="Music and all the heart that comes with it.">
     <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+
   </head>
+
   <body class="private-access">
+
+<!-- Password Entry Container -->
+
     <div class="password-container">
         <h1>Private Access</h1>
         <p>Choose your access level and enter the corresponding password</p>
-        
+
+<!-- Data Analytics Portfolio Password Entry -->
+
         <div class="access-options">
             <div class="access-section">
                 <h3>Portfolio Access</h3>
@@ -34,7 +61,10 @@
                     <button type="submit">Access Portfolio</button>
                 </form>
             </div>
-            
+
+<!-- End of Data Analytics Portfolio Password Entry -->
+<!-- Electronic Press Kit Password Entry -->
+
             <div class="access-section">
                 <h3>EPK Access</h3>
                 <p>Electronic press kit and promotional materials</p>
@@ -43,7 +73,10 @@
                     <button type="submit">Access EPK</button>
                 </form>
             </div>
-            
+
+<!-- End of Electronic Press Kit Password Entry -->
+<!-- Ryan Vo Analytics Dashboard Password Entry -->
+
             <div class="access-section">
                 <h3>Analytics Dashboard</h3>
                 <p>Personal analytics and performance tracking</p>
@@ -52,16 +85,31 @@
                     <button type="submit">Access Dashboard</button>
                 </form>
             </div>
+
+<!-- End of Ryan Vo Analytics Dashboard Password Entry -->
+
         </div>
-        
+
+<!-- End of Password Entry Container -->
+<!-- Error Message -->
+
         <div id="errorMessage" style="display: none;">
             <p>Incorrect password. Please try again.</p>
         </div>
-        
+
+<!-- End of Error Message -->
+<!-- Redirect (index.html) -->
+
         <div class="back-to-site">
             <a href="index.html">← Back to Main Site</a>
         </div>
+
+<!-- End of Redirect -->
+
     </div>
+
+<!-- Social Links Footer -->
+
     <footer class="social-footer">
       <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
         <img src="images/social-icons/spotify.jpeg" alt="Spotify">
@@ -85,7 +133,11 @@
         <img src="images/social-icons/email.png" alt="Email">
       </a>
     </footer>
-    <script>
+
+<!-- End of Social Links Footer -->
+<!-- Password Protection -->
+
+<script>
 const passwords = {
     'portfolio.html': atob('VkRhdGFQb3J0'),
     'epk.html': atob('UlZNUHJlc3NLaXQ='), 
@@ -113,5 +165,7 @@ document.querySelectorAll('.password-form').forEach(form => {
     });
 });
 </script>
+
   </body>
+
 </html>
