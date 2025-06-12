@@ -751,12 +751,15 @@ header p {
     .ep-artwork {
         flex: none;
         align-self: center;
+        width: 100%;
     }
     
     .ep-artwork img,
     .ep-artwork .coming-soon-placeholder {
-        max-width: 250px;
+        width: 100%
+        max-width: 280px;
         height: 250px;
+        margin: 0 auto;
     }
     
     .ep-info h1 {
