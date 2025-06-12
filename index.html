@@ -66,5 +66,21 @@
             <img src="images/social-icons/email.png" alt="Email">
         </a>
     </footer>
+    <script>
+function trackSocialClick(platform) {
+  gtag('event', 'social_click', {
+    'event_category': 'Social Media',
+    'event_label': platform,
+    'page': window.location.pathname
+  });
+}
+
+function trackStreamingClick(platform, song) {
+  gtag('event', 'streaming_click', {
+    'event_category': 'Music Streaming',
+    'event_label': platform + ' - ' + song
+  });
+}
+</script>
 </body>
 </html>
