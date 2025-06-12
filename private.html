@@ -89,7 +89,7 @@
 
 const passwords = {
     'portfolio.html': atob('VkRhdGFQb3J0'),
-    'epk.html': atob('UlZNUHJlc3NLaXQ='),
+    'epk.html': atob('UlZNUHJlc3NLaXQ='), 
     'analytics.html': atob('VmlldG5hbWV4aWNhbi4x')
 };
 
@@ -101,6 +101,8 @@ document.querySelectorAll('.password-form').forEach(form => {
         const correctPassword = passwords[redirect];
         
         if (password === correctPassword) {
+            // Set session flag for this specific page
+            sessionStorage.setItem(redirect + '_authenticated', 'true');
             window.location.href = redirect;
         } else {
             document.getElementById('errorMessage').style.display = 'block';
