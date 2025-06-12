@@ -421,7 +421,7 @@ header p {
 .release-card.coming-soon {
     grid-column: 1 / -1;
     justify-self: center;
-    max-width: 350px;
+    max-width: 100%;
 }
 
 .release-card {
