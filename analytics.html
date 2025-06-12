@@ -60,7 +60,7 @@
                       </div>
                       <input type="number" class="stat-input" id="totalFollowers" value="906" onchange="updateStats()">
                       <div class="stat-breakdown">
-                          <small>IG: <input type="number" class="small-input" id="igFollowers" value="574" onchange="updateSocialBreakdown()"> | TT: <input type="number" class="small-input" id="ttFollowers" value="311" onchange="updateSocialBreakdown()"> | Other: <input type="number" class="small-input" id="otherFollowers" value="21" onchange="updateSocialBreakdown()"></small>
+                         <small>IG: <input type="number" class="small-input" id="igFollowers" value="574" onchange="updateSocialBreakdown()"> | TT: <input type="number" class="small-input" id="ttFollowers" value="311" onchange="updateSocialBreakdown()"> | TW: <input type="number" class="small-input" id="twitterFollowers" value="10" onchange="updateSocialBreakdown()"> | BS: <input type="number" class="small-input" id="blueskyFollowers" value="21" onchange="updateSocialBreakdown()"> | YT: <input type="number" class="small-input" id="youtubeFollowers" value="XX" onchange="updateSocialBreakdown()"></small>
                       </div>
                   </div>
                   
@@ -180,8 +180,10 @@ function updateBreakdown() {
 function updateSocialBreakdown() {
     const ig = parseInt(document.getElementById('igFollowers').value) || 0;
     const tt = parseInt(document.getElementById('ttFollowers').value) || 0;
-    const other = parseInt(document.getElementById('otherFollowers').value) || 0;
-    document.getElementById('totalFollowers').value = ig + tt + other;
+    const twitter = parseInt(document.getElementById('twitterFollowers').value) || 0;
+    const bluesky = parseInt(document.getElementById('blueskyFollowers').value) || 0;
+    const youtube = parseInt(document.getElementById('youtubeFollowers').value) || 0;
+    document.getElementById('totalFollowers').value = ig + tt + twitter + bluesky + youtube;
     updateStats();
 }
 
