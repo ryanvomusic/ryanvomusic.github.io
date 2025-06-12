@@ -739,9 +739,11 @@ header p {
 /* Mobile responsiveness for EP page */
 @media (max-width: 768px) {
     .ep-header {
+        display: flex;
         flex-direction: column;
         text-align: center;
         padding: 30px 20px;
+        grid-template-columns: none;
     }
     
     .ep-artwork {
@@ -756,6 +758,11 @@ header p {
         max-width: 280px;
         height: 250px;
         margin: 0 auto;
+    }
+    
+    .ep-info {
+        flex: 1;
+        overflow: visible;
     }
     
     .ep-info h1 {
