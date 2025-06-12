@@ -142,14 +142,36 @@
       </a>
     </footer>
 <script>
-// Update functions for live editing
+// Save values to localStorage
+function saveValue(inputId) {
+    const input = document.getElementById(inputId);
+    if (input) {
+        localStorage.setItem(inputId, input.value);
+    }
+}
+
+// Load values from localStorage
+function loadValue(inputId, defaultValue = '') {
+    const savedValue = localStorage.getItem(inputId);
+    const input = document.getElementById(inputId);
+    if (input && savedValue !== null) {
+        input.value = savedValue;
+    } else if (input && defaultValue) {
+        input.value = defaultValue;
+    }
+}
+
+// Update your existing functions to include saving:
 function updateLastUpdated() {
-    // This function can be expanded later if needed
+    saveValue('lastUpdatedDate');
 }
 
 function updateTrend(elementId) {
     const trendValue = document.getElementById(elementId).value;
     const trendElement = document.getElementById(elementId);
+    
+    // Save the value
+    saveValue(elementId);
     
     // Update trend styling based on value
     if (trendValue > 0) {
@@ -162,6 +184,12 @@ function updateTrend(elementId) {
 }
 
 function updateStats() {
+    // Save all main stat values
+    saveValue('totalStreams');
+    saveValue('totalFollowers');
+    saveValue('monthlyListeners');
+    saveValue('totalPlaylists');
+    
     // Update the display numbers in goals section
     document.getElementById('currentStreams').textContent = document.getElementById('totalStreams').value;
     document.getElementById('currentFollowers').textContent = document.getElementById('totalFollowers').value;
@@ -173,6 +201,11 @@ function updateStats() {
 function updateBreakdown() {
     const spotify = parseInt(document.getElementById('spotifyStreams').value) || 0;
     const apple = parseInt(document.getElementById('appleStreams').value) || 0;
+    
+    // Save breakdown values
+    saveValue('spotifyStreams');
+    saveValue('appleStreams');
+    
     document.getElementById('totalStreams').value = spotify + apple;
     updateStats();
 }
@@ -183,6 +216,14 @@ function updateSocialBreakdown() {
     const twitter = parseInt(document.getElementById('twitterFollowers').value) || 0;
     const bluesky = parseInt(document.getElementById('blueskyFollowers').value) || 0;
     const youtube = parseInt(document.getElementById('youtubeFollowers').value) || 0;
+    
+    // Save all social values
+    saveValue('igFollowers');
+    saveValue('ttFollowers');
+    saveValue('twitterFollowers');
+    saveValue('blueskyFollowers');
+    saveValue('youtubeFollowers');
+    
     document.getElementById('totalFollowers').value = ig + tt + twitter + bluesky + youtube;
     updateStats();
 }
@@ -190,11 +231,21 @@ function updateSocialBreakdown() {
 function updatePlaylistBreakdown() {
     const you = parseInt(document.getElementById('youPlaylists').value) || 0;
     const haunt = parseInt(document.getElementById('hauntPlaylists').value) || 0;
+    
+    // Save playlist values
+    saveValue('youPlaylists');
+    saveValue('hauntPlaylists');
+    
     document.getElementById('totalPlaylists').value = you + haunt;
     updateStats();
 }
 
 function updateProgress() {
+    // Save goal values
+    saveValue('streamGoal');
+    saveValue('followerGoal');
+    saveValue('listenerGoal');
+    
     // Stream progress
     const currentStreams = parseInt(document.getElementById('totalStreams').value);
     const streamGoal = parseInt(document.getElementById('streamGoal').value);
@@ -214,9 +265,37 @@ function updateProgress() {
     document.getElementById('listenerProgress').style.width = listenerPercent + '%';
 }
 
-// Initialize progress bars on page load
+// Load all saved values when page loads
 document.addEventListener('DOMContentLoaded', function() {
+    // Load all input values
+    loadValue('lastUpdatedDate', '2025-06-11');
+    loadValue('totalStreams', '359');
+    loadValue('totalFollowers', '906');
+    loadValue('monthlyListeners', '14');
+    loadValue('totalPlaylists', '11');
+    loadValue('spotifyStreams', '240');
+    loadValue('appleStreams', '119');
+    loadValue('igFollowers', '574');
+    loadValue('ttFollowers', '311');
+    loadValue('twitterFollowers', '10');
+    loadValue('blueskyFollowers', '21');
+    loadValue('youtubeFollowers', '0');
+    loadValue('youPlaylists', '9');
+    loadValue('hauntPlaylists', '2');
+    loadValue('streamGoal', '500');
+    loadValue('followerGoal', '1000');
+    loadValue('listenerGoal', '50');
+    loadValue('streamTrend', '12');
+    loadValue('followerTrend', '23');
+    loadValue('listenerTrend', '0');
+    loadValue('playlistTrend', '2');
+    
+    // Update progress bars and trend colors
     updateProgress();
+    updateTrend('streamTrend');
+    updateTrend('followerTrend');
+    updateTrend('listenerTrend');
+    updateTrend('playlistTrend');
 });
 </script>
   </body>
