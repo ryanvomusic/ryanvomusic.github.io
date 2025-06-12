@@ -308,6 +308,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadValue('tiktokGoal', '1000');
     loadValue('currentTiktokViews', '200');
     
+    // Update the spans in goals section with loaded values
+    updateStats();
+    
     // Update progress bars and trend colors
     updateProgress();
     updateTrend('streamTrend');
