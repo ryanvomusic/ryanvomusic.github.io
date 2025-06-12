@@ -52,19 +52,26 @@
 </head>
 
 <body class="homepage">
+
+<!-- Navigation Bar -->
+
     <nav class="navbar">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="releases.html" class="nav-link">Music Releases</a>
     </nav>
-    
+
+<!-- End of Navigation Bar -->
+
     <main>
         <header>
             <h1>Ryan Vo</h1>
             <p>Singer • Musician • Songwriter</p>
         </header>
     </main>
-    
+
+<!--  -->
+
     <footer class="social-footer">
       <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify" onclick="trackSocialClick('Spotify')">
         <img src="images/social-icons/spotify.jpeg" alt="Spotify">
@@ -88,7 +95,10 @@
         <img src="images/social-icons/email.png" alt="Email">
       </a>
     </footer>
-    <script>
+
+<!--  -->
+
+<script>
 function trackSocialClick(platform) {
   gtag('event', 'social_click', {
     'event_category': 'Social Media',
