@@ -1535,6 +1535,24 @@ header p {
     color: #7a6a5a;
 }
 
+.stat-input-small {
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border: none;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    width: 60px;
+    text-align: center;
+    outline: none;
+    font-weight: 600;
+}
+
+.stat-input-small:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
 /* Goals Section */
 .analytics-page .goals-section {
     background: rgba(255, 250, 240, 0.4);
