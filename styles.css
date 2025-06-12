@@ -502,7 +502,7 @@ header p {
 
 .coming-soon-placeholder {
     width: 100%;
-    max-width: 250px;
+    max-width: none;
     height: 250px;
     background: rgba(160, 130, 150, 0.3);
     border-radius: 10px;
