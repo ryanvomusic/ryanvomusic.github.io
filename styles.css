@@ -418,6 +418,12 @@ header p {
     margin-right: auto;
 }
 
+.release-card.coming-soon {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 350px;
+}
+
 .release-card {
     background: rgba(255, 250, 240, 0.4);
     padding: 25px;
