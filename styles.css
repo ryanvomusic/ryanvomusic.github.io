@@ -409,13 +409,15 @@ header p {
 }
 
 .releases-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-bottom: 40px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    flex: wrap;
+    justify-content: centered;
 }
 
 .release-card {
