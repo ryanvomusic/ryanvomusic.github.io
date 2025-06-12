@@ -589,6 +589,7 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
 }
 
 .password-container {
@@ -599,6 +600,7 @@ header p {
     text-align: center;
     max-width: 600px;
     width: 90%;
+    margin: auto;
 }
 
 .password-container h1 {
@@ -633,12 +635,19 @@ header p {
     margin-bottom: 15px;
 }
 
+.password-form {
+    margin-top: 15px;
+}
+
 .password-form input {
     padding: 10px 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
+    margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
+    width: 100%
+    max-width: 200px;
 }
 
 .password-form button {
@@ -650,6 +659,7 @@ header p {
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-top: 5px;
 }
 
 .password-form button:hover {
@@ -663,13 +673,44 @@ header p {
 }
 
 .back-to-site {
-    margin-top: 30px;
+    margin-top: 40px;
+    padding-bottom: 20px;
 }
 
 .back-to-site a {
     color: #7a6a5a;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .private-access {
+        align-items: flex-start; /* align to top instead of center */
+        padding: 40px 20px; /* more padding for scrolling */
+        min-height: 100vh;
+    }
+    
+    .password-container {
+        margin-top: 20px; /* space from top */
+        margin-bottom: 40px; /* space from bottom */
+    }
+    
+    .password-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* space between elements */
+    }
+    
+    .password-form input {
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 200px;
+    }
+    
+    .access-section p {
+        margin-bottom: 20px; /* more space before form */
+    }
 }
 
 /* Portfolio Page Styles */
