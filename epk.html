@@ -21,22 +21,24 @@
     <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
   </head>
   <body>
-<script>
-(function() {
-    const currentPage = window.location.pathname.split('/').pop();
-    const isAuthenticated = sessionStorage.getItem(currentPage + '_authenticated');
+    <script>
+      (function() {
+          const currentPage = window.location.pathname.split('/').pop();
+          const isAuthenticated = sessionStorage.getItem(currentPage + '_authenticated');
+          
+          if (!isAuthenticated) {
+              window.location.href = 'private.html';
+          }
+      })();
+    </script>
     
-    if (!isAuthenticated) {
-        window.location.href = 'private.html';
-    }
-})();
-</script>
     <nav class="private-nav">
-        <div class="nav-content">
-            <h2>Electronic Press Kit</h2>
-            <a href="private.html" class="back-link">← Back to Private Access</a>
-        </div>
+      <div class="nav-content">
+        <h2>Electronic Press Kit</h2>
+        <a href="private.html" class="back-link">← Back to Private Access</a>
+      </div>
     </nav>
+    
     <main class="epk-page">
       <div class="epk-container">
         <section class="epk-header">
@@ -83,39 +85,39 @@
           <div class="music-releases">
             <div class="release-item">
               <img src="images/album-covers/haunt-you-artwork.jpeg" alt="Haunt You Artwork">
-                <div class="release-details">
-                  <h3>Haunt You</h3>
-                  <p><strong>Release Date:</strong> 05/02/2025</p>
-                  <p><strong>Genre:</strong> </p>
-                  <p><strong>Streams:</strong> </p>
-                  <p><strong>Playlists:</strong> </p>
-                  <div class="streaming-links">
-                    <a href="https://open.spotify.com/track/0ZUUmeoTIRaZRuDtPPT4cN?si=tHAllsPHQw67tX9gHFtFnw" target="_blank">
-                      <img src="images/social-icons/spotify.jpeg" alt="Spotify">
-                    </a>
-                    <a href="https://music.apple.com/us/album/haunt-you/1809591179?i=1809591180" target="_blank">
-                      <img src="images/social-icons/apple.jpeg" alt="Apple Music">
-                    </a>
-                  </div>
+              <div class="release-details">
+                <h3>Haunt You</h3>
+                <p><strong>Release Date:</strong> 05/02/2025</p>
+                <p><strong>Genre:</strong> </p>
+                <p><strong>Streams:</strong> </p>
+                <p><strong>Playlists:</strong> </p>
+                <div class="streaming-links">
+                  <a href="https://open.spotify.com/track/0ZUUmeoTIRaZRuDtPPT4cN?si=tHAllsPHQw67tX9gHFtFnw" target="_blank">
+                    <img src="images/social-icons/spotify.jpeg" alt="Spotify">
+                  </a>
+                  <a href="https://music.apple.com/us/album/haunt-you/1809591179?i=1809591180" target="_blank">
+                    <img src="images/social-icons/apple.jpeg" alt="Apple Music">
+                  </a>
                 </div>
+              </div>
             </div>
             <div class="release-item">
               <img src="images/album-covers/you-artwork.jpeg" alt="You Artwork">
-                <div class="release-details">
-                  <h3>You</h3>
-                  <p><strong>Release Date:</strong> 12/20/2024</p>
-                  <p><strong>Genre:</strong> </p>
-                  <p><strong>Streams:</strong> </p>
-                  <p><strong>Playlists:</strong> </p>
-                  <div class="streaming-links">
-                    <a href="https://open.spotify.com/track/5zYjzyD7JWmA9auGyZzgmi?si=FHfHMvx1Rte21HKCD7A9Ow" target="_blank">
-                      <img src="images/social-icons/spotify.jpeg" alt="Spotify">
-                    </a>
-                    <a href="https://music.apple.com/us/album/you/1785391417?i=1785391418" target="_blank">
-                      <img src="images/social-icons/apple.jpeg" alt="Apple Music">
-                    </a>
-                  </div>
+              <div class="release-details">
+                <h3>You</h3>
+                <p><strong>Release Date:</strong> 12/20/2024</p>
+                <p><strong>Genre:</strong> </p>
+                <p><strong>Streams:</strong> </p>
+                <p><strong>Playlists:</strong> </p>
+                <div class="streaming-links">
+                  <a href="https://open.spotify.com/track/5zYjzyD7JWmA9auGyZzgmi?si=FHfHMvx1Rte21HKCD7A9Ow" target="_blank">
+                    <img src="images/social-icons/spotify.jpeg" alt="Spotify">
+                  </a>
+                  <a href="https://music.apple.com/us/album/you/1785391417?i=1785391418" target="_blank">
+                    <img src="images/social-icons/apple.jpeg" alt="Apple Music">
+                  </a>
                 </div>
+              </div>
             </div>
           </div>
         </section>
@@ -187,24 +189,25 @@
         </section>
       </div>
     </main>
+    
     <footer class="social-footer">
-    	<a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
-      	<img src="images/social-icons/spotify.jpeg" alt="Spotify">
+      <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
+        <img src="images/social-icons/spotify.jpeg" alt="Spotify">
       </a>
       <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram">
-      	<img src="images/social-icons/instagram.jpeg" alt="Instagram">
+        <img src="images/social-icons/instagram.jpeg" alt="Instagram">
       </a>
       <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok">
-      	<img src="images/social-icons/tiktok.jpeg" alt="TikTok">
+        <img src="images/social-icons/tiktok.jpeg" alt="TikTok">
       </a>
       <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music">
-      	<img src="images/social-icons/apple.jpeg" alt="Apple Music">
+        <img src="images/social-icons/apple.jpeg" alt="Apple Music">
       </a>
       <a href="https://x.com/ryanvomusic" class="social-icon" target="_blank" title="Twitter">
-      	<img src="images/social-icons/twitter.jpeg" alt="Twitter">
+        <img src="images/social-icons/twitter.jpeg" alt="Twitter">
       </a>
       <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky">
-      	<img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
+        <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
       </a>
       <a href="mailto:ryanvomusic@gmail.com" class="social-icon" title="Email">
         <img src="images/social-icons/email.png" alt="Email">
