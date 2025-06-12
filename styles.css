@@ -512,15 +512,16 @@ header p {
 
 .pre-save-text {
     position: absolute;
-    bottom: 2px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 0.7em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1em;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .coming-soon {
