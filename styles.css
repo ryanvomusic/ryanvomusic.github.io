@@ -580,10 +580,13 @@ header p {
     gap: 40px;
     margin-bottom: 50px;
     background: rgba(255, 250, 240, 0.4);
-    padding: 40px;
+    padding: 40px 50px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     align-items: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ep-artwork {
@@ -605,7 +608,7 @@ header p {
 .ep-info h1 {
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
-    font-size: 2.2em;
+    font-size: 2.5em;
     color: #5a4a3a;
     margin-bottom: 10px;
     text-shadow: 
