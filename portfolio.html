@@ -21,6 +21,16 @@
     <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
   </head>
   <body>
+    <script>
+(function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const isAuthenticated = sessionStorage.getItem(currentPage + '_authenticated');
+    
+    if (!isAuthenticated) {
+        window.location.href = 'private.html';
+    }
+})();
+</script>
     <nav class="private-nav">
         <div class="nav-content">
             <h2>Data Analytics Portfolio</h2>
