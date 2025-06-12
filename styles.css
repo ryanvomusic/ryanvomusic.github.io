@@ -210,32 +210,6 @@ header p {
         margin-top: 70px;
         padding: 15px;
     }
-    
-    .about-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .about-photo {
-        flex: none;
-        text-align: center;
-        align-self: center;
-    }
-    
-    .about-photo img {
-        width: 250px;
-        height: 300px;
-        transform: none !important;
-    }
-    
-    .about-content h1 {
-        font-size: 2em;
-        text-align: center;
-    }
-    
-    .intro-text {
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
@@ -254,7 +228,6 @@ header p {
 }
 
 /* About Page Styles */
-
 .about-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -284,18 +257,6 @@ header p {
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     filter: sepia(10%) saturate(90%) brightness(105%) contrast(95%);
-    position: relative;
-}
-
-.about-photo {
-    flex: 0 0 300px;
-    position: relative;
-    transform: translateY(0);
-    transition: transform 0.1s ease-out;
-}
-
-.about-container:hover .about-photo {
-    transform: translateY(-5px);
 }
 
 .about-photo::after {
@@ -306,8 +267,8 @@ header p {
     right: 0;
     bottom: 0;
     background: 
-    	radial-gradient(ellipse at center,
-        	rgba(255,250,240,0.05) 0%,
+        radial-gradient(ellipse at center,
+            rgba(255,250,240,0.05) 0%,
             rgba(255,250,240,0.15) 30%,
             rgba(160,130,150,0.4) 80%,
             rgba(140,110,130,0.6) 100%
@@ -410,7 +371,6 @@ header p {
 }
 
 /* Releases Page Styles */
-
 .releases-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -485,7 +445,6 @@ header p {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     opacity: 0.85;
     transition: all 0.3s ease;
-    filter: blur(0px);
 }
 
 .release-card:hover .release-artwork img {
@@ -582,7 +541,6 @@ header p {
 }
 
 /* Private Access Page Styles */
-
 .private-access {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
@@ -646,7 +604,7 @@ header p {
     margin-right: 10px;
     margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
-    width: 100%
+    width: 100%;
     max-width: 200px;
 }
 
@@ -685,36 +643,33 @@ header p {
 
 @media (max-width: 768px) {
     .private-access {
-        align-items: flex-start; /* align to top instead of center */
-        padding: 40px 20px; /* more padding for scrolling */
-        min-height: 100vh;
+        align-items: flex-start;
+        padding: 40px 20px;
     }
     
     .password-container {
-        margin-top: 20px; /* space from top */
-        margin-bottom: 40px; /* space from bottom */
+        margin-top: 20px;
+        margin-bottom: 40px;
     }
     
     .password-form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px; /* space between elements */
+        gap: 15px;
     }
     
     .password-form input {
-        margin-right: 0;
-        margin-bottom: 0;
+        margin: 0;
         width: 200px;
     }
     
     .access-section p {
-        margin-bottom: 20px; /* more space before form */
+        margin-bottom: 20px;
     }
 }
 
-/* Portfolio Page Styles */
-
+/* Private Pages Styles */
 .private-nav {
     position: fixed;
     top: 0;
@@ -754,6 +709,7 @@ header p {
     color: #fff;
 }
 
+/* Portfolio Page Styles */
 .portfolio-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -811,28 +767,46 @@ header p {
     padding-bottom: 10px;
 }
 
-.skills-grid {
+.skills-grid, .projects-grid {
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-wrap: wrap;
     gap: 25px;
-    justify-items: center;
+    justify-content: center;
 }
 
-.skill-item {
+.skill-item, .project-card {
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid rgba(160, 130, 150, 0.6);
     width: 100%;
     max-width: 350px;
     flex: 0 1 300px;
 }
 
-.skill-item h3 {
+.skill-item {
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+}
+
+.project-card {
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.skill-item h3, .project-info h3 {
     font-family: 'Comfortaa', cursive;
     color: #5a4a3a;
     margin-bottom: 15px;
     font-size: 1.2em;
+}
+
+.project-info h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 .skill-item ul {
@@ -843,10 +817,9 @@ header p {
 .skill-item li {
     font-family: 'Poppins', sans-serif;
     color: #6a5a4a;
-    padding: 8px 0;
+    padding: 8px 0 8px 20px;
     border-bottom: 1px solid rgba(255, 250, 240, 0.8);
     position: relative;
-    padding-left: 20px;
 }
 
 .skill-item li:before {
@@ -854,28 +827,6 @@ header p {
     position: absolute;
     left: 0;
     color: rgba(160, 130, 150, 0.8);
-}
-
-.projects-grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    justify-items: center;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 350px;
-    flex: 0 1 300px;
-}
-
-.project-card:hover {
-    transform: translateY(-3px);
 }
 
 .project-card.placeholder .project-image {
@@ -895,13 +846,6 @@ header p {
 
 .project-info {
     padding: 20px;
-}
-
-.project-info h3 {
-    font-family: 'Comfortaa', cursive;
-    color: #5a4a3a;
-    margin-bottom: 10px;
-    font-size: 1.1em;
 }
 
 .project-info p {
@@ -938,10 +882,9 @@ header p {
 .goals-content li {
     font-family: 'Poppins', sans-serif;
     color: #6a5a4a;
-    padding: 10px 0;
+    padding: 10px 0 10px 25px;
     border-bottom: 1px solid rgba(255, 250, 240, 0.8);
     position: relative;
-    padding-left: 25px;
 }
 
 .goals-content li:before {
@@ -980,44 +923,41 @@ header p {
     }
     
     .skill-item, .project-card {
-        max-width: 100%; /* full width on mobile */
+        max-width: 100%;
         width: 100%;
     }
     
     .skill-item h3, .project-info h3 {
-        font-size: 1em; /* reduced from 1.2em and 1.1em */
+        font-size: 1em;
     }
     
     .skill-item li, .project-info p {
-        font-size: 0.85em; /* reduced from 0.9em */
+        font-size: 0.85em;
     }
     
     .goals-content p {
-        font-size: 0.9em; /* reduced from normal */
+        font-size: 0.9em;
     }
     
     .goals-content li {
-        font-size: 0.85em; /* reduced from normal */
-        padding: 8px 0; /* reduced padding */
-        padding-left: 20px; /* reduced from 25px */
+        font-size: 0.85em;
+        padding: 8px 0 8px 20px;
     }
     
     .project-status {
-        font-size: 0.75em; /* reduced from 0.8em */
+        font-size: 0.75em;
     }
     
-    /* Reduce section padding on mobile */
     .skills-section, .projects-section, .goals-section {
-        padding: 20px; /* reduced from 30px */
+        padding: 20px;
     }
     
     .skill-item, .project-info {
-        padding: 15px; /* reduced from 20px */
+        padding: 15px;
     }
 }
 
 /* EPK Page Styles */
-
 .epk-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -1030,7 +970,6 @@ header p {
     margin: 0 auto;
 }
 
-/* EPK Header */
 .epk-header {
     display: flex;
     gap: 40px;
@@ -1143,7 +1082,6 @@ header p {
     transform: translateY(-2px);
 }
 
-/* EPK Sections */
 .epk-section {
     background: rgba(255, 250, 240, 0.4);
     padding: 40px;
@@ -1162,18 +1100,6 @@ header p {
     padding-bottom: 10px;
 }
 
-.epk-section .release-details .streaming-links .stream-icon img {
-    width: 16px !important;
-    height: 16px !important;
-    transition: all 0.3s ease;
-}
-
-.epk-section .release-details .streaming-links .stream-icon:hover img {
-    transform: translateY(-2px) scale(1.1);
-    opacity: 0.8;
-}
-
-/* Bio Section */
 .bio-versions {
     display: flex;
     flex-direction: column;
@@ -1201,7 +1127,6 @@ header p {
     margin-bottom: 15px;
 }
 
-/* Music Section */
 .music-releases {
     display: flex;
     flex-direction: column;
@@ -1213,7 +1138,6 @@ header p {
     gap: 20px;
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
-    margin: 20px auto;
     border-radius: 10px;
     align-items: center;
 }
@@ -1250,23 +1174,17 @@ header p {
     margin-top: 10px;
 }
 
-.epk-page .streaming-links img,
-.music-releases img[alt="Spotify"],
-.music-releases img[alt="Apple Music"] {
+.epk-page .streaming-links img {
     width: 20px !important;
     height: 20px !important;
-    max-width: 20px !important;
-    max-height: 20px !important;
     transition: all 0.3s ease;
 }
 
-.epk-page .streaming-links a:hover img,
-.music-releases .stream-icon:hover img {
+.epk-page .streaming-links a:hover img {
     transform: translateY(-2px) scale(1.1);
     opacity: 0.8;
 }
 
-/* Photos Section */
 .photo-note, .video-note {
     font-family: 'Poppins', sans-serif;
     color: #7a6a5a;
@@ -1307,7 +1225,6 @@ header p {
     font-size: 0.8em;
 }
 
-/* Contact Section */
 .contact-info {
     background: rgba(255, 255, 255, 0.6);
     padding: 30px;
@@ -1338,16 +1255,10 @@ header p {
     text-decoration: underline;
 }
 
-/* Video Section */
-
 .video-download-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: rgba(255,255,255,0.6);
     padding: 20px;
     border-radius: 10px;
-    gap: 20px;
 }
 
 .download-item {
@@ -1365,7 +1276,7 @@ header p {
     font-family: 'Comfortaa', cursive;
     color: #5a4a3a;
     margin-bottom: 8px;
-    font-size: 1.1em
+    font-size: 1.1em;
 }
 
 .download-info p {
@@ -1393,7 +1304,6 @@ header p {
     transform: translateY(-2px);
 }
 
-/* Mobile responsiveness for EPK */
 @media (max-width: 768px) {
     .epk-page {
         padding: 40px 15px;
@@ -1468,7 +1378,6 @@ header p {
     margin: 0 auto;
 }
 
-/* Dashboard Header */
 .dashboard-header {
     text-align: center;
     margin-bottom: 40px;
@@ -1517,7 +1426,6 @@ header p {
     outline: none;
 }
 
-/* Quick Stats Section */
 .analytics-page .quick-stats {
     background: rgba(255, 250, 240, 0.4);
     padding: 30px;
@@ -1568,7 +1476,6 @@ header p {
     margin: 0;
 }
 
-/* Input Styling */
 .stat-input {
     font-family: 'Comfortaa', cursive;
     font-size: 2.5em;
@@ -1656,7 +1563,6 @@ header p {
     padding: 2px;
 }
 
-/* Goals Section */
 .analytics-page .goals-section {
     background: rgba(255, 250, 240, 0.4);
     padding: 30px;
@@ -1754,7 +1660,6 @@ header p {
     transform: translateY(-1px);
 }
 
-/* Mobile responsiveness for analytics */
 @media (max-width: 768px) {
     .dashboard-header h1 {
         font-size: 2em;
