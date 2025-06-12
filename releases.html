@@ -112,7 +112,7 @@
 
         <div class="release-card">
           <div class="release-artwork">
-            <a href="illumina-ep.html#track-haunt-you">
+            <a href="illumina-ep.html#track-haunt-you" onclick="trackEPClick('Haunt You')">
               <img src="images/album-covers/haunt-you-artwork.jpeg" alt="Haunt You - Single Artwork">
             </a>
           </div>
@@ -136,7 +136,7 @@
 
         <div class="release-card">
           <div class="release-artwork">
-            <a href="illumina-ep.html#track-you">
+            <a href="illumina-ep.html#track-you" onclick="trackEPClick('You')">
               <img src="images/album-covers/you-artwork.jpeg" alt="You - Single Artwork">
             </a>
           </div>
@@ -206,6 +206,13 @@ function trackStreamingClick(platform, song) {
   gtag('event', 'streaming_click', {
     'event_category': 'Music Streaming',
     'event_label': platform + ' - ' + song
+  });
+}
+
+function trackEPClick(song) {
+  gtag('event', 'ep_navigation', {
+    'event_category': 'EP Navigation',
+    'event_label': song + ' - Artwork Click'
   });
 }
 </script>
