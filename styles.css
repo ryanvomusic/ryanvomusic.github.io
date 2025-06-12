@@ -410,7 +410,7 @@ header p {
 
 .releases-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minimax(350px, 1fr));
     gap: 40px;
     margin-bottom: 40px;
     max-width: 800px;
@@ -418,11 +418,6 @@ header p {
     margin-right: auto;
 }
 
-.release-card.coming-soon {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 390px;
-}
 
 .release-card {
     background: rgba(255, 250, 240, 0.4);
@@ -502,7 +497,7 @@ header p {
 
 .coming-soon-placeholder {
     width: 100%;
-    max-width: none;
+    max-width: 250px;
     height: 250px;
     background: rgba(160, 130, 150, 0.3);
     border-radius: 10px;
