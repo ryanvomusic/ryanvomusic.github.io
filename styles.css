@@ -418,6 +418,15 @@ header p {
     margin-right: auto;
 }
 
+.releases-grid.coming-soon {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .release-card {
     background: rgba(255, 250, 240, 0.4);
