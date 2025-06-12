@@ -500,6 +500,24 @@ header p {
     opacity: 0.8;
 }
 
+.pre-save-container {
+    position: relative;
+    display: inline-block;
+}
+
+.pre-save-text {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-family: 'Poppins', sans-serif;
+}
+
 .coming-soon {
     opacity: 0.7;
 }
