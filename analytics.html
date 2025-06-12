@@ -108,11 +108,11 @@
                   </div>
                   
                   <div class="goal-card">
-                      <h4>TikTok Views Goal</h4>
+                      <h4>Weekly TikTokViews</h4>
                       <div class="progress-bar">
                           <div class="progress-fill" id="tiktokProgress"></div>
                       </div>
-                      <p><input type="number" class="stat-input-small" id="currentTiktokViews" value="1200" onchange="updateProgress()"> / <input typ="number" class="goal-input" id="tiktokGoal" value="5000" onchange="updateProgress()"> views</p>
+                      <p><input type="number" class="stat-input-small" id="currentTiktokViews" value="200" onchange="updateProgress()"> / <input type="number" class="goal-input" id="tiktokGoal" value="1000" onchange="updateProgress()"> views</p>
                   </div>
                   
                   <div class="goal-card">
@@ -305,8 +305,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadValue('followerTrend', '23');
     loadValue('listenerTrend', '0');
     loadValue('playlistTrend', '2');
-    loadValue('tiktokGoal', '5000');
-    loadValue('currentTiktokViews', '1200');
+    loadValue('tiktokGoal', '1000');
+    loadValue('currentTiktokViews', '200');
     
     // Update progress bars and trend colors
     updateProgress();
