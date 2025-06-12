@@ -31,7 +31,7 @@
 
     <title>Ryan Vo - About</title>
 
-<!-- Favicons (Browser Icons/Apple Home Screen Icons) -->
+<!-- Favicon (Browser Icons/Apple Home Screen Icons) -->
 
     <link rel="icon" type="image/jpeg" href="images/background-photo.jpeg">
     <link rel="apple-touch-icon" href="images/background-photo.jpeg">
@@ -54,17 +54,32 @@
 </head>
 
 <body>
+
+<!-- Navigation Bar -->
+
     <nav class="navbar">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link active">About</a>
         <a href="releases.html" class="nav-link">Music Releases</a>
     </nav>
-    
+
+<!-- End of Navigation Bar -->
+
     <main class="about-page">
+
+<!-- About Container -->
+
         <div class="about-container">
+
+<!-- Photo -->
+
             <div class="about-photo">
                 <img src="images/about-photo.jpeg" alt="Ryan Vo">
             </div>
+
+<!-- End of Photo -->
+<!-- Bio Section -->
+
             <div class="about-content">
                 <h1>About Me</h1>
                 <p class="intro-text">Singer • Musician • Songwriter</p>
@@ -78,9 +93,17 @@
                     <blockquote>Music is, and has always been, the best way I've found to capture my full range of emotion, heart, and soul, and I'm so lucky to be able to do what I do.</blockquote>
                 </div>
             </div>
+
+<!-- End of Bio Section -->
+
         </div>
+
+<!-- End of About Container -->
+
     </main>
-    
+
+<!-- Social Links Footer -->
+
     <footer class="social-footer">
       <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify" onclick="trackSocialClick('Spotify')">
         <img src="images/social-icons/spotify.jpeg" alt="Spotify">
@@ -104,39 +127,47 @@
         <img src="images/social-icons/email.png" alt="Email">
       </a>
     </footer>
-    <script>
-    function isMobilePortrait() {
-        return window.innerWidth <= 768 && window.matchMedia("(orientation: portrait)").matches;
+
+<!-- End of Social Links Footer -->
+<!--  -->
+
+<script>
+function isMobilePortrait() {
+    return window.innerWidth <= 768 && window.matchMedia("(orientation: portrait)").matches;
+}
+
+if (!isMobilePortrait()) {
+    let ticking = false;
+
+    function updateParallax() {
+        if (isMobilePortrait()) {
+            return;
+        }
+
+        const scrolled = window.pageYOffset;
+        const parallaxContainer = document.querySelector('.about-photo');
+
+        if (parallaxContainer) {
+            const speed = scrolled * 1;
+            parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
+        }
+
+        ticking = false;
     }
 
-    if (!isMobilePortrait()) {
-        let ticking = false;
-        
-        function updateParallax() {
-            if (isMobilePortrait()) {
-                return;
-            }
-            
-            const scrolled = window.pageYOffset;
-            const parallaxContainer = document.querySelector('.about-photo');
-            
-            if (parallaxContainer) {
-                const speed = scrolled * 1;
-                parallaxContainer.style.transform = `translate3d(0, ${speed}px, 0)`;
-            }
-            
-            ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
         }
-        
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        });
-    }
-    </script>
-    <script>
+    });
+}
+</script>
+
+<!--  -->
+<!--  -->
+
+<script>
 function trackSocialClick(platform) {
   gtag('event', 'social_click', {
     'event_category': 'Social Media',
@@ -152,5 +183,7 @@ function trackStreamingClick(platform, song) {
   });
 }
 </script>
+
 </body>
+
 </html>
