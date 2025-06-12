@@ -21,128 +21,130 @@
     <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
   </head>
   <body>
-<script>
-(function() {
-    const currentPage = window.location.pathname.split('/').pop();
-    const isAuthenticated = sessionStorage.getItem(currentPage + '_authenticated');
+    <script>
+      (function() {
+          const currentPage = window.location.pathname.split('/').pop();
+          const isAuthenticated = sessionStorage.getItem(currentPage + '_authenticated');
+          
+          if (!isAuthenticated) {
+              window.location.href = 'private.html';
+          }
+      })();
+    </script>
     
-    if (!isAuthenticated) {
-        window.location.href = 'private.html';
-    }
-})();
-</script>
     <nav class="private-nav">
-        <div class="nav-content">
-            <h2>Data Analytics Portfolio</h2>
-            <a href="private.html" class="back-link">← Back to Private Access</a>
-        </div>
+      <div class="nav-content">
+        <h2>Data Analytics Portfolio</h2>
+        <a href="private.html" class="back-link">← Back to Private Access</a>
+      </div>
     </nav>
     
     <main class="portfolio-page">
-        <div class="portfolio-container">
-            <section class="portfolio-intro">
-                <h1>Technical Skills & Projects</h1>
-                <p class="portfolio-tagline">Building data-driven insights for creative industries</p>
-            </section>
+      <div class="portfolio-container">
+        <section class="portfolio-intro">
+          <h1>Technical Skills & Projects</h1>
+          <p class="portfolio-tagline">Building data-driven insights for creative industries</p>
+        </section>
+        
+        <section class="goals-section">
+          <h2>Professional Goals</h2>
+          <div class="goals-content">
+            <p>Seeking entry-level data analyst position in media/entertainment industry while building expertise in:</p>
+            <ul>
+              <li>Music industry analytics and insights</li>
+              <li>Social media performance analysis</li>
+              <li>Audience engagement optimization</li>
+              <li>Data visualization and reporting</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="skills-section">
+          <h2>Current Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <h3>In Progress</h3>
+              <ul>
+                <li>Google Data Analytics Certificate</li>
+                <li>JavaScript Fundamentals (freeCodeCamp)</li>
+              </ul>
+            </div>
+            <div class="skill-item">
+              <h3>Completed</h3>
+              <ul>
+                <li>HTML/CSS Fundamentals (freeCodeCamp)</li>
+                <li>Personal Website Development</li>
+              </ul>
+            </div>
+            <div class="skill-item">
+              <h3>Tools & Platforms</h3>
+              <ul>
+                <li>GitHub & GitHub Pages</li>
+                <li>Google Analytics</li>
+                <li>Canva & Design Tools</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section class="projects-section">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card placeholder">
+              <div class="project-image">
+                <span>Coming Soon</span>
+              </div>
+              <div class="project-info">
+                <h3>Music Analytics Dashboard</h3>
+                <p>Planned project to analyze streaming performance and social media engagement</p>
+                <span class="project-status">In Development</span>
+              </div>
+            </div>
             
-            <section class="goals-section">
-                <h2>Professional Goals</h2>
-                <div class="goals-content">
-                    <p>Seeking entry-level data analyst position in media/entertainment industry while building expertise in:</p>
-                    <ul>
-                        <li>Music industry analytics and insights</li>
-                        <li>Social media performance analysis</li>
-                        <li>Audience engagement optimization</li>
-                        <li>Data visualization and reporting</li>
-                    </ul>
-                </div>
-            </section>
+            <div class="project-card placeholder">
+              <div class="project-image">
+                <span>Coming Soon</span>
+              </div>
+              <div class="project-info">
+                <h3>Artist Website Analytics</h3>
+                <p>Implementation and analysis of website performance metrics</p>
+                <span class="project-status">In Development</span>
+              </div>
+            </div>
             
-            <section class="skills-section">
-                <h2>Current Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h3>In Progress</h3>
-                        <ul>
-                            <li>Google Data Analytics Certificate</li>
-                            <li>JavaScript Fundamentals (freeCodeCamp)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Completed</h3>
-                        <ul>
-                            <li>HTML/CSS Fundamentals (freeCodeCamp)</li>
-                            <li>Personal Website Development</li>
-                        </ul>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Tools & Platforms</h3>
-                        <ul>
-                            <li>GitHub & GitHub Pages</li>
-                            <li>Google Analytics</li>
-                            <li>Canva & Design Tools</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="projects-section">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card placeholder">
-                        <div class="project-image">
-                            <span>Coming Soon</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Music Analytics Dashboard</h3>
-                            <p>Planned project to analyze streaming performance and social media engagement</p>
-                            <span class="project-status">In Development</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card placeholder">
-                        <div class="project-image">
-                            <span>Coming Soon</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Artist Website Analytics</h3>
-                            <p>Implementation and analysis of website performance metrics</p>
-                            <span class="project-status">In Development</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card placeholder">
-                        <div class="project-image">
-                            <span>Coming Soon</span>
-                        </div>
-                        <div class="project-info">
-                            <h3>Google Data Analytics Capstone</h3>
-                            <p>Final certificate project - TBD</p>
-                            <span class="project-status">Future</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+            <div class="project-card placeholder">
+              <div class="project-image">
+                <span>Coming Soon</span>
+              </div>
+              <div class="project-info">
+                <h3>Google Data Analytics Capstone</h3>
+                <p>Final certificate project - TBD</p>
+                <span class="project-status">Future</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+    
     <footer class="social-footer">
-    	<a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
-      	<img src="images/social-icons/spotify.jpeg" alt="Spotify">
+      <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
+        <img src="images/social-icons/spotify.jpeg" alt="Spotify">
       </a>
       <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram">
-      	<img src="images/social-icons/instagram.jpeg" alt="Instagram">
+        <img src="images/social-icons/instagram.jpeg" alt="Instagram">
       </a>
       <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok">
-      	<img src="images/social-icons/tiktok.jpeg" alt="TikTok">
+        <img src="images/social-icons/tiktok.jpeg" alt="TikTok">
       </a>
       <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music">
-      	<img src="images/social-icons/apple.jpeg" alt="Apple Music">
+        <img src="images/social-icons/apple.jpeg" alt="Apple Music">
       </a>
       <a href="https://x.com/ryanvomusic" class="social-icon" target="_blank" title="Twitter">
-      	<img src="images/social-icons/twitter.jpeg" alt="Twitter">
+        <img src="images/social-icons/twitter.jpeg" alt="Twitter">
       </a>
       <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky">
-      	<img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
+        <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
       </a>
       <a href="mailto:ryanvomusic@gmail.com" class="social-icon" title="Email">
         <img src="images/social-icons/email.png" alt="Email">
