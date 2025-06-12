@@ -253,6 +253,8 @@ function updateProgress() {
     saveValue('streamGoal');
     saveValue('followerGoal');
     saveValue('listenerGoal');
+    saveValue('tiktokGoal');
+    saveValue('currentTiktokViews');
     
     // Stream progress
     const currentStreams = parseInt(document.getElementById('totalStreams').value);
@@ -265,6 +267,12 @@ function updateProgress() {
     const followerGoal = parseInt(document.getElementById('followerGoal').value);
     const followerPercent = Math.min((currentFollowers / followerGoal) * 100, 100);
     document.getElementById('followerProgress').style.width = followerPercent + '%';
+    
+    // TikTok Views progress
+    const currentTiktokViews = parseInt(document.getElementById('currentTiktokViews').value);
+    const tiktokGoal = parseInt(document.getElementById('tiktokGoal').value);
+    const tiktokPercent = Math.min((currentTiktokViews / tiktokGoal) * 100, 100);
+    document.getElementById('tiktokProgress').style.width = tiktokPercent + '%';
     
     // Listener progress
     const currentListeners = parseInt(document.getElementById('monthlyListeners').value);
@@ -297,6 +305,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadValue('followerTrend', '23');
     loadValue('listenerTrend', '0');
     loadValue('playlistTrend', '2');
+    loadValue('tiktokGoal', '5000');
+    loadValue('currentTiktokViews', '1200');
     
     // Update progress bars and trend colors
     updateProgress();
