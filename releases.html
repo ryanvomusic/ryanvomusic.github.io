@@ -48,8 +48,8 @@
     <meta name="twitter:title" content="Ryan Vo - Music Releases">
     <meta name="twitter:description" content="Music and all the heart that comes with it.">
     <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
-</head>
 
+</head>
 
 <body>
 
@@ -61,6 +61,8 @@
         <a href="releases.html" class="nav-link active">Music Releases</a>
     </nav>
 
+<!-- End of Navigation Bar -->
+
     <main class="releases-page">
         <div class="releases-container">
             <h1>Music Releases</h1>
@@ -71,26 +73,40 @@
             <div class="releases-grid coming-soon">
                 <div class="release-card coming-soon">
                     <div class="release-artwork">
+
+<!-- Option 1: No Song To Promote -->
+
                         <div class="coming-soon-placeholder">
                             <span>Coming Soon</span>
                         </div>
+
+<!-- Option 2: Song Promotion -->
+<!--
+                        <div class="pre-save-container">
+                          <img src="" alt="New Song">
+                          <span class="pre-save-text">Pre-Save</span>
+                        </div>
+-->
+
                     </div>
                     <div class="release-info">
+
+<!-- Add song title and release date when promoting -->
+
                         <h3>New Music</h3>
                         <p class="release-type">TBA</p>
                         <p class="release-date">2025</p>
                         <div class="streaming-links">
-                          <a href="" target="_blank" class="stream-icon pre-save-link" onclick="trackStreamingClick('HyperFollow', 'New Music')">
-                            <div class="pre-save-container">
-                              <img src="images/album-covers/haunt-you-artwork.jpeg" alt="Pre-save">
-                              <span class="pre-save-text">Pre-Save</span>
-                            </div>
-                          </a>
+
+<!-- When promoting, replace 'Song Title' with appropriate song name -->
+
+                          <a href="" target="_blank" class="stream-icon" onclick="trackStreamingClick('HyperFollow', 'Song Title')">Pre-Save Now</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+<!-- End of Coming Soon Grid -->
 <!-- Releases Grid -->
 
             <div class="releases-grid">
@@ -116,6 +132,7 @@
                     </div>
                 </div>
 
+<!-- End of Haunt You Card -->
 <!-- You Card -->
 
                 <div class="release-card">
@@ -136,7 +153,13 @@
                         </div>
                     </div>
                 </div>
+
+<!-- End of You Card -->
+
             </div>
+
+<!-- End of Releases Grid -->
+
         </div>
     </main>
 
@@ -166,6 +189,7 @@
       </a>
     </footer>
 
+<!-- End of Social Links Footer -->
 <!-- Google Analytics Social/Streaming Click Tracking -->
 
 <script>
