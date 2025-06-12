@@ -963,11 +963,56 @@ header p {
     }
     
     .portfolio-intro h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+    }
+    
+    .portfolio-tagline {
+        font-size: 1em;
+    }
+    
+    .skills-section h2, .projects-section h2, .goals-section h2 {
+        font-size: 1.4em;
     }
     
     .skills-grid, .projects-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-item, .project-card {
+        max-width: 100%; /* full width on mobile */
+        width: 100%;
+    }
+    
+    .skill-item h3, .project-info h3 {
+        font-size: 1em; /* reduced from 1.2em and 1.1em */
+    }
+    
+    .skill-item li, .project-info p {
+        font-size: 0.85em; /* reduced from 0.9em */
+    }
+    
+    .goals-content p {
+        font-size: 0.9em; /* reduced from normal */
+    }
+    
+    .goals-content li {
+        font-size: 0.85em; /* reduced from normal */
+        padding: 8px 0; /* reduced padding */
+        padding-left: 20px; /* reduced from 25px */
+    }
+    
+    .project-status {
+        font-size: 0.75em; /* reduced from 0.8em */
+    }
+    
+    /* Reduce section padding on mobile */
+    .skills-section, .projects-section, .goals-section {
+        padding: 20px; /* reduced from 30px */
+    }
+    
+    .skill-item, .project-info {
+        padding: 15px; /* reduced from 20px */
     }
 }
 
@@ -1350,9 +1395,14 @@ header p {
 
 /* Mobile responsiveness for EPK */
 @media (max-width: 768px) {
+    .epk-page {
+        padding: 40px 15px;
+    }
+    
     .epk-header {
         flex-direction: column;
         text-align: center;
+        padding: 30px 20px;
     }
     
     .epk-photo {
@@ -1371,6 +1421,8 @@ header p {
     
     .epk-stats {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
     
     .quick-links {
@@ -1380,6 +1432,7 @@ header p {
     .release-item {
         flex-direction: column;
         text-align: center;
+        padding: 15px;
     }
     
     .photo-gallery {
@@ -1390,6 +1443,15 @@ header p {
         flex-direction: column;
         text-align: center;
         gap: 25px;
+    }
+    
+    .epk-section {
+        padding: 30px 20px;
+    }
+    
+    .epk-container {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }
 
@@ -1672,6 +1734,24 @@ header p {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     padding: 2px;
+}
+
+.export-btn {
+    background: #5a4a3a;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.export-btn:hover {
+    background: #4a3a2a;
+    transform: translateY(-1px);
 }
 
 /* Mobile responsiveness for analytics */
