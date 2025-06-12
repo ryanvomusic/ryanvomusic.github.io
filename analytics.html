@@ -47,6 +47,7 @@
                 <span>Last Updated: </span>
                 <input type="date" id="lastUpdatedDate" value="2025-06-11" onchange="updateLastUpdated()">
               </div>
+              <button onclick="exportData()" class="export-btn">Export Data (CSV)</button>
             </section>
 
           <section class="quick-stats">
@@ -289,6 +290,74 @@ function updateProgress() {
     const listenerGoal = parseInt(document.getElementById('listenerGoal').value);
     const listenerPercent = Math.min((currentListeners / listenerGoal) * 100, 100);
     document.getElementById('listenerProgress').style.width = listenerPercent + '%';
+}
+
+// Export function - add this to your existing JavaScript
+function exportData() {
+    // Get all the current values
+    const data = {
+        lastUpdated: document.getElementById('lastUpdatedDate').value,
+        totalStreams: document.getElementById('totalStreams').value,
+        spotifyStreams: document.getElementById('spotifyStreams').value,
+        appleStreams: document.getElementById('appleStreams').value,
+        totalFollowers: document.getElementById('totalFollowers').value,
+        igFollowers: document.getElementById('igFollowers').value,
+        ttFollowers: document.getElementById('ttFollowers').value,
+        twitterFollowers: document.getElementById('twitterFollowers').value,
+        blueskyFollowers: document.getElementById('blueskyFollowers').value,
+        youtubeFollowers: document.getElementById('youtubeFollowers').value,
+        monthlyListeners: document.getElementById('monthlyListeners').value,
+        totalPlaylists: document.getElementById('totalPlaylists').value,
+        youPlaylists: document.getElementById('youPlaylists').value,
+        hauntPlaylists: document.getElementById('hauntPlaylists').value,
+        currentTiktokViews: document.getElementById('currentTiktokViews').value,
+        streamGoal: document.getElementById('streamGoal').value,
+        followerGoal: document.getElementById('followerGoal').value,
+        listenerGoal: document.getElementById('listenerGoal').value,
+        tiktokGoal: document.getElementById('tiktokGoal').value,
+        streamTrend: document.getElementById('streamTrend').value,
+        followerTrend: document.getElementById('followerTrend').value,
+        listenerTrend: document.getElementById('listenerTrend').value,
+        playlistTrend: document.getElementById('playlistTrend').value
+    };
+    
+    // Create CSV content
+    const csvContent = 
+        "Metric,Value\n" +
+        "Last Updated," + data.lastUpdated + "\n" +
+        "Total Streams," + data.totalStreams + "\n" +
+        "Spotify Streams," + data.spotifyStreams + "\n" +
+        "Apple Music Streams," + data.appleStreams + "\n" +
+        "Total Social Followers," + data.totalFollowers + "\n" +
+        "Instagram Followers," + data.igFollowers + "\n" +
+        "TikTok Followers," + data.ttFollowers + "\n" +
+        "Twitter Followers," + data.twitterFollowers + "\n" +
+        "Bluesky Followers," + data.blueskyFollowers + "\n" +
+        "YouTube Subscribers," + data.youtubeFollowers + "\n" +
+        "Monthly Listeners," + data.monthlyListeners + "\n" +
+        "Total Playlist Adds," + data.totalPlaylists + "\n" +
+        "You Playlist Adds," + data.youPlaylists + "\n" +
+        "Haunt You Playlist Adds," + data.hauntPlaylists + "\n" +
+        "Weekly TikTok Views," + data.currentTiktokViews + "\n" +
+        "Stream Goal," + data.streamGoal + "\n" +
+        "Follower Goal," + data.followerGoal + "\n" +
+        "Listener Goal," + data.listenerGoal + "\n" +
+        "TikTok Views Goal," + data.tiktokGoal + "\n" +
+        "Stream Trend," + data.streamTrend + "\n" +
+        "Follower Trend," + data.followerTrend + "\n" +
+        "Listener Trend," + data.listenerTrend + "\n" +
+        "Playlist Trend," + data.playlistTrend;
+    
+    // Create and download file
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'analytics-data-' + data.lastUpdated + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
 }
 
 // Load all saved values when page loads
