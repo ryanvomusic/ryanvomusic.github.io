@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+
+<!-- Google Analytics Tag -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FH61R8YH31"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,36 +12,62 @@
 
   gtag('config', 'G-FH61R8YH31');
 </script>
+
+<!-- Character Encoding -->
+
     <meta charset="utf-8">
+
+<!-- Viewport (Mobile Responsiveness) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS Stylesheet -->
+
     <link rel="stylesheet" href="styles.css">
+
+<!-- SEO Title -->
+
     <title>Ryan Vo - Music Releases</title>
-    
+
+<!-- Favicons (Browser Icons/Apple Home Screen Icons) -->
+
     <link rel="icon" type="image/jpeg" href="images/background-photo.jpeg">
     <link rel="apple-touch-icon" href="images/background-photo.jpeg">
-    
+
+<!-- Open Graph Meta Tags -->
+
     <meta property="og:title" content="Ryan Vo - Music Releases">
     <meta property="og:description" content="Music and all the heart that comes with it.">
     <meta property="og:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
     <meta property="og:url" content="https://ryanvomusic.github.io/releases.html">
     <meta property="og:type" content="website">
-    
+
+<!-- Twitter Card Meta Tags -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ryan Vo - Music Releases">
     <meta name="twitter:description" content="Music and all the heart that comes with it.">
     <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
 </head>
+
+
 <body>
+
+<!-- Navigation Bar -->
+
     <nav class="navbar">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="releases.html" class="nav-link active">Music Releases</a>
     </nav>
-    
+
     <main class="releases-page">
         <div class="releases-container">
             <h1>Music Releases</h1>
             <p class="releases-intro">Latest music and upcoming projects</p>
+
+<!-- Coming Soon Grid -->
+
             <div class="releases-grid coming-soon">
                 <div class="release-card coming-soon">
                     <div class="release-artwork">
@@ -54,8 +82,13 @@
                     </div>
                 </div>
             </div>
-            
+
+<!-- Releases Grid -->
+
             <div class="releases-grid">
+
+<!-- Haunt You Card -->
+
                 <div class="release-card">
                     <div class="release-artwork">
                         <img src="images/album-covers/haunt-you-artwork.jpeg" alt="Haunt You - Single Artwork">
@@ -74,7 +107,9 @@
                         </div>
                     </div>
                 </div>
-                
+
+<!-- You Card -->
+
                 <div class="release-card">
                     <div class="release-artwork">
                         <img src="images/album-covers/you-artwork.jpeg" alt="You - Single Artwork">
@@ -96,7 +131,9 @@
             </div>
         </div>
     </main>
-    
+
+<!-- Social Links Footer -->
+
     <footer class="social-footer">
       <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify" onclick="trackSocialClick('Spotify')">
         <img src="images/social-icons/spotify.jpeg" alt="Spotify">
@@ -120,7 +157,10 @@
         <img src="images/social-icons/email.png" alt="Email">
       </a>
     </footer>
-    <script>
+
+<!-- Google Analytics Social/Streaming Click Tracking -->
+
+<script>
 function trackSocialClick(platform) {
   gtag('event', 'social_click', {
     'event_category': 'Social Media',
