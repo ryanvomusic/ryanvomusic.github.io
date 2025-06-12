@@ -503,6 +503,11 @@ header p {
 .pre-save-container {
     position: relative;
     display: inline-block;
+    min-width: 32px;
+}
+
+.pre-save-container:has(img[src=""]) {
+    display: none;
 }
 
 .pre-save-text {
