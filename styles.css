@@ -116,9 +116,19 @@ body::after {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   border-radius: 8px;
   z-index: 1000;
-  margin-top: 10px;
+  margin-top: 2px;
   padding: 10px 0;
   border: 1px solid rgba(255,255,255,0.3);
+}
+
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: transparent;
 }
 
 .nav-dropdown:hover .dropdown-content, .dropdown-content:hover {
