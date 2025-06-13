@@ -652,6 +652,10 @@ header p {
     font-weight: 500;
 }
 
+.no-underline {
+    text-decoration: none !important;
+}
+
 @media (max-width: 768px) {
     .releases-grid {
         grid-template-columns: 1fr;
