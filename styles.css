@@ -74,7 +74,7 @@ body::after {
     transform: translateY(-2px);
 }
 
-.nav-link:not(.active)::before {
+.nav-link:not(.active):not(.dropdown-toggle)::before {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -87,16 +87,16 @@ body::after {
     transition: width 0.3s ease;
 }
 
-.nav-link:not(.active):hover::before {
+.nav-link:not(.active):not(.dropdown-toggle):hover::before {
     width: 120%;
 }
 
-.nav-link.active {
+.nav-link.active:not(.dropdown-toggle)::after {
     color: #5a4a3a;
     font-weight: 500;
 }
 
-.nav-link.active::after {
+.nav-link.active:not(.dropdown-toggle)::after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -119,6 +119,11 @@ body::after {
   font-size: 0.8em;
   margin-left: 5px;
   transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.active {
+    color: #5a4a3a;
+    font-weight: 500;
 }
 
 .nav-dropdown:hover .dropdown-toggle::after {
