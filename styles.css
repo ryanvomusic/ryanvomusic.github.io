@@ -587,6 +587,23 @@ header p {
     opacity: 0.8;
 }
 
+.photo-credit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em;
+    color: #8a7a6a;
+    margin-top: 5px;
+    font-style: italic;
+    text-align: center;
+}
+
+.producer-credit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #8a7a6a;
+    margin-top: 10px;
+    font-style: italic;
+}
+
 .pre-save-container {
     position: relative;
     display: inline-block;
