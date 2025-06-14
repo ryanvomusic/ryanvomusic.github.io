@@ -216,10 +216,18 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownToggle.addEventListener('click', function(e) {
       // Only prevent default on mobile
       if (window.innerWidth <= 768) {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
+        // If dropdown is currently closed, prevent default and open it
+        if (!dropdown.classList.contains('active')) {
+          e.preventDefault();
+          dropdown.classList.add('active');
+        }
+        // If dropdown is already open, allow the link to work normally (go to releases.html)
+        // Don't prevent default, just close the dropdown
+        else {
+          dropdown.classList.remove('active');
+        }
       }
-    });
+    });    
     
     // Close dropdown when clicking outside
     document.addEventListener('click', function(e) {
