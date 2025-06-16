@@ -1184,7 +1184,7 @@ header p {
 }
 
 .project-card.placeholder .project-image {
-    height: 150px;
+    height: 200px;
     background: rgba(160, 130, 150, 0.2);
     display: flex;
     align-items: center;
