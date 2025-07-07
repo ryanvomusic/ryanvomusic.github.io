@@ -2037,3 +2037,167 @@ header p {
         text-align: center;
     }
 }
+
+/* Enhanced Project Card Styles */
+.project-card.active {
+    border-left: 4px solid rgba(40, 167, 69, 0.6);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.project-card.active .project-image {
+    height: 200px;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(28, 200, 138, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(40, 167, 69, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card.active .project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.project-card.active .project-image span {
+    font-weight: 600;
+    color: #28a745;
+    font-size: 1.1em;
+    z-index: 1;
+    position: relative;
+}
+
+/* Project Details Styling */
+.project-details {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tech-stack {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75em;
+    color: #6a5a4a;
+    font-weight: 500;
+    background: rgba(160, 130, 150, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    font-style: italic;
+}
+
+/* Enhanced Project Status Badges */
+.project-status.live {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-status.live::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #28a745;
+    animation: pulse 2s infinite;
+}
+
+.project-status.collecting {
+    background: rgba(255, 193, 7, 0.2);
+    color: #856404;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    position: relative;
+}
+
+.project-status.collecting::before {
+    content: '📊 ';
+    margin-right: 4px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Skills Section Enhancements */
+.skill-item li.completed {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.skill-item li.completed:before {
+    content: "✓";
+    color: #28a745;
+    font-weight: bold;
+}
+
+.skill-item li.in-progress {
+    color: #856404;
+    font-weight: 500;
+}
+
+.skill-item li.in-progress:before {
+    content: "⚡";
+    color: #ffc107;
+}
+
+/* Progress Indicators */
+.progress-indicator {
+    display: inline-block;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* Enhanced Hover Effects for Active Projects */
+.project-card.active:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
+}
+
+.project-card.active:hover .project-image {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.3), rgba(28, 200, 138, 0.3));
+}
+
+/* Mobile Responsiveness for New Elements */
+@media (max-width: 768px) {
+    .project-details {
+        gap: 6px;
+    }
+    
+    .tech-stack {
+        font-size: 0.7em;
+        padding: 3px 6px;
+    }
+    
+    .project-status.live::before,
+    .project-status.collecting::before {
+        display: none;
+    }
+    
+    .progress-indicator {
+        font-size: 0.65em;
+        padding: 1px 6px;
+    }
+}
