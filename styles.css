@@ -2110,7 +2110,6 @@ header p {
 }
 
 .project-status.collecting::before {
-    content: '📊 ';
     margin-right: 4px;
 }
 
