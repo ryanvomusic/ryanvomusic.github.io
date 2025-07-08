@@ -437,11 +437,11 @@ header p {
     margin: 30px 0 0 0;
     padding: 20px 30px;
     background: rgba(255, 250, 240, 0.5);
-    border-left: 4px solid rgba(160, 130, 150 0.6);
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
     border-radius: 0 8px 8px 0;
     text-shadow:
        0 0 5px rgba(255, 250, 240, 0.8),
-       1px 1px 2px rgba(0, 0, 0, 0,1);
+       1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* About Page Mobile */
@@ -1982,7 +1982,16 @@ header p {
 .last-updated input[type="date"] {
     background: transparent;
     border: none;
-    color: #6a
+    color: #6a5a4a;
+    margin: 30px 0 0 0;
+    padding: 20px 30px;
+    background: rgba(255,250,240,0.5);
+    border-left: 4px solid rgba(160, 130,150,0.6);
+    border-radius: 0 8px 8px 0;
+    text-shadow:
+        0 0 5px rgba(255,250,240,0.8),
+        1px 1px 2px rgba(0,0,0,0.1);
+}
 
 .analytics-page .quick-stats {
     background: rgba(255, 250, 240, 0.4);
@@ -2241,13 +2250,4 @@ header p {
         gap: 10px;
         text-align: center;
     }
-}5a4a;
-    margin: 30px 0 0 0;
-    padding: 20px 30px;
-    background: rgba(255,250,240,0.5);
-    border-left: 4px solid rgba(160, 130,150,0.6);
-    border-radius: 0 8px 8px 0;
-    text-shadow:
-        0 0 5px rgba(255,250,240,0.8),
-        1px 1px 2px rgba(0,0,0,0.1);
 }
