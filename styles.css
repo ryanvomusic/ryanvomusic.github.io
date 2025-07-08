@@ -434,277 +434,14 @@ header p {
     font-style: italic;
     line-height: 1.6;
     color: #6a5a4a;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
-    outline: none;
-}
-
-.analytics-page .quick-stats {
-    background: rgba(255, 250, 240, 0.4);
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.analytics-page .quick-stats h2 {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 600;
-    font-size: 1.8em;
-    color: #5a4a3a;
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
-    padding-bottom: 10px;
-}
-
-.analytics-page .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.analytics-page .stat-card {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid rgba(160, 130, 150, 0.6);
-    transition: transform 0.3s ease;
-}
-
-.analytics-page .stat-card:hover {
-    transform: translateY(-2px);
-}
-
-.analytics-page .stat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.analytics-page .stat-header h3 {
-    font-family: 'Comfortaa', cursive;
-    color: #5a4a3a;
-    font-size: 1em;
-    margin: 0;
-}
-
-.stat-input {
-    font-family: 'Comfortaa', cursive;
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #5a4a3a;
-    background: transparent;
-    border: none;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 8px;
-    outline: none;
-}
-
-.stat-input:focus {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    padding: 5px;
-}
-
-.trend-input {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 10px;
-    border: none;
-    width: 50px;
-    text-align: center;
-    outline: none;
-}
-
-.trend-input.positive {
-    background: rgba(40, 167, 69, 0.2);
-    color: #28a745;
-}
-
-.trend-input.neutral {
-    background: rgba(108, 117, 125, 0.2);
-    color: #6c757d;
-}
-
-.trend-input.negative {
-    background: rgba(220, 53, 69, 0.2);
-    color: #dc3545;
-}
-
-.small-input {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    background: transparent;
-    border: none;
-    color: #7a6a5a;
-    width: 40px;
-    text-align: center;
-    outline: none;
-}
-
-.small-input:focus {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px;
-}
-
-.stat-breakdown {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    color: #7a6a5a;
-}
-
-.stat-input-small {
-    font-family: 'Poppins', sans-serif;
-    background: transparent;
-    border: none;
-    color: #6a5a4a;
-    font-size: 0.9em;
-    width: 60px;
-    text-align: center;
-    outline: none;
-    font-weight: 600;
-}
-
-.stat-input-small:focus {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px;
-}
-
-.analytics-page .goals-section {
-    background: rgba(255, 250, 240, 0.4);
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.analytics-page .goals-section h2 {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 600;
-    font-size: 1.8em;
-    color: #5a4a3a;
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
-    padding-bottom: 10px;
-}
-
-.analytics-page .goals-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.analytics-page .goal-card {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.analytics-page .goal-card h4 {
-    font-family: 'Comfortaa', cursive;
-    color: #5a4a3a;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-.analytics-page .progress-bar {
-    width: 100%;
-    height: 8px;
-    background: rgba(160, 130, 150, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.analytics-page .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, rgba(160, 130, 150, 0.8), rgba(160, 130, 150, 0.6));
-    border-radius: 4px;
-    transition: width 0.5s ease;
-}
-
-.analytics-page .goal-card p {
-    font-family: 'Poppins', sans-serif;
-    color: #6a5a4a;
-    font-size: 0.9em;
-    margin: 0;
-}
-
-.goal-input {
-    font-family: 'Poppins', sans-serif;
-    background: transparent;
-    border: none;
-    color: #6a5a4a;
-    font-size: 0.9em;
-    width: 60px;
-    text-align: center;
-    outline: none;
-    font-weight: 600;
-}
-
-.goal-input:focus {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px;
-}
-
-.export-btn {
-    background: #5a4a3a;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s ease;
-}
-
-.export-btn:hover {
-    background: #4a3a2a;
-    transform: translateY(-1px);
-}
-
-/* Analytics Page Mobile */
-@media (max-width: 768px) {
-    .dashboard-header h1 {
-        font-size: 2em;
-    }
-    
-    .analytics-page .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .analytics-page .goals-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stat-input {
-        font-size: 2em;
-    }
-    
-    .analytics-page .stat-header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-}5a4a;
     margin: 30px 0 0 0;
     padding: 20px 30px;
-    background: rgba(255,250,240,0.5);
-    border-left: 4px solid rgba(160, 130,150,0.6);
+    background: rgba(255, 250, 240, 0.5);
+    border-left: 4px solid rgba(160, 130, 150 0.6);
     border-radius: 0 8px 8px 0;
     text-shadow:
-        0 0 5px rgba(255,250,240,0.8),
-        1px 1px 2px rgba(0,0,0,0.1);
+       0 0 5px rgba(255, 250, 240, 0.8),
+       1px 1px 2px rgba(0, 0, 0, 0,1);
 }
 
 /* About Page Mobile */
@@ -2246,3 +1983,271 @@ header p {
     background: transparent;
     border: none;
     color: #6a
+
+.analytics-page .quick-stats {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.analytics-page .quick-stats h2 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #5a4a3a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 10px;
+}
+
+.analytics-page .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.analytics-page .stat-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.analytics-page .stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.analytics-page .stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.analytics-page .stat-header h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    font-size: 1em;
+    margin: 0;
+}
+
+.stat-input {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #5a4a3a;
+    background: transparent;
+    border: none;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.stat-input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.trend-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    border: none;
+    width: 50px;
+    text-align: center;
+    outline: none;
+}
+
+.trend-input.positive {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.trend-input.neutral {
+    background: rgba(108, 117, 125, 0.2);
+    color: #6c757d;
+}
+
+.trend-input.negative {
+    background: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+}
+
+.small-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    background: transparent;
+    border: none;
+    color: #7a6a5a;
+    width: 40px;
+    text-align: center;
+    outline: none;
+}
+
+.small-input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.stat-breakdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #7a6a5a;
+}
+
+.stat-input-small {
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border: none;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    width: 60px;
+    text-align: center;
+    outline: none;
+    font-weight: 600;
+}
+
+.stat-input-small:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.analytics-page .goals-section {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.analytics-page .goals-section h2 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #5a4a3a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 10px;
+}
+
+.analytics-page .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.analytics-page .goal-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.analytics-page .goal-card h4 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.analytics-page .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(160, 130, 150, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.analytics-page .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(160, 130, 150, 0.8), rgba(160, 130, 150, 0.6));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.analytics-page .goal-card p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.goal-input {
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border: none;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    width: 60px;
+    text-align: center;
+    outline: none;
+    font-weight: 600;
+}
+
+.goal-input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.export-btn {
+    background: #5a4a3a;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.export-btn:hover {
+    background: #4a3a2a;
+    transform: translateY(-1px);
+}
+
+/* Analytics Page Mobile */
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 2em;
+    }
+    
+    .analytics-page .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .analytics-page .goals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-input {
+        font-size: 2em;
+    }
+    
+    .analytics-page .stat-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}5a4a;
+    margin: 30px 0 0 0;
+    padding: 20px 30px;
+    background: rgba(255,250,240,0.5);
+    border-left: 4px solid rgba(160, 130,150,0.6);
+    border-radius: 0 8px 8px 0;
+    text-shadow:
+        0 0 5px rgba(255,250,240,0.8),
+        1px 1px 2px rgba(0,0,0,0.1);
+}
