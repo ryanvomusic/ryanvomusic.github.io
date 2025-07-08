@@ -1608,6 +1608,7 @@ header p {
     border: 1px solid rgba(40, 167, 69, 0.3);
     position: relative;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .project-status.live::before {
@@ -1635,40 +1636,6 @@ header p {
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
-}
-
-/* Skills Section Enhancements */
-.skill-item li.completed {
-    color: #28a745;
-    font-weight: 500;
-}
-
-.skill-item li.completed:before {
-    content: "✓";
-    color: #28a745;
-    font-weight: bold;
-}
-
-.skill-item li.in-progress {
-    color: #856404;
-    font-weight: 500;
-}
-
-.skill-item li.in-progress:before {
-    content: "⚡";
-    color: #ffc107;
-}
-
-/* Progress Indicators */
-.progress-indicator {
-    display: inline-block;
-    background: rgba(40, 167, 69, 0.1);
-    color: #28a745;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.7em;
-    font-weight: 600;
-    margin-left: 8px;
 }
 
 /* Enhanced Hover Effects for Active Projects */
