@@ -2183,3 +2183,107 @@ header p {
         padding: 1px 6px;
     }
 }
+
+/* Add these mobile fixes to your existing @media (max-width: 768px) section */
+
+@media (max-width: 768px) {
+    /* Project card mobile fixes - add these to your existing mobile styles */
+    .project-card {
+        height: auto !important; /* Remove any fixed heights */
+        min-height: auto !important;
+        overflow: visible !important; /* Ensure content isn't hidden */
+    }
+    
+    .project-info {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    
+    .project-info p {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        text-overflow: initial !important;
+        white-space: normal !important;
+        line-height: 1.4;
+        font-size: 0.85em;
+    }
+    
+    /* Ensure project descriptions are fully visible */
+    .project-card .project-info {
+        padding: 15px;
+    }
+    
+    /* Projects grid mobile adjustment */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px;
+    }
+    
+    /* Tech stack mobile adjustments */
+    .tech-stack {
+        font-size: 0.7em;
+        padding: 3px 6px;
+        margin-bottom: 8px;
+        display: block;
+        width: fit-content;
+    }
+    
+    /* Project status mobile adjustments */
+    .project-status {
+        font-size: 0.75em;
+        padding: 4px 10px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    
+    /* Remove any text truncation on mobile */
+    .project-card * {
+        overflow: visible !important;
+        text-overflow: initial !important;
+        white-space: normal !important;
+    }
+    
+    /* Project details mobile spacing */
+    .project-details {
+        gap: 8px;
+        margin-top: 12px;
+    }
+    
+    /* Progress indicator mobile sizing */
+    .progress-indicator {
+        font-size: 0.65em;
+        padding: 2px 6px;
+        margin-left: 6px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .project-card {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    
+    .project-info h3 {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    
+    .project-info p {
+        font-size: 0.8em;
+        line-height: 1.35;
+        margin-bottom: 8px;
+    }
+    
+    .tech-stack {
+        font-size: 0.65em;
+        padding: 2px 5px;
+    }
+    
+    .project-status {
+        font-size: 0.7em;
+        padding: 3px 8px;
+    }
+}
