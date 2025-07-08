@@ -1,3 +1,7 @@
+/* ========================================
+   UNIVERSAL STYLES (ALL PAGES)
+======================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
@@ -45,6 +49,7 @@ body::after {
     z-index: -1;
 }
 
+/* Navigation Bar (ALL PAGES) */
 .navbar {
     position: fixed;
     top: 0;
@@ -157,44 +162,7 @@ body::after {
   display: none;
 }
 
-/* Mobile dropdown adjustments */
-@media (max-width: 768px) {
-  .nav-dropdown {
-    position: relative;
-  }
-
-  .dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    margin-top: 5px;
-    padding: 10px 0;
-    border: 1px solid rgba(160, 130, 150, 0.2);
-    border-radius: 8px;
-    width: 200px;
-    z-index: 1000;
-  }
-  
-  .nav-dropdown:active .dropdown-content {
-    display: block !important;
-  }
-  
-  .dropdown-content a {
-    padding: 12px 20px;
-    font-size: 14px;
-    color: #7a6a5a;
-    text-align: center;
-  }
-
-  .dropdown-content a:hover {
-    background: rgba(160, 130, 150, 0.2);
-  }
-}
-
+/* Main Content */
 main {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -206,6 +174,112 @@ main {
     text-align: center;
     padding: 20px;
 }
+
+/* Social Links Footer (ALL PAGES) */
+.social-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    z-index: 50;
+}
+
+.social-icon {
+    margin: 0 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icon img {
+    width: 36px;
+    height: 36px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: translateY(-2px) scale(1.2);
+    opacity: 0.6;
+}
+
+/* Universal Mobile Styles */
+@media (max-width: 768px) {
+    .nav-dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        margin-top: 5px;
+        padding: 10px 0;
+        border: 1px solid rgba(160, 130, 150, 0.2);
+        border-radius: 8px;
+        width: 200px;
+        z-index: 1000;
+    }
+    
+    .nav-dropdown:active .dropdown-content {
+        display: block !important;
+    }
+    
+    .dropdown-content a {
+        padding: 12px 20px;
+        font-size: 14px;
+        color: #7a6a5a;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background: rgba(160, 130, 150, 0.2);
+    }
+
+    .nav-link {
+        margin: 0 15px;
+    }
+    
+    .social-icon {
+        margin: 0 12px;
+    }
+    
+    .social-icon img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    main {
+        margin-top: 70px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        margin: 0 8px;
+    }
+    
+    .social-icon {
+        margin: 0 8px;
+    }
+    
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ========================================
+   HOME PAGE (index.html)
+======================================== */
 
 .homepage {
     overflow: hidden;
@@ -241,50 +315,8 @@ header p {
         1px 1px 2px rgba(0,0,0,0.2);
 }
 
-.social-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.5);
-    z-index: 50;
-}
-
-.social-icon {
-    margin: 0 20px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.social-icon img {
-    width: 36px;
-    height: 36px;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover img {
-    transform: translateY(-2px) scale(1.2);
-    opacity: 0.6;
-}
-
+/* Home Page Mobile */
 @media (max-width: 768px) {
-    .nav-link {
-        margin: 0 15px;
-    }
-    
-    .social-icon {
-        margin: 0 12px;
-    }
-    
-    .social-icon img {
-        width: 28px;
-        height: 28px;
-    }
-    
     header h1 {
         font-size: 3em;
     }
@@ -292,29 +324,12 @@ header p {
     header p {
         font-size: 1.2em;
     }
-    
-    main {
-        margin-top: 70px;
-        padding: 15px;
-    }
 }
 
-@media (max-width: 480px) {
-    .nav-link {
-        margin: 0 8px;
-    }
-    
-    .social-icon {
-        margin: 0 8px;
-    }
-    
-    .social-icon img {
-        width: 24px;
-        height: 24px;
-    }
-}
+/* ========================================
+   ABOUT PAGE (about.html)
+======================================== */
 
-/* About Page Styles */
 .about-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -419,6 +434,269 @@ header p {
     font-style: italic;
     line-height: 1.6;
     color: #6a5a4a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.analytics-page .quick-stats {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.analytics-page .quick-stats h2 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #5a4a3a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 10px;
+}
+
+.analytics-page .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.analytics-page .stat-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.analytics-page .stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.analytics-page .stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.analytics-page .stat-header h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    font-size: 1em;
+    margin: 0;
+}
+
+.stat-input {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #5a4a3a;
+    background: transparent;
+    border: none;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+.stat-input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.trend-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    border: none;
+    width: 50px;
+    text-align: center;
+    outline: none;
+}
+
+.trend-input.positive {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.trend-input.neutral {
+    background: rgba(108, 117, 125, 0.2);
+    color: #6c757d;
+}
+
+.trend-input.negative {
+    background: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+}
+
+.small-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    background: transparent;
+    border: none;
+    color: #7a6a5a;
+    width: 40px;
+    text-align: center;
+    outline: none;
+}
+
+.small-input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.stat-breakdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #7a6a5a;
+}
+
+.stat-input-small {
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border: none;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    width: 60px;
+    text-align: center;
+    outline: none;
+    font-weight: 600;
+}
+
+.stat-input-small:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.analytics-page .goals-section {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.analytics-page .goals-section h2 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #5a4a3a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 10px;
+}
+
+.analytics-page .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.analytics-page .goal-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.analytics-page .goal-card h4 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.analytics-page .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(160, 130, 150, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.analytics-page .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(160, 130, 150, 0.8), rgba(160, 130, 150, 0.6));
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.analytics-page .goal-card p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.goal-input {
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    border: none;
+    color: #6a5a4a;
+    font-size: 0.9em;
+    width: 60px;
+    text-align: center;
+    outline: none;
+    font-weight: 600;
+}
+
+.goal-input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.export-btn {
+    background: #5a4a3a;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.export-btn:hover {
+    background: #4a3a2a;
+    transform: translateY(-1px);
+}
+
+/* Analytics Page Mobile */
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 2em;
+    }
+    
+    .analytics-page .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .analytics-page .goals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-input {
+        font-size: 2em;
+    }
+    
+    .analytics-page .stat-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}5a4a;
     margin: 30px 0 0 0;
     padding: 20px 30px;
     background: rgba(255,250,240,0.5);
@@ -429,6 +707,7 @@ header p {
         1px 1px 2px rgba(0,0,0,0.1);
 }
 
+/* About Page Mobile */
 @media (max-width: 768px) and (orientation: portrait) {
     .about-container {
         flex-direction: column;
@@ -457,7 +736,10 @@ header p {
     }
 }
 
-/* Releases Page Styles */
+/* ========================================
+   RELEASES PAGE (releases.html)
+======================================== */
+
 .releases-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -656,6 +938,7 @@ header p {
     text-decoration: none !important;
 }
 
+/* Releases Page Mobile */
 @media (max-width: 768px) {
     .releases-grid {
         grid-template-columns: 1fr;
@@ -682,7 +965,10 @@ header p {
     }
 }
 
-/* EP Page Styles */
+/* ========================================
+   EP PAGE (illumina-ep.html)
+======================================== */
+
 .ep-header {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -844,7 +1130,7 @@ header p {
     height: 20px !important;
 }
 
-/* Mobile responsiveness for EP page */
+/* EP Page Mobile */
 @media (max-width: 768px) {
     .ep-header {
         display: flex;
@@ -894,7 +1180,10 @@ header p {
     }
 }
 
-/* Private Access Page Styles */
+/* ========================================
+   PRIVATE ACCESS PAGE (private.html)
+======================================== */
+
 .private-access {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
@@ -995,6 +1284,7 @@ header p {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Private Access Mobile */
 @media (max-width: 768px) {
     .private-access {
         align-items: flex-start;
@@ -1023,7 +1313,10 @@ header p {
     }
 }
 
-/* Private Pages Styles */
+/* ========================================
+   PRIVATE PAGES NAVIGATION (portfolio.html, epk.html, analytics.html)
+======================================== */
+
 .private-nav {
     position: fixed;
     top: 0;
@@ -1063,7 +1356,22 @@ header p {
     color: #fff;
 }
 
-/* Portfolio Page Styles */
+/* Private Nav Mobile */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-content h2 {
+        font-size: 1.1em;
+    }
+}
+
+/* ========================================
+   PORTFOLIO PAGE (portfolio.html)
+======================================== */
+
 .portfolio-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -1249,16 +1557,132 @@ header p {
     font-weight: bold;
 }
 
+/* Enhanced Project Card Styles */
+.project-card.active {
+    border-left: 4px solid rgba(40, 167, 69, 0.6);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.project-card.active .project-image {
+    height: 200px;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(28, 200, 138, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(40, 167, 69, 0.3);
+    position: relative;
+}
+
+.project-card.active .project-image span {
+    font-weight: 600;
+    color: #28a745;
+    font-size: 1.1em;
+    z-index: 1;
+    position: relative;
+}
+
+/* Project Details Styling */
+.project-details {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tech-stack {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75em;
+    color: #6a5a4a;
+    font-weight: 500;
+    background: rgba(160, 130, 150, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    font-style: italic;
+}
+
+/* Enhanced Project Status Badges */
+.project-status.live {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-status.live::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #28a745;
+    animation: pulse 2s infinite;
+}
+
+.project-status.collecting {
+    background: rgba(255, 193, 7, 0.2);
+    color: #856404;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    position: relative;
+}
+
+.project-status.collecting::before {
+    margin-right: 4px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Skills Section Enhancements */
+.skill-item li.completed {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.skill-item li.completed:before {
+    content: "✓";
+    color: #28a745;
+    font-weight: bold;
+}
+
+.skill-item li.in-progress {
+    color: #856404;
+    font-weight: 500;
+}
+
+.skill-item li.in-progress:before {
+    content: "⚡";
+    color: #ffc107;
+}
+
+/* Progress Indicators */
+.progress-indicator {
+    display: inline-block;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+/* Enhanced Hover Effects for Active Projects */
+.project-card.active:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
+}
+
+.project-card.active:hover .project-image {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.3), rgba(28, 200, 138, 0.3));
+}
+
+/* Portfolio Page Mobile */
 @media (max-width: 768px) {
-    .nav-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .nav-content h2 {
-        font-size: 1.1em;
-    }
-    
     .portfolio-intro h1 {
         font-size: 1.8em;
     }
@@ -1309,9 +1733,85 @@ header p {
     .skill-item, .project-info {
         padding: 15px;
     }
+
+    /* Portfolio-specific project card mobile fixes */
+    .portfolio-page .project-card {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+
+    .portfolio-page .project-info {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 15px;
+    }
+
+    .portfolio-page .project-info p {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        text-overflow: initial !important;
+        white-space: normal !important;
+        line-height: 1.4;
+        font-size: 0.85em;
+        margin-bottom: 12px;
+    }
+
+    /* Portfolio projects grid mobile adjustment */
+    .portfolio-page .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Remove any text truncation on portfolio mobile */
+    .portfolio-page .project-card * {
+        overflow: visible !important;
+        text-overflow: initial !important;
+        white-space: normal !important;
+    }
+
+    /* Portfolio project details mobile spacing */
+    .portfolio-page .project-details {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    /* Portfolio project image mobile adjustments */
+    .portfolio-page .project-card .project-image {
+        height: 150px; /* Reduce height on mobile to give more space for text */
+    }
+
+    /* Ensure active project cards work properly on mobile */
+    .portfolio-page .project-card.active .project-image span {
+        font-size: 1em; /* Slightly smaller on mobile */
+    }
+    
+    .project-details {
+        gap: 6px;
+    }
+    
+    .tech-stack {
+        font-size: 0.7em;
+        padding: 3px 6px;
+    }
+    
+    .project-status.live::before,
+    .project-status.collecting::before {
+        display: none;
+    }
+    
+    .progress-indicator {
+        font-size: 0.65em;
+        padding: 1px 6px;
+    }
 }
 
-/* EPK Page Styles */
+/* ========================================
+   EPK PAGE (epk.html)
+======================================== */
+
 .epk-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -1658,6 +2158,7 @@ header p {
     transform: translateY(-2px);
 }
 
+/* EPK Page Mobile */
 @media (max-width: 768px) {
     .epk-page {
         padding: 40px 15px;
@@ -1719,7 +2220,10 @@ header p {
     }
 }
 
-/* Analytics Dashboard Styles */
+/* ========================================
+   ANALYTICS PAGE (analytics.html)
+======================================== */
+
 .analytics-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -1774,516 +2278,4 @@ header p {
 .last-updated input[type="date"] {
     background: transparent;
     border: none;
-    color: #6a5a4a;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
-    outline: none;
-}
-
-.analytics-page .quick-stats {
-    background: rgba(255, 250, 240, 0.4);
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.analytics-page .quick-stats h2 {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 600;
-    font-size: 1.8em;
-    color: #5a4a3a;
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
-    padding-bottom: 10px;
-}
-
-.analytics-page .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.analytics-page .stat-card {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid rgba(160, 130, 150, 0.6);
-    transition: transform 0.3s ease;
-}
-
-.analytics-page .stat-card:hover {
-    transform: translateY(-2px);
-}
-
-.analytics-page .stat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.analytics-page .stat-header h3 {
-    font-family: 'Comfortaa', cursive;
-    color: #5a4a3a;
-    font-size: 1em;
-    margin: 0;
-}
-
-.stat-input {
-    font-family: 'Comfortaa', cursive;
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #5a4a3a;
-    background: transparent;
-    border: none;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 8px;
-    outline: none;
-}
-
-.stat-input:focus {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    padding: 5px;
-}
-
-.trend-input {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 10px;
-    border: none;
-    width: 50px;
-    text-align: center;
-    outline: none;
-}
-
-.trend-input.positive {
-    background: rgba(40, 167, 69, 0.2);
-    color: #28a745;
-}
-
-.trend-input.neutral {
-    background: rgba(108, 117, 125, 0.2);
-    color: #6c757d;
-}
-
-.trend-input.negative {
-    background: rgba(220, 53, 69, 0.2);
-    color: #dc3545;
-}
-
-.small-input {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    background: transparent;
-    border: none;
-    color: #7a6a5a;
-    width: 40px;
-    text-align: center;
-    outline: none;
-}
-
-.small-input:focus {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px;
-}
-
-.stat-breakdown {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    color: #7a6a5a;
-}
-
-.stat-input-small {
-    font-family: 'Poppins', sans-serif;
-    background: transparent;
-    border: none;
-    color: #6a5a4a;
-    font-size: 0.9em;
-    width: 60px;
-    text-align: center;
-    outline: none;
-    font-weight: 600;
-}
-
-.stat-input-small:focus {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px;
-}
-
-.analytics-page .goals-section {
-    background: rgba(255, 250, 240, 0.4);
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.analytics-page .goals-section h2 {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 600;
-    font-size: 1.8em;
-    color: #5a4a3a;
-    margin-bottom: 20px;
-    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
-    padding-bottom: 10px;
-}
-
-.analytics-page .goals-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.analytics-page .goal-card {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.analytics-page .goal-card h4 {
-    font-family: 'Comfortaa', cursive;
-    color: #5a4a3a;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-.analytics-page .progress-bar {
-    width: 100%;
-    height: 8px;
-    background: rgba(160, 130, 150, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.analytics-page .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, rgba(160, 130, 150, 0.8), rgba(160, 130, 150, 0.6));
-    border-radius: 4px;
-    transition: width 0.5s ease;
-}
-
-.analytics-page .goal-card p {
-    font-family: 'Poppins', sans-serif;
-    color: #6a5a4a;
-    font-size: 0.9em;
-    margin: 0;
-}
-
-.goal-input {
-    font-family: 'Poppins', sans-serif;
-    background: transparent;
-    border: none;
-    color: #6a5a4a;
-    font-size: 0.9em;
-    width: 60px;
-    text-align: center;
-    outline: none;
-    font-weight: 600;
-}
-
-.goal-input:focus {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px;
-}
-
-.export-btn {
-    background: #5a4a3a;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s ease;
-}
-
-.export-btn:hover {
-    background: #4a3a2a;
-    transform: translateY(-1px);
-}
-
-@media (max-width: 768px) {
-    .dashboard-header h1 {
-        font-size: 2em;
-    }
-    
-    .analytics-page .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .analytics-page .goals-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stat-input {
-        font-size: 2em;
-    }
-    
-    .analytics-page .stat-header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-}
-
-/* Enhanced Project Card Styles */
-.project-card.active {
-    border-left: 4px solid rgba(40, 167, 69, 0.6);
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.project-card.active .project-image {
-    height: 200px;
-    background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(28, 200, 138, 0.2));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(40, 167, 69, 0.3);
-    position: relative;
-}
-
-.project-card.active .project-image span {
-    font-weight: 600;
-    color: #28a745;
-    font-size: 1.1em;
-    z-index: 1;
-    position: relative;
-}
-
-/* Project Details Styling */
-.project-details {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.tech-stack {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75em;
-    color: #6a5a4a;
-    font-weight: 500;
-    background: rgba(160, 130, 150, 0.1);
-    padding: 4px 8px;
-    border-radius: 12px;
-    display: inline-block;
-    font-style: italic;
-}
-
-/* Enhanced Project Status Badges */
-.project-status.live {
-    background: rgba(40, 167, 69, 0.2);
-    color: #28a745;
-    border: 1px solid rgba(40, 167, 69, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.project-status.live::before {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #28a745;
-    animation: pulse 2s infinite;
-}
-
-.project-status.collecting {
-    background: rgba(255, 193, 7, 0.2);
-    color: #856404;
-    border: 1px solid rgba(255, 193, 7, 0.3);
-    position: relative;
-}
-
-.project-status.collecting::before {
-    margin-right: 4px;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
-/* Skills Section Enhancements */
-.skill-item li.completed {
-    color: #28a745;
-    font-weight: 500;
-}
-
-.skill-item li.completed:before {
-    content: "✓";
-    color: #28a745;
-    font-weight: bold;
-}
-
-.skill-item li.in-progress {
-    color: #856404;
-    font-weight: 500;
-}
-
-.skill-item li.in-progress:before {
-    content: "⚡";
-    color: #ffc107;
-}
-
-/* Progress Indicators */
-.progress-indicator {
-    display: inline-block;
-    background: rgba(40, 167, 69, 0.1);
-    color: #28a745;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.7em;
-    font-weight: 600;
-    margin-left: 8px;
-}
-
-/* Enhanced Hover Effects for Active Projects */
-.project-card.active:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
-}
-
-.project-card.active:hover .project-image {
-    background: linear-gradient(135deg, rgba(40, 167, 69, 0.3), rgba(28, 200, 138, 0.3));
-}
-
-/* Mobile Responsiveness for New Elements */
-@media (max-width: 768px) {
-    .project-details {
-        gap: 6px;
-    }
-    
-    .tech-stack {
-        font-size: 0.7em;
-        padding: 3px 6px;
-    }
-    
-    .project-status.live::before,
-    .project-status.collecting::before {
-        display: none;
-    }
-    
-    .progress-indicator {
-        font-size: 0.65em;
-        padding: 1px 6px;
-    }
-}
-
-/* Add these mobile fixes to your existing @media (max-width: 768px) section */
-
-@media (max-width: 768px) {
-    /* Project card mobile fixes - add these to your existing mobile styles */
-    .project-card {
-        height: auto !important; /* Remove any fixed heights */
-        min-height: auto !important;
-        overflow: visible !important; /* Ensure content isn't hidden */
-    }
-    
-    .project-info {
-        height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-    }
-    
-    .project-info p {
-        height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-        text-overflow: initial !important;
-        white-space: normal !important;
-        line-height: 1.4;
-        font-size: 0.85em;
-    }
-    
-    /* Ensure project descriptions are fully visible */
-    .project-card .project-info {
-        padding: 15px;
-    }
-    
-    /* Projects grid mobile adjustment */
-    .projects-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 20px;
-    }
-    
-    /* Tech stack mobile adjustments */
-    .tech-stack {
-        font-size: 0.7em;
-        padding: 3px 6px;
-        margin-bottom: 8px;
-        display: block;
-        width: fit-content;
-    }
-    
-    /* Project status mobile adjustments */
-    .project-status {
-        font-size: 0.75em;
-        padding: 4px 10px;
-        margin-top: 10px;
-        display: inline-block;
-    }
-    
-    /* Remove any text truncation on mobile */
-    .project-card * {
-        overflow: visible !important;
-        text-overflow: initial !important;
-        white-space: normal !important;
-    }
-    
-    /* Project details mobile spacing */
-    .project-details {
-        gap: 8px;
-        margin-top: 12px;
-    }
-    
-    /* Progress indicator mobile sizing */
-    .progress-indicator {
-        font-size: 0.65em;
-        padding: 2px 6px;
-        margin-left: 6px;
-    }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-    .project-card {
-        margin-bottom: 20px;
-        padding: 15px;
-    }
-    
-    .project-info h3 {
-        font-size: 1em;
-        margin-bottom: 8px;
-    }
-    
-    .project-info p {
-        font-size: 0.8em;
-        line-height: 1.35;
-        margin-bottom: 8px;
-    }
-    
-    .tech-stack {
-        font-size: 0.65em;
-        padding: 2px 5px;
-    }
-    
-    .project-status {
-        font-size: 0.7em;
-        padding: 3px 8px;
-    }
-}
+    color: #6a
