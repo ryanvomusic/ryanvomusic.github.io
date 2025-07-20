@@ -44,26 +44,12 @@
 
 <body>
 
-<!-- Authentication Guard / Password Protection -->
-
-<script>
-  (function() {
-    const currentPage = window.location.pathname.split('/').pop();
-    const isAuthenticated = sessionStorage.getItem(currentPage + '_authenticated');
-
-    if (!isAuthenticated) {
-      window.location.href = 'private.html';
-    }
-  })();
-</script>
-
-<!-- End of -->
 <!-- Navigation Bar -->
 
   <nav class="private-nav">
     <div class="nav-content">
       <h2>Data Analytics Portfolio</h2>
-      <a href="private.html" class="back-link">← Back to Private Access</a>
+      <a href="index.html" class="back-link">← Back to Main Page</a>
     </div>
   </nav>
 
