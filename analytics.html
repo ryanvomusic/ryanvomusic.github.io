@@ -113,7 +113,7 @@
             </div>
             <input type="number" class="stat-input" id="totalFollowers" value="906" onchange="updateStats()">
             <div class="stat-breakdown">
-              <small>Instagram: <input type="number" class="small-input" id="igFollowers" value="574" onchange="updateSocialBreakdown()"> | TikTok: <input type="number" class="small-input" id="ttFollowers" value="311" onchange="updateSocialBreakdown()"> | Twitter: <input type="number" class="small-input" id="twitterFollowers" value="10" onchange="updateSocialBreakdown()"> | Bluesky: <input type="number" class="small-input" id="blueskyFollowers" value="21" onchange="updateSocialBreakdown()"> | YouTube: <input type="number" class="small-input" id="youtubeFollowers" value="XX" onchange="updateSocialBreakdown()"> | Spotify: <input type="number" class="small-input" id="spotifyFollowers" value="XX" onchange="updateSocialBreakdown()"></small>
+              <small>Instagram: <input type="number" class="small-input" id="igFollowers" value="574" onchange="updateSocialBreakdown()"> | TikTok: <input type="number" class="small-input" id="ttFollowers" value="311" onchange="updateSocialBreakdown()"> | Twitter: <input type="number" class="small-input" id="twitterFollowers" value="10" onchange="updateSocialBreakdown()"> | Bluesky: <input type="number" class="small-input" id="blueskyFollowers" value="21" onchange="updateSocialBreakdown()"> | YouTube: <input type="number" class="small-input" id="youtubeFollowers" value="XX" onchange="updateSocialBreakdown()"> | Spotify: <input type="number" class="small-input" id="spotifyFollowers" value="XX" onchange="updateSocialBreakdown()"> | Snapchat: <input type="number" class="small-input" id="snapchatFollowers" value="XX" onchange="updateSocialBreakdown()"></small>
             </div>
           </div>
 
@@ -315,6 +315,7 @@
     const bluesky = parseInt(document.getElementById('blueskyFollowers').value) || 0;
     const youtube = parseInt(document.getElementById('youtubeFollowers').value) || 0;
     const spotify = parseInt(document.getElementById('spotifyFollowers').value) || 0;
+    const snapchat = parseInt(document.getElementById('snapchatFollowers').value) || 0;
 
     // Save all social values
     saveValue('igFollowers');
@@ -323,8 +324,9 @@
     saveValue('blueskyFollowers');
     saveValue('youtubeFollowers');
     saveValue('spotifyFollowers');
+    saveValue('snapchatFollowers');
 
-    document.getElementById('totalFollowers').value = ig + tt + twitter + bluesky + youtube + spotify;
+    document.getElementById('totalFollowers').value = ig + tt + twitter + bluesky + youtube + spotify + snapchat;
     updateStats();
   }
 
@@ -388,6 +390,7 @@
       blueskyFollowers: document.getElementById('blueskyFollowers').value,
       youtubeFollowers: document.getElementById('youtubeFollowers').value,
       spotifyFollowers: document.getElementById('spotifyFollowers').value,
+      snapchatFollowers: document.getElementById('snapchatFollowers').value,
       monthlyListeners: document.getElementById('monthlyListeners').value,
       totalPlaylists: document.getElementById('totalPlaylists').value,
       youPlaylists: document.getElementById('youPlaylists').value,
@@ -417,6 +420,7 @@
       "Bluesky Followers," + data.blueskyFollowers + "\n" +
       "YouTube Subscribers," + data.youtubeFollowers + "\n" +
       "Spotify Followers," + data.spotifyFollowers + "\n" +
+      "Snapchat Followers," + data.snapchatFollowers + "\n" +
       "Monthly Listeners," + data.monthlyListeners + "\n" +
       "Total Playlist Adds," + data.totalPlaylists + "\n" +
       "You Playlist Adds," + data.youPlaylists + "\n" +
@@ -459,6 +463,7 @@
     loadValue('blueskyFollowers', '21');
     loadValue('youtubeFollowers', '0');
     loadValue('spotifyFollowers', '0');
+    loadValue('snapchatFollowers', '306');
     loadValue('youPlaylists', '9');
     loadValue('hauntPlaylists', '2');
     loadValue('streamGoal', '500');
