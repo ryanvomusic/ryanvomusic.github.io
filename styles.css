@@ -2851,3 +2851,24 @@ header p {
         padding: 10px;
     }
 }
+
+
+/* Fix for Data Sources section paragraphs */
+.data-section p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 6px 0;
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.data-section p strong {
+    color: #5a4a3a;
+    font-weight: 600;
+}
+
+/* Ensure consistent spacing in data section */
+.data-section p:not(:last-child) {
+    margin-bottom: 8px;
+}
