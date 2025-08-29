@@ -1298,6 +1298,8 @@ header p {
 .project-card.active {
     border-left: 4px solid rgba(40, 167, 69, 0.6);
     background: rgba(255, 255, 255, 0.8);
+   cursor: pointer;
+   transition: all 0.3s ease;
 }
 
 .project-card.active .project-image {
@@ -1316,6 +1318,63 @@ header p {
     font-size: 1.1em;
     z-index: 1;
     position: relative;
+}
+
+/* Enhanced clickable project card styling */
+.project-card.active a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-card.active a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
+}
+
+.project-card.active a:hover .project-image {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.3), rgba(28, 200, 138, 0.3));
+}
+
+/* Add "View Details" button */
+.project-card.active .project-info::after {
+    content: "Click to view full analysis →";
+    display: inline-block;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-top: 10px;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card.active a:hover .project-info::after {
+    background: rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.4);
+    transform: translateX(3px);
+}
+
+/* Enhanced hover state for completed project */
+
+.project-card.active:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .project-card.active .project-info::after {
+        content: "Tap for full analysis →";
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
 }
 
 /* Project Details Styling */
