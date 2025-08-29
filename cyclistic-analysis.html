@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<!-- Character Encoding -->
+
+  <meta charset="utf-8">
+
+<!-- Viewport (Mobile Responsiveness) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS Stylesheet -->
+
+  <link rel="stylesheet" href="styles.css">
+
+<!-- SEO Title -->
+
+  <title>Ryan Vo - Portfolio</title>
+
+<!-- Favicons (Browser Icons/Apple Home Screen Icons) -->
+
+  <link rel="icon" type="image/jpeg" href="images/background-photo.jpeg">
+  <link rel="apple-touch-icon" href="images/background-photo.jpeg">
+
+<!-- Open Graph Meta Tags -->
+
+  <meta property="og:title" content="Ryan Vo - Portfolio">
+  <meta property="og:description" content="Music and all the heart that comes with it.">
+  <meta property="og:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+  <meta property="og:url" content="https://ryanvomusic.github.io">
+  <meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ryan Vo - Portfolio">
+  <meta name="twitter:description" content="Music and all the heart that comes with it.">
+  <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+
+  <nav class="private-nav">
+    <div class="nav-content">
+      <h2>Data Analytics Portfolio</h2>
+      <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+    </div>
+  </nav>
+
+<!-- End of Navigation Bar -->
+
+  <main class="project-detail-page">
+    <div class="project-detail-container">
+
+<!-- Project Header Section -->
+
+      <section class="project-header">
+        <div class="project-hero">
+          <h1> Cyclistic Bike Share Analysis</h1>
+          <p class="project-subtitle">Google Data Analytics Capstone Project</p>
+          <div class="project-meta">
+            <span class="project-date">Completed: August 2025</span>
+            <span class="project-tools">SQL • BigQuery • Tableau</span>
+          </div>
+        </div>
+      </section>
+
+<!-- End of Project Header Section -->
+<!-- Section 1: Business Task -->
+
+      <section class="project-section">
+        <h2>Business Task</h2>
+        <div class="summary-content">
+          <p>Analyze usage patterns between annual members and casual riders to identify key behavioral differences that will inform a targeted marketing strategy. The business goal is to convert casual riders into profitable annual members, as finance analysts have determined annual memberships generate significantly higher revenue than single-ride or full-day passes. This analysis will provide data-driven insights to guide marketing campaigns, optimize resource allocation, and maximize membership growth for Cyclistic's bike-share program.</p>
+        </div>
+      </section>
+
+<!-- End of Section 1: Business Task -->
+<!-- Section 2: Data Sources -->
+
+      <section class="project-section">
+        <h2>Data Sources</h2>
+        <div class="data-overview">
+          <div class="data-section">
+            <h3>Data Sources</h3>
+            <p><strong>Dataset: </strong>Cyclistic historical bike trip data (12 months: August 2024 - July 2024)</p>
+            <p><strong>Volume: </strong>5,479,059 individual trip records</p>
+            <p><strong>Source: </strong>Public dataset from Motivate International Inc. (real Divvy bike-share data from Chicago)</p>
+            <h3>Key Variables</h3>
+            <ul>
+              <li><strong>ride_id:</strong> Unique identifier for each trip</li>
+              <li><strong>rideable_type:</strong> Bike type (classic, electric, docked)</li>
+              <li><strong>started_at / ended_at:</strong> Trip start and end timestamps</li>
+              <li><strong>member_casual:</strong> User type classification</li>
+            </ul>
+          </div>    
+          <div class="data-section">
+            <h3>Calculated Variables</h3>
+            <ul>
+              <li><strong>ride_length:</strong> Trip duration in minutes</li>
+              <li><strong>day_of_week:</strong> Extracted from start timestamp</li>
+            </ul>
+            <h3>Data Limitations</h3>
+            <ul>
+              <li>No personally identifiable information (privacy protected)</li>
+              <li>Cannot connect individual trips to specific users</li>
+              <li>Cannot determine if casual riders live in service area or purchased multiple single passes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+<!-- End of Section 2: Data Sources -->
+<!-- Section 3: Methodology -->
+
+      <section class="project-section">
+        <h2>Methodology</h2>
+        <div class="methodology-content">
+          <div class="method-overview">
+            <div class="method-step">
+              <h3>Data Processing and Analysis</h3>
+              <p><strong>Platform: </strong>Google BigQuery for data storage and SQL analysis</p>
+              <p><strong>Data Cleaning: </strong>Filtered out negative ride times and data quality issues</p>
+              <p><strong>Calculated Fields: </strong>Created ride_length (minutes) and day_of_week variables</p>
+              <p><strong>Analysis Approach: </strong>Comparative analysis between member_casual groups across multiple dimensions</p>
+            </div>
+            <div class="method-step">
+              <h3>Key Anaslyses Performed</h3>
+              <ul>
+                <li>Usage volume and duration comparisons</li>
+                <li>Daily usage patterns (day of week analysis)</li>
+                <li>Seasonal trends (monthly usage patterns)</li>
+                <li>Bike type preference analysis</li>
+              </ul>
+            </div>
+            <div class="method-step">
+              <h3>Visualization</h3>
+              <p>Tableau for interactive dashboard creation and data storytelling</p>
+            </div>
+            <div class="method-step">
+              <h3>Quality Controls</h3>
+              <ul>
+                <li>Removed trips with negative or zero duration</li>
+                <li>Verified data consistency across 12-month period</li>
+                <li>Cross-validated findings across multiple analytical dimensions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- End of Section 3: Methodology -->
+<!-- Section 4: Key Findings & Dashboard -->
+
+      <section class="project-section">
+        <h2>Key Findings</h2>
+        <div class="findings-container">
+          <div class="findings-grid">
+            <div class="finding-item">
+              <h3>Usage Volume vs. Duration Reveals Different Use Cases</h3>
+              <ul>
+                <li>Members take 76% more rides (3.49M vs 1.99M) but with significantly shorter duration (11.85 min vs 23.60 min average)</li>
+                <li>Short, frequent trips indicate commuting/transportation behavior vs longer recreational rides</li>
+              </ul>
+            </div>
+            <div class="finding-item">
+              <h3>Weekly Patterns Confirm Transportation vs. Recreation Usage</h3>
+              <ul>
+                <li>Members show consistent weekday usage peaking Tuesday-Thursday (commuting behavior)</li>
+                <li>Casual riders peak on weekends with lowest usage midweek (recreational/leisure behavior)</li>
+              </ul>
+            </div>
+            <div class="finding-item">
+              <h3>Seasonal Dependency Reveals Different Use Cases</h3>
+              <ul>
+                <li>Casual riders show dramatic seasonal variation (23K rides in January vs 334K in summer), suggesting recreational/tourism usage patterns</li>
+                <li>Members maintain more consistent year-round usage (112K-465K range), indicating transportation dependency regardless of weather</li>
+                <li>Summer peaks for both groups, but casual riders' 14x variation vs members' 4x variation confirms different motivations</li>
+              </ul>
+            </div>
+            <div class="finding-item">
+              <h3>Bike Type Preferences Show Efficiency Focus</h3>
+              <ul>
+                <li>Both groups prefer electric bikes, but members show slightly stronger preference (64.32% vs 59.20%)</li>
+                <li>Members' higher electric bike usage aligns with efficiency-focused commuting behavior</li>
+                <li>Electric scooter usage minimal but higher among casual riders</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dashboard-container">
+            <h3>Interactive Analysis Dashboard</h3>
+            <div class="tableau-embed">
+              <div class="tableau-placeholder">
+                <code><div class='tableauPlaceholder' id='viz1756450166561' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaseStudy_17564195487750&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CaseStudy_17564195487750&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaseStudy_17564195487750&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /><param name='filter' value='showOnboarding=true' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1756450166561');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1277px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+<!-- End of Section 4: Key Findings & Dashboard -->
+<!-- Section 5: Recommendations -->
+
+      <section class="project-section">
+        <h2>Strategic Recommendations</h2>
+        <div class="recommendations">
+          <div class="recommendation-item">
+            <h3>Target Summer & Weekend Marketing Campaigns</h3>
+            <ul>
+              <li>Focus marketing efforts during June-August when casual riders are most active (334K+ monthly rides)</li>
+              <li>Concentrate on Friday-Sunday when casual usage peaks</li>
+              <li>Leverage tourism seasons and recreational activity periods for maximum reach</li>
+            </ul>
+          </div>
+          <div class="recommendation-item">
+            <h3>Emphasize Convenience & Efficiency Benefits</h3>
+            <ul>
+              <li>Highlight time-saving advantages of membership for regular users</li>
+              <li>Market electric bike availability and convenience features</li>
+              <li>Position annual membership as the smart choice for consistent users (cost savings over multiple single rides)</li>
+            </ul>
+          </div>
+          <div class="recommendation-item">
+            <h3>Implement Flexible Membership Options</h3>
+            <ul>
+              <li>Create 3-month seasonal memberships targeting summer tourists and occasional users</li>
+              <li>Offer trial week/month memberships for casual riders showing repeat usage</li>
+              <li>Position seasonal memberships as cost-effective for extended visits or summer recreation</li>
+              <li>Use data to identify casual riders with 2+ months of activity as prime conversion targets</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<!-- End of Section 5: Recommendations -->
+<!-- Section 6: Business Impact -->
+
+      <section class="project-section">
+        <h2>Strategic Recommendations</h2>
+        <div class="recommendations">
+          <div class="recommendation-item">
+            <h3>Business Impact</h3>
+            <p>These recommendations leverage the behavioral data to target casual riders when they're most engaged while addressing their primary usage motivations. Converting even a small percentage of the 1.99M casual riders would significantly impact revenue, given that annual members are substantially more profitable than single-ride users.
+This analysis provides Cyclistic with a data-driven roadmap for marketing resource allocation and campaign timing based on actual usage patterns rather than assumptions. The distinct behavioral profiles identified enable targeted messaging that speaks to each group's specific needs and usage patterns.</p>
+          </div>
+        </div>
+      </section> 
+
+<!-- End of Section 6: Business Impact -->
+      
+    </div>
+  </main>
+
+<!-- Footnote -->
+
+  <div class="project-footnote">
+    <p><em>Tools Used: SQL (Google BigQuery), Tableau</em></p>
+  </div>
+  <div class="project-footnote">
+    <p><em>Data Volume: 5,479,059 trip records analyzed</em></p>
+  </div>
+  <div class="project-footnote">
+    <p><em>Analysis Period: 12 months (August 2024 - July 2025)</em></p>
+  </div>
+  
+<!-- Social Link Footer -->
+
+  <footer class="social-footer">
+    <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
+      <img src="images/social-icons/spotify.jpeg" alt="Spotify">
+    </a>
+    <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram">
+      <img src="images/social-icons/instagram.jpeg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok">
+      <img src="images/social-icons/tiktok.jpeg" alt="TikTok">
+    </a>
+    <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music">
+      <img src="images/social-icons/apple.jpeg" alt="Apple Music">
+    </a>
+    <a href="https://x.com/ryanvomusic" class="social-icon" target="_blank" title="Twitter">
+      <img src="images/social-icons/twitter.jpeg" alt="Twitter">
+    </a>
+    <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky">
+      <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
+    </a>
+    <a href="mailto:ryanvoprism@gmail.com" class="social-icon" title="Email">
+      <img src="images/social-icons/email.png" alt="Email">
+    </a>
+  </footer>
+
+<!-- End of Social Link Footer -->
+
+</body>
+
+</html>
