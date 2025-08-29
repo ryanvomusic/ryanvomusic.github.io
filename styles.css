@@ -2252,89 +2252,401 @@ header p {
     }
 }
 
-/* Capstone Page */
+/* ========================================
+   PROJECT DETAIL PAGE STYLES (cyclistic-analysis.html)
+======================================== */
 
-        .business-questions {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid rgba(160, 130, 150, 0.6);
-            margin: 20px 0;
-        }
+.project-detail-page {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 180px);
+}
 
-        .business-questions h3 {
-            font-family: 'Comfortaa', cursive;
-            color: #5a4a3a;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
+.project-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        .business-questions ul {
-            list-style: none;
-            padding: 0;
-        }
+.project-header {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 50px 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
 
-        .business-questions li {
-            font-family: 'Poppins', sans-serif;
-            color: #6a5a4a;
-            padding: 8px 0 8px 20px;
-            border-bottom: 1px solid rgba(255, 250, 240, 0.8);
-            position: relative;
-        }
+.project-hero h1 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 2.8em;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    text-shadow: 
+        0 0 8px rgba(255, 250, 240, 0.9),
+        0 0 15px rgba(255, 250, 240, 0.7),
+        1px 1px 3px rgba(0,0,0,0.2);
+}
 
-        .business-questions li:before {
-            content: "?";
-            position: absolute;
-            left: 0;
-            color: rgba(160, 130, 150, 0.8);
-            font-weight: bold;
-        }
+.project-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    color: #7a6a5a;
+    font-style: italic;
+    margin-bottom: 25px;
+}
 
-        .data-overview {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
-        .data-section {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 25px;
-            border-radius: 10px;
-        }
+.project-date, .project-tools {
+    background: rgba(160, 130, 150, 0.2);
+    color: #5a4a3a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+}
 
-        .data-section h3 {
-            font-family: 'Comfortaa', cursive;
-            color: #5a4a3a;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-            border-bottom: 1px solid rgba(160, 130, 150, 0.3);
-            padding-bottom: 8px;
-        }
+.project-section {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-        .data-section ul {
-            list-style: none;
-            padding: 0;
-        }
+.project-section h2 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 2em;
+    color: #5a4a3a;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 10px;
+}
 
-        .data-section li {
-            font-family: 'Poppins', sans-serif;
-            color: #6a5a4a;
-            padding: 6px 0;
-            font-size: 0.9em;
-        }
+.summary-content p {
+    font-family: 'Poppins', sans-serif;
+    color: #5a4a3a;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
 
-        .data-section li strong {
-            color: #5a4a3a;
-        }
+.business-questions {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+    margin: 20px 0;
+}
 
-        .method-overview {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
+.business-questions h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
 
-        .method-overview h3 {
-            font-family: 'Comfortaa', cursive;
-            color: #5a4a3
+.business-questions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.business-questions li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.8);
+    position: relative;
+}
+
+.business-questions li:before {
+    content: "?";
+    position: absolute;
+    left: 0;
+    color: rgba(160, 130, 150, 0.8);
+    font-weight: bold;
+}
+
+.data-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.data-section {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.data-section h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(160, 130, 150, 0.3);
+    padding-bottom: 8px;
+}
+
+.data-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.data-section li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 6px 0;
+    font-size: 0.9em;
+}
+
+.data-section li strong {
+    color: #5a4a3a;
+}
+
+.method-overview {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.method-overview h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.method-overview p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    font-size: 1em;
+}
+
+.findings-container {
+    margin-bottom: 30px;
+}
+
+.findings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.finding-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(40, 167, 69, 0.6);
+}
+
+.finding-item h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.finding-item p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.dashboard-container h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.dashboard-description {
+    font-family: 'Poppins', sans-serif;
+    color: #5a4a3a;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tableau-embed {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 25px 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableau-placeholder {
+    text-align: center;
+    color: #6a5a4a;
+}
+
+.tableau-placeholder p {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.tableau-placeholder code {
+    background: rgba(160, 130, 150, 0.2);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    display: block;
+    margin: 15px 0;
+}
+
+.embed-note {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #7a6a5a;
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.method-step {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+}
+
+.method-step h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.method-step p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    line-height: 1.5;
+}
+
+.recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recommendation-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(40, 167, 69, 0.6);
+}
+
+.recommendation-item h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.recommendation-item p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.project-footnote {
+    background: rgba(90, 74, 58, 0.95);
+    padding: 20px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.project-footnote p {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85em;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-footnote strong {
+    color: #fff;
+}
+
+/* Project Detail Mobile */
+@media (max-width: 768px) {
+    .project-header {
+        padding: 30px 20px;
+    }
+
+    .project-hero h1 {
+        font-size: 2.2em;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .data-overview {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .findings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .methodology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .data-section {
+        padding: 20px;
+    }
+
+    .finding-item {
+        padding: 15px;
+    }
+
+    .project-section {
+        padding: 30px 20px;
+    }
+
+    .tableau-embed {
+        padding: 20px;
+        min-height: 400px;
+    }
+
+    .project-footnote {
+        padding: 15px;
+        margin-top: -100px;
+    }
+
+    .project-footnote p {
+        font-size: 0.8em;
+    }
+}
