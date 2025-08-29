@@ -2251,3 +2251,90 @@ header p {
         text-align: center;
     }
 }
+
+/* Capstone Page */
+
+        .business-questions {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid rgba(160, 130, 150, 0.6);
+            margin: 20px 0;
+        }
+
+        .business-questions h3 {
+            font-family: 'Comfortaa', cursive;
+            color: #5a4a3a;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .business-questions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .business-questions li {
+            font-family: 'Poppins', sans-serif;
+            color: #6a5a4a;
+            padding: 8px 0 8px 20px;
+            border-bottom: 1px solid rgba(255, 250, 240, 0.8);
+            position: relative;
+        }
+
+        .business-questions li:before {
+            content: "?";
+            position: absolute;
+            left: 0;
+            color: rgba(160, 130, 150, 0.8);
+            font-weight: bold;
+        }
+
+        .data-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .data-section {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .data-section h3 {
+            font-family: 'Comfortaa', cursive;
+            color: #5a4a3a;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 1px solid rgba(160, 130, 150, 0.3);
+            padding-bottom: 8px;
+        }
+
+        .data-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .data-section li {
+            font-family: 'Poppins', sans-serif;
+            color: #6a5a4a;
+            padding: 6px 0;
+            font-size: 0.9em;
+        }
+
+        .data-section li strong {
+            color: #5a4a3a;
+        }
+
+        .method-overview {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .method-overview h3 {
+            font-family: 'Comfortaa', cursive;
+            color: #5a4a3
