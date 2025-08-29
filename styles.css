@@ -2650,3 +2650,204 @@ header p {
         font-size: 0.8em;
     }
 }
+
+/* ========================================
+   ADDITIONAL CSS FIXES FOR CYCLISTIC PROJECT PAGE
+======================================== */
+
+/* Fix for methodology content structure */
+.methodology-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.methodology-content .method-step {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(160, 130, 150, 0.6);
+}
+
+.methodology-content .method-step h3 {
+    font-family: 'Comfortaa', cursive;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.methodology-content .method-step p {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.methodology-content .method-step strong {
+    color: #5a4a3a;
+}
+
+/* Fix for all ul elements in project sections */
+.project-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-section li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.8);
+    position: relative;
+    line-height: 1.5;
+}
+
+.project-section li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: rgba(160, 130, 150, 0.8);
+}
+
+.project-section li:last-child {
+    border-bottom: none;
+}
+
+/* Specific styling for finding items with ul */
+.finding-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.finding-item li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 4px 0 4px 15px;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.6);
+    position: relative;
+    line-height: 1.4;
+    font-size: 0.85em;
+}
+
+.finding-item li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: rgba(40, 167, 69, 0.8);
+}
+
+/* Specific styling for recommendation items with ul */
+.recommendation-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommendation-item li {
+    font-family: 'Poppins', sans-serif;
+    color: #6a5a4a;
+    padding: 6px 0 6px 20px;
+    border-bottom: 1px solid rgba(255, 250, 240, 0.6);
+    position: relative;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+.recommendation-item li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: rgba(40, 167, 69, 0.8);
+    font-weight: bold;
+}
+
+/* Fix for tableau embed code display */
+.tableau-placeholder code {
+    background: rgba(160, 130, 150, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+    display: block;
+    margin: 20px 0;
+    color: #5a4a3a;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Multiple footnote fixes */
+.project-footnote {
+    background: rgba(90, 74, 58, 0.95);
+    padding: 15px 20px;
+    margin: 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-footnote:first-of-type {
+    margin-top: -100px;
+}
+
+.project-footnote p {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8em;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.project-footnote em {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
+}
+
+/* Navigation fix */
+.private-nav .back-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.private-nav .back-link:hover {
+    color: #fff;
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+    .methodology-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .methodology-content .method-step {
+        padding: 20px;
+    }
+    
+    .finding-item li {
+        font-size: 0.8em;
+        padding: 3px 0 3px 12px;
+    }
+    
+    .recommendation-item li {
+        font-size: 0.85em;
+        padding: 5px 0 5px 15px;
+    }
+    
+    .project-footnote {
+        padding: 10px 15px;
+    }
+    
+    .project-footnote p {
+        font-size: 0.75em;
+    }
+    
+    .tableau-placeholder code {
+        font-size: 0.7em;
+        padding: 10px;
+    }
+}
