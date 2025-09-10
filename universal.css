@@ -1,24 +1,16 @@
-/* ========================================
-   UNIVERSAL STYLES - USED ACROSS ALL PAGES
-======================================== */
+/* UNIVERSAL STYLES - USED ACROSS ALL PAGES */
 
-/* ========================================
-   FONTS & IMPORTS
-======================================== */
+/* FONTS & IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* ========================================
-   GLOBAL RESET & BASE STYLES
-======================================== */
+/* GLOBAL RESET & BASE STYLES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========================================
-   BODY & BACKGROUND EFFECTS
-======================================== */
+/* BODY & BACKGROUND EFFECTS */
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -60,9 +52,7 @@ body::after {
     z-index: -1;
 }
 
-/* ========================================
-   NAVIGATION BAR - ALL PAGES
-======================================== */
+/* NAVIGATION BAR - ALL PAGES */
 .navbar {
     position: fixed;
     top: 0;
@@ -102,9 +92,7 @@ body::after {
     background: rgba(160, 130, 150, 0.15);
 }
 
-/* ========================================
-   DROPDOWN NAVIGATION STYLES
-======================================== */
+/* DROPDOWN NAVIGATION STYLES */
 .nav-dropdown {
   position: relative;
   display: inline-block;
@@ -178,9 +166,7 @@ body::after {
   display: none;
 }
 
-/* ========================================
-   MAIN CONTENT CONTAINER
-======================================== */
+/* MAIN CONTENT CONTAINER */
 main {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -193,9 +179,7 @@ main {
     padding: 20px;
 }
 
-/* ========================================
-   SOCIAL LINKS FOOTER - ALL PAGES
-======================================== */
+/* SOCIAL LINKS FOOTER - ALL PAGES */
 .social-footer {
     position: fixed;
     bottom: 0;
@@ -226,9 +210,7 @@ main {
     opacity: 0.6;
 }
 
-/* ========================================
-   UNIVERSAL MOBILE STYLES
-======================================== */
+/* UNIVERSAL MOBILE STYLES */
 @media (max-width: 768px) {
         /* Mobile dropdown adjustments */
     .dropdown-content {
@@ -275,9 +257,7 @@ main {
     }
 }
 
-/* ========================================
-   EXTRA SMALL MOBILE STYLES
-======================================== */
+/* EXTRA SMALL MOBILE STYLES */
 @media (max-width: 480px) {
     .nav-link {
         margin: 0 8px;
