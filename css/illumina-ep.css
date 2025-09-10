@@ -1,10 +1,6 @@
-/* ========================================
-   ILLUMINA-EP.HTML - EP DETAIL PAGE SPECIFIC STYLES
-======================================== */
+/* ILLUMINA-EP.HTML - EP DETAIL PAGE SPECIFIC STYLES */
 
-/* ========================================
-   EP PAGE HEADER SECTION
-======================================== */
+/* EP PAGE HEADER SECTION */
 .ep-header {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -28,9 +24,7 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* ========================================
-   EP INFO SECTION
-======================================== */
+/* EP INFO SECTION */
 .ep-info h1 {
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
@@ -51,9 +45,7 @@
     font-style: italic;
 }
 
-/* ========================================
-   EP BACKGROUND SECTION
-======================================== */
+/* EP BACKGROUND SECTION */
 .ep-background {
     background: rgba(255, 250, 240, 0.4);
     padding: 40px;
@@ -79,9 +71,7 @@
     font-size: 1.1em;
 }
 
-/* ========================================
-   TRACK LISTING SECTION
-======================================== */
+/* TRACK LISTING SECTION */
 .track-listing {
     background: rgba(255, 250, 240, 0.4);
     padding: 40px;
@@ -99,9 +89,7 @@
     padding-bottom: 10px;
 }
 
-/* ========================================
-   TRACK CARD STYLING
-======================================== */
+/* TRACK CARD STYLING */
 .track-card {
     display: flex;
     gap: 25px;
@@ -129,9 +117,7 @@
     color: #6c757d;
 }
 
-/* ========================================
-   TRACK ARTWORK
-======================================== */
+/* TRACK ARTWORK */
 .track-artwork {
     flex: 0 0 120px;
 }
@@ -156,6 +142,10 @@
     justify-content: center;
     margin: 0 auto;
     border: 2px dashed rgba(160, 130, 150, 0.5);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #7a6a5a;
+    font-weight: 500;
 }
 
 .coming-soon-placeholder span {
@@ -165,9 +155,7 @@
     font-weight: 500;
 }
 
-/* ========================================
-   TRACK INFO
-======================================== */
+/* TRACK INFO */
 .track-info {
     flex: 1;
 }
@@ -195,9 +183,7 @@
     margin-bottom: 15px;
 }
 
-/* ========================================
-   TRACK STREAMING LINKS
-======================================== */
+/* TRACK STREAMING LINKS */
 .track-card .streaming-links {
     display: flex;
     gap: 10px;
@@ -208,9 +194,7 @@
     height: 20px !important;
 }
 
-/* ========================================
-   EP PAGE MOBILE STYLES
-======================================== */
+/* EP PAGE MOBILE STYLES */
 @media (max-width: 768px) {
     .ep-header {
         display: flex;
