@@ -183,7 +183,31 @@
     margin-bottom: 15px;
 }
 
+.producer-credit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #8a7a6a;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.photo-credit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em;
+    color: #8a7a6a;
+    margin-top: 5px;
+    font-style: italic;
+    text-align: center;
+}
+
 /* TRACK STREAMING LINKS */
+.streaming-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
 .track-card .streaming-links {
     display: flex;
     gap: 10px;
