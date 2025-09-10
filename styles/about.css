@@ -1,8 +1,6 @@
 /* ABOUT.HTML - ABOUT PAGE SPECIFIC STYLES */
 
-/* ========================================
-   ABOUT PAGE LAYOUT
-======================================== */
+/* ABOUT PAGE LAYOUT */
 .about-page {
     margin-top: 80px;
     margin-bottom: 100px;
@@ -18,9 +16,7 @@
     align-items: flex-start;
 }
 
-/* ========================================
-   ABOUT PHOTO SECTION
-======================================== */
+/* ABOUT PHOTO SECTION */
 .about-photo {
     flex: 0 0 300px;
     position: relative;
@@ -55,9 +51,7 @@
     pointer-events: none;
 }
 
-/* ========================================
-   ABOUT CONTENT SECTION
-======================================== */
+/* ABOUT CONTENT SECTION */
 .about-content {
     flex: 1;
 }
@@ -87,9 +81,7 @@
         1px 1px 3px rgba(0,0,0,0.2);
 }
 
-/* ========================================
-   BIO SECTION STYLING
-======================================== */
+/* BIO SECTION STYLING */
 .bio-section {
     background: rgba(255,250,240,0.85);
     padding: 30px;
@@ -126,9 +118,7 @@
        1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* ========================================
-   ABOUT PAGE MOBILE STYLES
-======================================== */
+/* ABOUT PAGE MOBILE STYLES */
 @media (max-width: 768px) and (orientation: portrait) {
     .about-container {
         flex-direction: column;
