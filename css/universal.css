@@ -25,7 +25,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/background-photo.jpeg');
+    background-image: url('../images/background-photo.jpeg');
     background-size: cover;
     background-position: center;
     filter: blur(6px);
