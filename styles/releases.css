@@ -1,0 +1,251 @@
+/* ========================================
+   RELEASES.HTML - RELEASES PAGE SPECIFIC STYLES
+======================================== */
+
+/* ========================================
+   RELEASES PAGE LAYOUT
+======================================== */
+.releases-page {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 40px 20px;
+    min-height: calc(100vh - 180px);
+}
+
+.releases-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ========================================
+   RELEASES PAGE HEADER
+======================================== */
+.releases-container h1 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #5a4a3a;
+    margin-bottom: 10px;
+    text-shadow: 
+        0 0 8px rgba(255, 250, 240, 0.9),
+        0 0 15px rgba(255, 250, 240, 0.7),
+        1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.releases-intro {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #7a6a5a;
+    margin-bottom: 50px;
+    font-style: italic;
+    text-shadow: 
+        0 0 6px rgba(255, 250, 240, 0.8),
+        1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   RELEASES GRID LAYOUT
+======================================== */
+.releases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.releases-grid.coming-soon {
+    grid-template-columns: 1fr;
+}
+
+/* ========================================
+   RELEASE CARD STYLING
+======================================== */
+.release-card {
+    background: rgba(255, 250, 240, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.release-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.release-card.coming-soon {
+    opacity: 0.7;
+}
+
+/* ========================================
+   RELEASE ARTWORK
+======================================== */
+.release-artwork {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.release-artwork img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+}
+
+.release-card:hover .release-artwork img {
+    opacity: 0.6;
+    filter: blur(4px);
+}
+
+.coming-soon-placeholder {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    background: rgba(160, 130, 150, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px dashed rgba(160, 130, 150, 0.5);
+}
+
+.coming-soon-placeholder span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #7a6a5a;
+    font-weight: 500;
+}
+
+/* ========================================
+   RELEASE INFO & METADATA
+======================================== */
+.release-info h3 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #5a4a3a;
+    margin-bottom: 8px;
+}
+
+.release-type, .release-date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: #7a6a5a;
+    margin-bottom: 5px;
+}
+
+.producer-credit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    color: #8a7a6a;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.photo-credit {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em;
+    color: #8a7a6a;
+    margin-top: 5px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ========================================
+   STREAMING LINKS
+======================================== */
+.streaming-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stream-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.stream-icon img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.stream-icon:hover img {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 0.8;
+}
+
+/* ========================================
+   PRE-SAVE FUNCTIONALITY
+======================================== */
+.pre-save-container {
+    position: relative;
+    display: inline-block;
+    min-width: 32px;
+}
+
+.pre-save-container:has(img[src=""]) {
+    display: none;
+}
+
+.pre-save-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+.no-underline {
+    text-decoration: none !important;
+}
+
+/* ========================================
+   RELEASES PAGE MOBILE STYLES
+======================================== */
+@media (max-width: 768px) {
+    .releases-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .releases-container h1 {
+        font-size: 2em;
+    }
+    
+    .release-artwork img {
+        max-width: 200px;
+        height: 200px;
+    }
+    
+    .stream-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .coming-soon-placeholder {
+        max-width: 200px;
+        height: 200px;
+    }
+}
