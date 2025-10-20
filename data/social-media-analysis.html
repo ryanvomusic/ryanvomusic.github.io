@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<!-- Character Encoding -->
+
+  <meta charset="utf-8">
+
+<!-- Viewport (Mobile Responsiveness) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS Stylesheet -->
+
+  <link rel="stylesheet" href="universal.css">
+  <link rel="stylesheet" href="cyclistic-analysis.css">
+
+<!-- SEO Title -->
+
+  <title>Ryan Vo - Portfolio</title>
+
+<!-- Favicons (Browser Icons/Apple Home Screen Icons) -->
+
+  <link rel="icon" type="image/jpeg" href="../images/background-photo.jpeg">
+  <link rel="apple-touch-icon" href="../images/background-photo.jpeg">
+
+<!-- Open Graph Meta Tags -->
+
+  <meta property="og:title" content="Ryan Vo - Portfolio">
+  <meta property="og:description" content="Music and all the heart that comes with it.">
+  <meta property="og:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+  <meta property="og:url" content="https://ryanvomusic.github.io">
+  <meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ryan Vo - Portfolio">
+  <meta name="twitter:description" content="Music and all the heart that comes with it.">
+  <meta name="twitter:image" content="https://ryanvomusic.github.io/images/background-photo.jpeg">
+
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+
+  <nav class="private-nav">
+    <div class="nav-content">
+      <h2>Data Analytics Portfolio</h2>
+      <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+    </div>
+  </nav>
+
+<!-- End of Navigation Bar -->
+
+  <main class="project-detail-page">
+    <div class="project-detail-container">
+
+<!-- Project Header Section -->
+
+      <section class="project-header">
+        <div class="project-hero">
+          <h1>Social Media Content Analysis</h1>
+          <p class="project-subtitle">Thorough analysis for small creator in the music industry.</p>
+          <div class="project-meta">
+            <span class="project-date">Completed: October 2025</span>
+            <span class="project-tools">R • SQL • BigQuery • Tableau</span>
+          </div>
+        </div>
+      </section>
+
+<!-- End of Project Header Section -->
+<!-- Section 1: Business Task -->
+
+      <section class="project-section">
+        <h2>Business Task</h2>
+        <div class="summary-content">
+          <p>Analyze data gathered both from social media API and social media insights over a 4 month period to track effectiveness and promotional efficacy. Data was gathered from Instagram, TikTok, and Spotify to track overall performance on social media as well as the translation of view into music streams on Spotify.</p>
+        </div>
+      </section>
+
+<!-- End of Section 1: Business Task -->
+<!-- Section 2: Data Sources -->
+
+      <section class="project-section">
+        <h2>Data Sources</h2>
+        <div class="data-overview">
+          <div class="data-section">
+            <h3>Data Sources</h3>
+            <p><strong>Dataset: </strong>Social Media Insights (5/1/2025 - 8/2/2025)</p>
+            <p><strong>Source: </strong>Data gathered from Instagra, TikTok, and Spotify APIs as well as user gathered information on posts and Content Creation Effort</p>
+            <h3>Key Variables</h3>
+            <ul>
+              <li><strong>Interactions/Views/Engagement Rate:</strong> Effectiveness of content posted</li>
+              <li><strong>Spotify Streams/Listeners</strong> Ability of content to translate into streams</li>
+              <li><strong>Content Creation Effort</strong> Calculating ROI</li>
+              <li><strong>Post Day/Post Hour</strong> To find times and days where content gathers the most attention</li>
+            </ul>
+          </div>    
+          <div class="data-section">
+            <h3>Calculated Variables</h3>
+            <ul>
+              <li><strong>Streams per Listener</strong> Number of streams per each unique individual listener</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+<!-- End of Section 2: Data Sources -->
+<!-- Section 3: Methodology -->
+
+      <section class="project-section">
+        <h2>Methodology</h2>
+        <div class="methodology-content">
+          <div class="method-overview">
+            <div class="method-step">
+              <h3>Data Processing and Analysis</h3>
+              <p><strong>Platform: </strong>Google BigQuery for data storage and SQL analysis</p>
+              <p><strong>Data Cleaning: </strong>Used R for majority of data cleaning</p>
+              <p><strong>Analysis Approach: </strong>Comparative analysis between social media data and streaming data over time to discover growth and translation of content into streams.</p>
+            </div>
+            <div class="method-step">
+              <h3>Key Analyses Performed</h3>
+              <ul>
+                <li>Growth of combined audience over time</li>
+                <li>Comparison of social numbers versus streaming numbers</li>
+                <li>Analysis of TikTok viewer types and Instagram Reach versus Engagement</li>
+                <li>Analysis of Content Creation Effort versus Engagement to track ROI</li>
+                <li>Compared numbers at difference times and days to find the most beneficial times for posting</li>
+              </ul>
+            </div>
+            <div class="method-step">
+              <h3>Visualization</h3>
+              <p>Tableau for interactive dashboard creation and data storytelling</p>
+            </div>
+            <div class="method-step">
+              <h3>Quality Controls</h3>
+              <ul>
+                <li>Removed data where some metrics were not being tracked</li>
+                <li>Ensured consistent posting during time period of data gathering</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- End of Section 3: Methodology -->
+<!-- Section 4: Key Findings & Dashboard -->
+
+      <section class="project-section">
+        <h2>Key Findings</h2>
+        <div class="findings-container">
+          <div class="findings-grid">
+            <div class="finding-item">
+              <h3>High-Quality Listener Base</h3>
+              <ul>
+                <li>The average Streams Per Listener (SPL) is 2.67.</li>
+                <li>Social content converts views into high-intent fans on Spotify who listen to multiple tracks.</li>
+              </ul>
+            </div>
+            <div class="finding-item">
+              <h3>Low-Effort Content Maximizes ROI</h3>
+              <ul>
+                <li>Low Effort (Level 1) content drives 21 average total interactions, significantly outperforming High Effort content (13 interactions). However both Low and High Effort content outperform Medium Level content in Engagement Rates. </li>
+                <li>Viral content prefers quick, low-friction content. Time and resources spent on High Effort content are poorly utilized, unless meant to garner high engagement over viral views.</li>
+              </ul>
+            </div>
+            <div class="finding-item">
+              <h3>Single "Haunt You" is Stalled</h3>
+              <ul>
+                <li>"You" and "Haunt You" had a combined 307 total streams in the period. "Haunt You" (released May 2nd) only contributed ≈8% of the total streams for the period, despite being a recent focus.</li>
+                <li>The promotional launch and content tie-in for "HauntYou" were insufficient to gain traction, even among the existing high-quality audience.</li>
+              </ul>
+            </div>
+            <div class="finding-item">
+              <h3>TikTok Slightly Penalizes Syndication</h3>
+              <ul>
+                <li>Native TikTok posts average 314 views, while Cross-Posted TikTok posts average only 223 views.</li>
+                <li>The 29% drop in views confirms the need for a strategy that emphasizes platform-exclusive content to maximize viral reach.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dashboard-container">
+            <h3>Interactive Analysis Dashboard</h3>
+            <div class="tableau-embed">
+              <div class="tableau-placeholder">
+                <code><div class='tableauPlaceholder' id='viz1760919448229' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;So&#47;SocialMediaContentAnalysisFinal&#47;PlatformDeepDiveAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SocialMediaContentAnalysisFinal&#47;PlatformDeepDiveAnalysis' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;So&#47;SocialMediaContentAnalysisFinal&#47;PlatformDeepDiveAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1760919448229');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1440px';vizElement.style.height='1490px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1440px';vizElement.style.height='1490px';} else { vizElement.style.width='100%';vizElement.style.height='1200px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+<!-- End of Section 4: Key Findings & Dashboard -->
+<!-- Section 5: Recommendations -->
+
+      <section class="project-section">
+        <h2>Strategic Recommendations</h2>
+        <div class="recommendations">
+          <div class="recommendation-item">
+            <h3>Adopt a "Low-Effort, High-Volume" Content Model</h3>
+            <ul>
+              <li>Maximize engagement ROI and free up creation time.</li>
+              <li>Immediately de-prioritize medium and high effort content. Reallocate the saved creation time to identifying and scaling the format of low effort content. Save high effort content for aesthetic appearances, which perform well on Instagram.</li>
+              <li>Anchor this high-volume content to the peak time: afternoons and weekdays. This ensures the most efficient content is being posted when the audience is most engaged.</li>
+            </ul>
+          </div>
+          <div class="recommendation-item">
+            <h3>Execute a Dedicated "Haunt You" Content Relaunch</h3>
+            <ul>
+              <li>Convert high-quality listeners (SPL of 2.67) to the new single.</li>
+              <li>Create a dedicated, low effort TikTok trend/challenge using the sound clip from "Haunt You." This must be executed with native TikTok content</li>
+              <li>Promote the new single as the call-to-action for all high-performing content. Content is converting quality, but this must be directed to the correct product.</li>
+            </ul>
+          </div>
+          <div class="recommendation-item">
+            <h3>Implement a Strict "Native Only" Strategy</h3>
+            <ul>
+              <li>Eliminate the cross-posting view penalty and maximize organic reach.</li>
+              <li>Stop all direct cross-posting to TikTok.</li>
+              <li>All content must be created and posted natively and exclusively to TikTok first. Wait 24 hours, download the video without the watermark, and then syndicate (cross-post) to Instagram. This respects both platform algorithms and optimizes for maximum total views.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<!-- End of Section 5: Recommendations -->
+      
+    </div>
+  </main>
+
+<!-- Footnote -->
+
+  <div class="project-footnote">
+    <p><em>Tools Used: R, SQL (Google BigQuery), Tableau | Analysis Period: 4 months (May 2025 - August 2025)</em></p>
+  </div>
+  
+<!-- Social Link Footer -->
+
+  <footer class="social-footer">
+    <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
+      <img src="../images/social-icons/spotify.jpeg" alt="Spotify">
+    </a>
+    <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram">
+      <img src="../images/social-icons/instagram.jpeg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok">
+      <img src="../images/social-icons/tiktok.jpeg" alt="TikTok">
+    </a>
+    <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music">
+      <img src="../images/social-icons/apple.jpeg" alt="Apple Music">
+    </a>
+    <a href="https://x.com/ryanvomusic" class="social-icon" target="_blank" title="Twitter">
+      <img src="../images/social-icons/twitter.jpeg" alt="Twitter">
+    </a>
+    <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky">
+      <img src="../images/social-icons/bluesky.jpeg" alt="Bluesky">
+    </a>
+    <a href="mailto:ryanvoprism@gmail.com" class="social-icon" title="Email">
+      <img src="../images/social-icons/email.png" alt="Email">
+    </a>
+  </footer>
+
+<!-- End of Social Link Footer -->
+
+</body>
+
+</html>
