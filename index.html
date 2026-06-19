@@ -50,12 +50,7 @@
   <nav class="navbar">
     <a href="index.html" class="nav-link active">Home</a>
     <a href="about.html" class="nav-link">About</a>
-    <div class="nav-dropdown">
-      <a href="releases.html" class="nav-link dropdown-toggle">Music Releases</a>
-      <div class="dropdown-content">
-        <a href="illumina-ep.html">il•lum•in•a</a>
-      </div>
-    </div>
+    <a href="releases.html" class="nav-link">Music Releases</a>
   </nav>
 
 <!-- MainWelcome -->
@@ -71,82 +66,27 @@
 <!-- Social Links Footer -->
 
   <footer class="social-footer">
-    <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify" onclick="trackSocialClick('Spotify')">
+    <a href="https://open.spotify.com/artist/7qaQKE3XFyZMXK7Wzyq6ob?si=zOfvrS5oTPuAOexPLG_hSQ" class="social-icon" target="_blank" title="Spotify">
       <img src="images/social-icons/spotify.jpeg" alt="Spotify">
     </a>
-    <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram" onclick="trackSocialClick('Instagram')">
+    <a href="https://www.instagram.com/ryanvomusic/" class="social-icon" target="_blank" title="Instagram">
       <img src="images/social-icons/instagram.jpeg" alt="Instagram">
     </a>
-    <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok" onclick="trackSocialClick('TikTok')">
+    <a href="https://www.tiktok.com/@ryanvomusic" class="social-icon" target="_blank" title="TikTok">
       <img src="images/social-icons/tiktok.jpeg" alt="TikTok">
     </a>
-    <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music" onclick="trackSocialClick('Apple Music')">
+    <a href="https://music.apple.com/us/artist/ryan-vo/1255223748" class="social-icon" target="_blank" title="Apple Music">
       <img src="images/social-icons/apple.jpeg" alt="Apple Music">
     </a>
-    <a href="https://x.com/ryanvomusic" class="social-icon" target="_blank" title="Twitter" onclick="trackSocialClick('Twitter')">
-      <img src="images/social-icons/twitter.jpeg" alt="Twitter">
-    </a>
-    <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky" onclick="trackSocialClick('Bluesky')">
+    <a href="https://bsky.app/profile/ryanvomusic.bsky.social" class="social-icon" target="_blank" title="Bluesky">
       <img src="images/social-icons/bluesky.jpeg" alt="Bluesky">
     </a>
-    <a href="mailto:ryanvoprism@gmail.com" class="social-icon" title="Email" onclick="trackSocialClick('Email')">
+    <a href="mailto:ryanvomusic@gmail.com" class="social-icon" title="Email">
       <img src="images/social-icons/email.png" alt="Email">
     </a>
   </footer>
 
 <!-- End of Social Links Footer -->
-<!-- Mobile Dropdown Toggle -->
-
-<script>
-// Mobile dropdown toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const dropdown = document.querySelector('.nav-dropdown');
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768) {
-        // Check if dropdown is currently visible
-        const isOpen = dropdown.classList.contains('active');
-        
-        if (!isOpen) {
-          // First click: open dropdown
-          e.preventDefault();
-          dropdown.classList.add('active');
-        }
-        // Second click: dropdown is open, let the link work normally
-        // (don't prevent default, browser will navigate to releases.html)
-      }
-    });    
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768 && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('active');
-      }
-    });
-  }
-});
-</script>
-
-<!-- Google Analytics Social/Streaming Click Tracking -->
-
-<script>
-function trackSocialClick(platform) {
-  gtag('event', 'social_click', {
-    'event_category': 'Social Media',
-    'event_label': platform,
-    'page': window.location.pathname
-  });
-}
-
-function trackStreamingClick(platform, song) {
-  gtag('event', 'streaming_click', {
-    'event_category': 'Music Streaming',
-    'event_label': platform + ' - ' + song
-  });
-}
-</script>
 
 </body>
 
