@@ -20,8 +20,6 @@
 .about-photo {
     flex: 0 0 300px;
     position: relative;
-    transition: transform 0.1s ease-out;
-    will-change: transform;
 }
 
 .about-photo img {
